@@ -27,5 +27,5 @@ Ready for release | Release | The member review is complete with nothing left to
 
 From state | To state | Guard conditions (i.e., what must be true for the transition to occur)
 --- | --- | ---
-Start | New | - A submitter has an OAGIS issue to submit.
+Start | New | <ul><li>A submitter has an OAGIS issue to submit.</li></ul>
 New | Discussion | <ul><li>The submitter has determined that he/she wants to discuss the issue (and perhaps related ones) with the AC prior to to creating/changing OAGIS components.</li><li>The submitter has properly formatted the issue</li><ul><li>The title is in the correct format.</li><li>The description in the correct format.</li><li>An appropriate milestone is specified.</li><li>Appropriate labels are set.</ul></ul>
