@@ -1,4 +1,4 @@
-# AgGateway's ADAPT Data Model (ADM) standard issue management
+# AgGateway ADAPT Data Model (ADM) standard issue management
 
 ## Introduction
 
