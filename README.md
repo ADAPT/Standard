@@ -4,3 +4,8 @@ This repo contains documentation and ADM-related issues. It does not contain cod
 ## Issue state diagram
 [State diagram](https://app.creately.com/d/aciCyRbf6oy/view)
 ## Issue states
+
+State | Score CC State | Description
+--- | --- | ---
+New | N/A | A submitter submitted the issue. The submitter may need to refine the issue content before it’s ready to transition `Discussion` or `Implementing`.
+Discussion | N/A | The submitter would like to discuss the issue with the AC prior to creating/changing components in Score.
