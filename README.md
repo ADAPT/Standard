@@ -27,5 +27,17 @@ Ready for release | Release | The member review is complete with nothing left to
 
 From state | To state | Guard conditions (i.e., what must be true for the transition to occur)
 --- | --- | ---
-Start | New | <ul><li>A submitter has an OAGIS issue to submit.</li></ul>
-New | Discussion | <ul><li>The submitter has determined that he/she wants to discuss the issue (and perhaps related ones) with the AC prior to to creating/changing OAGIS components.</li><li>The submitter has properly formatted the issue</li><ul><li>The title is in the correct format.</li><li>The description in the correct format.</li><li>An appropriate milestone is specified.</li><li>Appropriate labels are set.</ul></ul>
+Start | New | <ul><li>Submitter has an issue to submit.</li></ul>
+New | Discussion | <ul><li>Submitter has determined that he/she wants to discuss the issue (and perhaps related ones) with AC prior to to creating/changing components.</li><li>The submitter has properly formatted the issue</li><ul><li>The title is in the correct format.</li><li>The description in the correct format.</li><li>An appropriate milestone is specified.</li><li>Appropriate labels are set.</ul></ul>
+New | Implementing | <ul><li>z</li></ul>
+Discussion | Implementing | <ul><li>Submitter has properly formatted the issue (see `New` to `Discussion`)</li></ul>
+Implemented | AC review | <ul><li>Submitter is ready to review with AC.</li></ul>
+AC review | Implementing | <ul><li>AC rejects the issue.</li></ul>
+Implementing | Implemented | <ul><li>Submitter regards that work on components they created/changed in Score is complete and has changed the status in Score to Draft.</li></ul>
+AC review | Approved | <ul><li>AC approves the issue.</li></ul>
+Approved | Candidate | <ul><li>Components associated with the issues have been set to Candidate status in Score.</li></ul>
+Candidate | Reconsider | <ul><li>An AC member believes that, in the interest of quality, the issue should be reconsidered.</li></ul>
+Member review | Reconsider | <ul><li>Same as `Candidate` to `Reconsider`</li></ul>
+Reconsider | Implementing | <ul><li>AC reverses its earlier approval.</li></ul>
+Member review | Ready for release | <ul><li>Members have validated the release.</li><li>All issues have been processed from the member review.</li></ul>
+Ready for release | End | <ul><li>ADM is released and the issue is closed and archived.</li></ul>
