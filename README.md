@@ -1,8 +1,13 @@
 # AgGateway's ADAPT Data Model (ADM) standard issue management
+
 ## Introduction
+
 This repo contains documentation and ADM-related issues. It does not contain code. The ADM-related issues are managed in a [GitHub project](https://github.com/ADAPT/ADM/projects/1). Each issue is in a state as specified below.
+
 ## Issue state diagram
+
 [State diagram](https://app.creately.com/d/aciCyRbf6oy/view)
+
 ## Issue states
 
 State | Score CC State | Description
@@ -17,3 +22,15 @@ Candidate | Candidate | The components associated with the issue are set to Cand
 Reconsider | Draft or Candidate | A member of the AC believes that, in the interest of ADM quality, the issue should be reconsidered.
 Member reveiew | Release | A draft release has been created in Score.
 Ready for release | Release | The member review is complete with nothing left to process
+
+## Issue transitions
+
+From state | To state | Guard conditions (i.e., what must be true for the transition to occur)
+--- | --- | ---
+Start | New | * A submitter has an OAGIS issue to submit.
+New | Discussion | * The submitter has determined that he/she wants to discuss the issue (and perhaps related ones) with the AC prior to to creating/changing OAGIS components.
+* The submitter has properly formatted the issue
+** The title is in the correct format.
+** The description in the correct format.
+** An appropriate milestone is specified.
+** Appropriate labels are set.
