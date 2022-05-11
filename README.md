@@ -29,8 +29,8 @@ From state | To state | Guard conditions (i.e., what must be true for the transi
 --- | --- | ---
 Start | New | <ul><li>Submitter has an issue to submit.</li></ul>
 New | Discussion | <ul><li>Submitter has determined that he/she wants to discuss the issue (and perhaps related ones) with AC prior to to creating/changing components.</li><li>The submitter has properly formatted the issue</li><ul><li>The title is in the correct format.</li><li>The description in the correct format.</li><li>An appropriate milestone is specified.</li><li>Appropriate labels are set.</ul></ul>
-New | Implementing | <ul><li>z</li></ul>
-Discussion | Implementing | <ul><li>Submitter has properly formatted the issue (see `New` to `Discussion`)</li></ul>
+New | Implementing | <ul><li>Submitter has properly formatted the issue (see `New` to `Discussion`)</li><li>Submitter is ready to create / change components in Score and those components are in WIP status in Score.</li></ul>
+Discussion | Implementing | <ul><li>Same as `New` to `Implementing`)</li></ul>
 Implemented | AC review | <ul><li>Submitter is ready to review with AC.</li></ul>
 AC review | Implementing | <ul><li>AC rejects the issue.</li></ul>
 Implementing | Implemented | <ul><li>Submitter regards that work on components they created/changed in Score is complete and has changed the status in Score to Draft.</li></ul>
