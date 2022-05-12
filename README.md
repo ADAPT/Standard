@@ -4,6 +4,10 @@
 
 This repo contains documentation and ADM-related issues. It does not contain code. The ADM-related issues are managed in a [GitHub project](https://github.com/ADAPT/ADM/projects/1). Each issue is in a state as specified below.
 
+## Supplementary disccussion page
+
+For discussion content that stakeholders feel is not well supported by this repo, consider the following AgGateway Confluence page: [ADM changes discussion](https://aggateway.atlassian.net/wiki/x/AwDGxg)
+
 ## Issue state diagram
 
 [State diagram (maintained in external application)](https://app.creately.com/d/aciCyRbf6oy/view)
