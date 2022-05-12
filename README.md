@@ -10,7 +10,7 @@ For discussion content that stakeholders feel is not well supported by this repo
 
 ## Issue state diagram
 
-[State diagram (maintained in external application)](https://app.creately.com/d/aciCyRbf6oy/view)
+[State diagram (maintained in external application)](https://embed.creately.com/aciCyRbf6oy?token=HoOPLnaMg32WngzJ&type=svg)
 
 ## Issue states
 
