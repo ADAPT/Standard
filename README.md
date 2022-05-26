@@ -1,12 +1,12 @@
-# AgGateway ADAPT Data Model (ADM) standard issue management
+# ADAPT Standard Issue Management
 
 ## Introduction
 
-This repo contains documentation and ADM-related issues. It does not contain code. The ADM-related issues are managed in a [GitHub project](https://github.com/ADAPT/ADM/projects/1). Each issue is in a state as specified below.
+The purpose of this repository is to manage ADAPT Standard issues. It does not contain code. The ADAPT Standard-related issues are managed in a [GitHub project](https://github.com/ADAPT/Standard/projects/1). Each issue is in a state as specified below.
 
 ## Supplementary disccussion page
 
-For discussion content that stakeholders feel is not well supported by this repo, consider the following AgGateway Confluence page: [ADM changes discussion](https://aggateway.atlassian.net/wiki/x/AwDGxg)
+For discussion content that stakeholders feel is not well supported by this repo, consider the following AgGateway Confluence page: [ADAPT Standard changes discussion](https://aggateway.atlassian.net/wiki/x/AwDGxg)
 
 ## Issue state diagram
 
@@ -25,7 +25,7 @@ Implementing | WIP | The submitter has created/changed components in Score and t
 Member reveiew | Release | A draft release has been created in Score.
 New | N/A | A submitter submitted the issue. The submitter may need to refine the issue content before it’s ready to transition `Discussion` or `Implementing`.
 Ready for release | Release | The member review is complete with nothing left to process
-Reconsider | Draft or Candidate | A member of the AC believes that, in the interest of ADM quality, the issue should be reconsidered.
+Reconsider | Draft or Candidate | A member of the AC believes that, in the interest of ADAPT Standard quality, the issue should be reconsidered.
 
 ## Issue transitions
 
@@ -42,6 +42,6 @@ Member review | Ready for release | <ul><li>Members have validated the release.<
 Member review | Reconsider | <ul><li>Same as `Candidate` to `Reconsider`</li></ul>
 New | Discussion | <ul><li>Submitter has determined that he/she wants to discuss the issue (and perhaps related ones) with AC prior to to creating/changing components.</li><li>The submitter has properly formatted the issue</li><ul><li>The title is in the correct format.</li><li>The description in the correct format.</li><li>An appropriate milestone is specified.</li><li>Appropriate labels are set.</ul></ul>
 New | Implementing | <ul><li>Submitter has properly formatted the issue (see `New` to `Discussion`)</li><li>Submitter is ready to create / change components in Score and those components are in WIP status in Score.</li></ul>
-Ready for release | End | <ul><li>ADM is released and the issue is closed and archived.</li></ul>
+Ready for release | End | <ul><li>ADAPT Standard is released and the issue is closed and archived.</li></ul>
 Reconsider | Implementing | <ul><li>AC reverses its earlier approval.</li></ul>
 Start | New | <ul><li>Submitter has an issue to submit.</li></ul>
