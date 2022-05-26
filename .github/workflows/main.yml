@@ -8,5 +8,5 @@ jobs:
       - name: Create or Update Project Card
         uses: peter-evans/create-or-update-project-card@v1
         with:
-          project-name: ADM Issue Management
+          project-name: ADAPT Standard Issue Management
           column-name: New
