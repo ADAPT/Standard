@@ -12,11 +12,24 @@ For discussion content that stakeholders feel is not well supported by this repo
 
 [State diagram (maintained in external application)](https://embed.creately.com/aciCyRbf6oy?token=HoOPLnaMg32WngzJ&type=svg)
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+stateDiagram-v2
+        [*] --> New
+        New --> Discussion
+        New --> Implementing
+        Discussion --> Implementing
+        Implementing --> Implemented
+        Implemented --> ACreview
+        ACreview --> Implementing
+        ACreview --> Approved
+        Approved --> Candidate
+        Candidate --> MemberReview
+        Candidate --> Reconsider
+        Reconsider --> Candidate
+        MemberReview --> ReadyToRelease
+        MemberReview --> Reconsider
+        Reconsider --> MemberReview
+        Reconsider --> Implementing
+        ReadyToRelease --> [*]
 ```
 
 ## Issue states
