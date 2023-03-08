@@ -13,14 +13,14 @@ For discussion content that stakeholders feel is not well supported by this repo
 [State diagram (maintained in external application)](https://embed.creately.com/aciCyRbf6oy?token=HoOPLnaMg32WngzJ&type=svg)
 ```mermaid
 stateDiagram-v2
-        [*] --> New
+        [*] --> New: GitHub issue submitted
         New --> Discussion
         New --> Implementing
         Discussion --> Implementing
         Implementing --> Implemented
-        Implemented --> ACreview
+        Implemented --> ACreview: Submitter ready to review with AC
         ACreview --> Implementing
-        ACreview --> Approved
+        ACreview --> Approved: AC approves
         Approved --> Candidate
         Candidate --> MemberReview
         Candidate --> Reconsider
@@ -28,8 +28,8 @@ stateDiagram-v2
         MemberReview --> ReadyToRelease
         MemberReview --> Reconsider
         Reconsider --> MemberReview
-        Reconsider --> Implementing
-        ReadyToRelease --> [*]
+        Reconsider --> Implementing: AC reversed prior to decision
+        ReadyToRelease --> [*]: Release (close issue)
 ```
 
 ## Issue states
