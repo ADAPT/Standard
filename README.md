@@ -8,7 +8,7 @@ The purpose of this repository is to manage ADAPT Standard issues. It does not c
 
 For discussion content that stakeholders feel is not well supported by this repo, consider the following AgGateway Confluence page: [ADAPT Standard changes discussion](https://aggateway.atlassian.net/wiki/x/AwDGxg)
 
-## Issue state diagram
+## GitHub Issue state diagram
 
 ```mermaid
 stateDiagram-v2
@@ -27,7 +27,7 @@ stateDiagram-v2
         MemberReview --> ReadyToRelease
         MemberReview --> Reconsider
         Reconsider --> MemberReview
-        Reconsider --> Implementing: AC reversed prior to decision
+        Reconsider --> Implementing: AC reversed prior decision
         ReadyToRelease --> [*]: Release (close issue)
 ```
 
