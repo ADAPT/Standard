@@ -1,0 +1,687 @@
+{
+  "version": "1.0.0-alpha.1",
+  "domains": [
+    {
+      "domain": "Distance",
+      "units": [
+        {
+          "key": "m",
+          "value": "meter"
+        },
+        {
+          "key": "ft",
+          "value": "foot"
+        },
+        {
+          "key": "in",
+          "value": "inch"
+        },
+        {
+          "key": "mi",
+          "value": "statute mile"
+        },
+        {
+          "key": "Nmi",
+          "value": "nautical mile"
+        },
+        {
+          "key": "yd",
+          "value": "yard"
+        },
+        {
+          "key": "Em",
+          "value": "exameter"
+        },
+        {
+          "key": "Pm",
+          "value": "petameter"
+        },
+        {
+          "key": "Tm",
+          "value": "terameter"
+        },
+        {
+          "key": "Gm",
+          "value": "gigameter"
+        },
+        {
+          "key": "Mm",
+          "value": "megameter"
+        },
+        {
+          "key": "km",
+          "value": "kilometer"
+        },
+        {
+          "key": "hm",
+          "value": "hectometer"
+        },
+        {
+          "key": "dam",
+          "value": "dekameter"
+        },
+        {
+          "key": "dm",
+          "value": "decimeter"
+        },
+        {
+          "key": "cm",
+          "value": "centimeter"
+        },
+        {
+          "key": "mm",
+          "value": "millimeter"
+        },
+        {
+          "key": "um",
+          "value": "micrometer"
+        },
+        {
+          "key": "nm",
+          "value": "nanometer"
+        },
+        {
+          "key": "pm",
+          "value": "picometer"
+        },
+        {
+          "key": "fm",
+          "value": "femtometer"
+        },
+        {
+          "key": "am",
+          "value": "attometer"
+        },
+        {
+          "key": "hdm",
+          "value": "Hundred Meter"
+        },
+        {
+          "key": "hdyd",
+          "value": "Hundred Yard"
+        }
+      ]
+    },
+    {
+      "domain": "Time",
+      "units": [
+        {
+          "key": "us",
+          "value": "microsecond"
+        },
+        {
+          "key": "ms",
+          "value": "millisecond"
+        },
+        {
+          "key": "sec",
+          "value": "second"
+        },
+        {
+          "key": "min",
+          "value": "minute"
+        },
+        {
+          "key": "hr",
+          "value": "hour"
+        },
+        {
+          "key": "day",
+          "value": "day"
+        },
+        {
+          "key": "wk",
+          "value": "week"
+        }
+      ]
+    },
+    {
+      "domain": "Temperature",
+      "units": [
+        {
+          "key": "C",
+          "value": "celsius"
+        },
+        {
+          "key": "F",
+          "value": "fahrenheit"
+        },
+        {
+          "key": "K",
+          "value": "kelvin"
+        },
+        {
+          "key": "mK",
+          "value": "milliKelvin"
+        }
+      ]
+    },
+    {
+      "domain": "Mass",
+      "units": [
+        {
+          "key": "g",
+          "value": "gram"
+        },
+        {
+          "key": "lb",
+          "value": "pound"
+        },
+        {
+          "key": "ton",
+          "value": "ton (U.S.)"
+        },
+        {
+          "key": "sg",
+          "value": "slug"
+        },
+        {
+          "key": "ozm",
+          "value": "mass ounce"
+        },
+        {
+          "key": "troyoz",
+          "value": "troy ounce"
+        },
+        {
+          "key": "t",
+          "value": "tonne"
+        },
+        {
+          "key": "Eg",
+          "value": "exagram"
+        },
+        {
+          "key": "Pg",
+          "value": "petagram"
+        },
+        {
+          "key": "Tg",
+          "value": "teragram"
+        },
+        {
+          "key": "Gg",
+          "value": "gigagram"
+        },
+        {
+          "key": "Mg",
+          "value": "megagram"
+        },
+        {
+          "key": "q",
+          "value": "metric quintal"
+        },
+        {
+          "key": "kg",
+          "value": "kilogram"
+        },
+        {
+          "key": "hg",
+          "value": "hectogram"
+        },
+        {
+          "key": "dag",
+          "value": "dekagram"
+        },
+        {
+          "key": "dg",
+          "value": "decigram"
+        },
+        {
+          "key": "cg",
+          "value": "centigram"
+        },
+        {
+          "key": "mg",
+          "value": "milligram"
+        },
+        {
+          "key": "ug",
+          "value": "microgram"
+        },
+        {
+          "key": "ng",
+          "value": "nanogram"
+        },
+        {
+          "key": "pg",
+          "value": "picogram"
+        },
+        {
+          "key": "fg",
+          "value": "femtogram"
+        },
+        {
+          "key": "ag",
+          "value": "attogram"
+        },
+        {
+          "key": "stone",
+          "value": "stone"
+        },
+        {
+          "key": "cwt",
+          "value": "hundred weight"
+        }
+      ]
+    },
+    {
+      "domain": "Percent",
+      "units": [
+        {
+          "key": "ratio",
+          "value": "ratio"
+        },
+        {
+          "key": "prcnt",
+          "value": "percent"
+        },
+        {
+          "key": "prcntHndth",
+          "value": "hundredth of a percent"
+        },
+        {
+          "key": "ppm",
+          "value": "Parts per million"
+        }
+      ]
+    },
+    {
+      "domain": "Unitless",
+      "units": [
+        {
+          "key": "unitless",
+          "value": "unitless"
+        }
+      ]
+    },
+    {
+      "domain": "Area",
+      "units": [
+        {
+          "key": "ha",
+          "value": "hectare"
+        },
+        {
+          "key": "ac",
+          "value": "acre"
+        },
+        {
+          "key": "thsndSqFt",
+          "value": "thousand square feet"
+        },
+        {
+          "key": "a",
+          "value": "are"
+        }
+      ]
+    },
+    {
+      "domain": "Volume",
+      "units": [
+        {
+          "key": "l",
+          "value": "liter"
+        },
+        {
+          "key": "floz",
+          "value": "fluid ounce"
+        },
+        {
+          "key": "gal",
+          "value": "gallon"
+        },
+        {
+          "key": "thsndgal",
+          "value": "thousand gallon"
+        },
+        {
+          "key": "qtdry",
+          "value": "dry quart"
+        },
+        {
+          "key": "ptdry",
+          "value": "dry pint (U.S.)"
+        },
+        {
+          "key": "qt",
+          "value": "quart"
+        },
+        {
+          "key": "pt",
+          "value": "pint (U.S.)"
+        },
+        {
+          "key": "uk_pt",
+          "value": "pint (U.K.)"
+        },
+        {
+          "key": "El",
+          "value": "exaliter"
+        },
+        {
+          "key": "Pl",
+          "value": "petaliter"
+        },
+        {
+          "key": "Tl",
+          "value": "teraliter"
+        },
+        {
+          "key": "Gl",
+          "value": "gigaliter"
+        },
+        {
+          "key": "Ml",
+          "value": "megaliter"
+        },
+        {
+          "key": "kl",
+          "value": "kiloliter"
+        },
+        {
+          "key": "hl",
+          "value": "hectoliter"
+        },
+        {
+          "key": "dal",
+          "value": "dekaliter"
+        },
+        {
+          "key": "dl",
+          "value": "deciliter"
+        },
+        {
+          "key": "cl",
+          "value": "centiliter"
+        },
+        {
+          "key": "ml",
+          "value": "milliliter"
+        },
+        {
+          "key": "ul",
+          "value": "microliter"
+        },
+        {
+          "key": "nl",
+          "value": "nanoliter"
+        },
+        {
+          "key": "pl",
+          "value": "picoliter"
+        },
+        {
+          "key": "fl",
+          "value": "femtoliter"
+        },
+        {
+          "key": "al",
+          "value": "attoliter"
+        },
+        {
+          "key": "bu",
+          "value": "bushel"
+        },
+        {
+          "key": "igal",
+          "value": "i-gallon"
+        }
+      ]
+    },
+    {
+      "domain": "Angle",
+      "units": [
+        {
+          "key": "arcdeg",
+          "value": "arc degree"
+        },
+        {
+          "key": "arcmin",
+          "value": "arc minute"
+        },
+        {
+          "key": "arcsec",
+          "value": "arc second"
+        },
+        {
+          "key": "rad",
+          "value": "radians"
+        },
+        {
+          "key": "thDeg",
+          "value": "Ten thousandths of a degree"
+        }
+      ]
+    },
+    {
+      "domain": "Container",
+      "units": [
+        {
+          "key": "container",
+          "value": "container"
+        }
+      ]
+    },
+    {
+      "domain": "Bag",
+      "units": [
+        {
+          "key": "bag",
+          "value": "bag"
+        }
+      ]
+    },
+    {
+      "domain": "TimeSpan",
+      "units": [
+        {
+          "key": "month",
+          "value": "month"
+        },
+        {
+          "key": "year",
+          "value": "year"
+        }
+      ]
+    },
+    {
+      "domain": "Barrel",
+      "units": [
+        {
+          "key": "barrel",
+          "value": "barrel"
+        }
+      ]
+    },
+    {
+      "domain": "Sack",
+      "units": [
+        {
+          "key": "sack",
+          "value": "sack"
+        }
+      ]
+    },
+    {
+      "domain": "Bale",
+      "units": [
+        {
+          "key": "bale",
+          "value": "bale"
+        }
+      ]
+    },
+    {
+      "domain": "Currency",
+      "units": [
+        {
+          "key": "cur",
+          "value": "currency"
+        }
+      ]
+    },
+    {
+      "domain": "Seeds",
+      "units": [
+        {
+          "key": "seeds",
+          "value": "seed"
+        },
+        {
+          "key": "thndSeeds",
+          "value": "thousandSeed"
+        }
+      ]
+    },
+    {
+      "domain": "DataPoints",
+      "units": [
+        {
+          "key": "points",
+          "value": "point"
+        }
+      ]
+    },
+    {
+      "domain": "Rows",
+      "units": [
+        {
+          "key": "row",
+          "value": "row"
+        }
+      ]
+    },
+    {
+      "domain": "Pressure",
+      "units": [
+        {
+          "key": "Pa",
+          "value": "Pascal"
+        },
+        {
+          "key": "kPa",
+          "value": "kilopascal"
+        },
+        {
+          "key": "PSI",
+          "value": "PSI"
+        },
+        {
+          "key": "bar",
+          "value": "bar"
+        }
+      ]
+    },
+    {
+      "domain": "Force",
+      "units": [
+        {
+          "key": "N",
+          "value": "Newton"
+        },
+        {
+          "key": "mN",
+          "value": "milliNewton"
+        },
+        {
+          "key": "lbf",
+          "value": "pounds of force"
+        }
+      ]
+    },
+    {
+      "domain": "Frequency",
+      "units": [
+        {
+          "key": "hz",
+          "value": "hertz"
+        }
+      ]
+    },
+    {
+      "domain": "Count",
+      "units": [
+        {
+          "key": "count",
+          "value": "count"
+        }
+      ]
+    },
+    {
+      "domain": "Voltage",
+      "units": [
+        {
+          "key": "V",
+          "value": "Volt"
+        },
+        {
+          "key": "mV",
+          "value": "millivolt"
+        }
+      ]
+    },
+    {
+      "domain": "ElectricCurrent",
+      "units": [
+        {
+          "key": "amp",
+          "value": "Ampere"
+        },
+        {
+          "key": "mA",
+          "value": "Milliamp"
+        }
+      ]
+    },
+    {
+      "domain": "Field",
+      "units": [
+        {
+          "key": "field",
+          "value": "field"
+        }
+      ]
+    },
+    {
+      "domain": "Energy",
+      "units": [
+        {
+          "key": "J",
+          "value": "Joule"
+        }
+      ]
+    },
+    {
+      "domain": "Power",
+      "units": [
+        {
+          "key": "W",
+          "value": "Watt"
+        },
+        {
+          "key": "kW",
+          "value": "kilowatt"
+        }
+      ]
+    },
+    {
+      "domain": "Gear",
+      "units": [
+        {
+          "key": "gear",
+          "value": "gear"
+        }
+      ]
+    },
+    {
+      "domain": "Torque",
+      "units": [
+        {
+          "key": "Nm",
+          "value": "newton meter"
+        }
+      ]
+    }
+  ]
+}
