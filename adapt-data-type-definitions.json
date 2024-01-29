@@ -1,2262 +1,2371 @@
 {
-  "version": "1.0.0-alpha.1",
-  "dataTypeRepresentations": [
+  "dataTypeDefinitions": [
     {
-      "representationCode": "AppliedCountPerAreaTarget",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedCountPerAreaTarget",
+      "description": "Seed rate, plant rate, etc. per area",
       "name": "Applied Count Per Area (Target)",
-      "description": "Seed rate, plant rate, etc. per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedCountPerAreaActual",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedCountPerAreaActual",
+      "description": "Seed rate, plant rate, etc. per area",
       "name": "Applied Count Per Area (Actual)",
-      "description": "Seed rate, plant rate, etc. per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedCountPerAreaControl",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedCountPerAreaControl",
+      "description": "Seed rate, plant rate, etc. per area",
       "name": "Applied Count Per Area (Control)",
-      "description": "Seed rate, plant rate, etc. per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedVolumePerAreaActual",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedVolumePerAreaActual",
+      "description": "Liquid applications expressed per area",
       "name": "Applied Volume Per Area (Actual)",
-      "description": "Liquid applications expressed per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedVolumePerAreaTarget",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedVolumePerAreaTarget",
+      "description": "Liquid applications expressed per area",
       "name": "Applied Volume Per Area (Target)",
-      "description": "Liquid applications expressed per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedVolumePerAreaControl",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedVolumePerAreaControl",
+      "description": "Liquid applications expressed per area",
       "name": "Applied Volume Per Area (Control)",
-      "description": "Liquid applications expressed per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedMassPerAreaActual",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedMassPerAreaActual",
+      "description": "Granular and bulk seed applications expressed per area",
       "name": "Applied Mass Per Area (Actual)",
-      "description": "Granular and bulk seed applications expressed per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedMassPerAreaTarget",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedMassPerAreaTarget",
+      "description": "Granular and bulk seed applications expressed per area",
       "name": "Applied Mass Per Area (Target)",
-      "description": "Granular and bulk seed applications expressed per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedMassPerAreaControl",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedMassPerAreaControl",
+      "description": "Granular and bulk seed applications expressed per area",
       "name": "Applied Mass Per Area (Control)",
-      "description": "Granular and bulk seed applications expressed per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedTotalCount",
-      "name": "Applied Total Count",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedTotalCount",
       "description": "Total Count of Application.  E.g., total seeds.",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Applied Total Count",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Integer",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedTotalMass",
-      "name": "Applied Total Mass",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedTotalMass",
       "description": "Total Mass of Application",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Applied Total Mass",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedTotalVolume",
-      "name": "Applied Total Volume",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedTotalVolume",
       "description": "Total Volume of Application",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Applied Total Volume",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m3"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldWetMassPerArea",
-      "name": "Yield Wet Mass Per Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldWetMassPerArea",
       "description": "Raw harvest mass per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Wet Mass Per Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldTotalWetMass",
-      "name": "Yield Total Wet Mass",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldTotalWetMass",
       "description": "Raw harvest mass total",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Total Wet Mass",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "Yield DryMassPerArea",
-      "name": "Yield Dry Mass Per Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Yield DryMassPerArea",
       "description": "Harvest mass per area adjusted to a standard moisture percentage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Dry Mass Per Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldTotalDryMass",
-      "name": "Yield Total Dry Mass",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldTotalDryMass",
       "description": "Total harvest mass adjusted to a standard moisture percentage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Total Dry Mass",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldBaleCountPerArea",
-      "name": "Yield Bale Count Per Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldBaleCountPerArea",
       "description": "Count of harvested bales per area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Bale Count Per Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldTotalBaleCount",
-      "name": "Yield Total Bale Count",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldTotalBaleCount",
       "description": "Total count of bales harvested",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Total Bale Count",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Integer",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldDryVolumePerArea",
-      "name": "Yield Dry Volume Per Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldDryVolumePerArea",
       "description": "Harvest volume per area.  For crops sold at a standard moisture percentage, defined in that percentage(dry value).",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Dry Volume Per Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldWetVolumePerArea",
-      "name": "Yield Wet Volume Per Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldWetVolumePerArea",
       "description": "Raw harvest volume per Area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Wet Volume Per Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]1[m2]-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldTotalDryVolume",
-      "name": "Yield Total Dry Volume",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldTotalDryVolume",
       "description": "Total harvest volume, adjusted to a standard moisture percentage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Total Dry Volume",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m3"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldTotalWetVolume",
-      "name": "Yield Total Wet Volume",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldTotalWetVolume",
       "description": "Total raw harvest volume",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Total Wet Volume",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m3"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedCountPerTime",
-      "name": "Applied Count Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedCountPerTime",
       "description": "Seed rate, plant rate, etc. per time",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Applied Count Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless1sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedVolumePerTime",
-      "name": "Applied Volume Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedVolumePerTime",
       "description": "Liquid applications expressed per time",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Applied Volume Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]1sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AppliedMassPerTime",
-      "name": "Applied Mass Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedMassPerTime",
       "description": "Granular and bulk seed applications expressed per time",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Applied Mass Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldWetMassPerTime",
-      "name": "Yield Wet Mass Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldWetMassPerTime",
       "description": "Raw harvest mass per time",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Wet Mass Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldDryMassPerTime",
-      "name": "Yield Dry Mass Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldDryMassPerTime",
       "description": "Harvest mass per time adjusted to a standard moisture percentage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Dry Mass Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "kg1sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldBaleCountPerTime",
-      "name": "Yield Bale Count Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldBaleCountPerTime",
       "description": "Count of harvested bales per time",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Bale Count Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless1sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldDryVolumePerTime",
-      "name": "Yield Dry Volume Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldDryVolumePerTime",
       "description": "Harvest volume per time. For crops sold at a standard moisture percentage, defined in that percentage(dry value).",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Dry Volume Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "YieldWetVolumePerTime",
-      "name": "Yield Wet Volume Per Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "YieldWetVolumePerTime",
       "description": "Raw harvest volume per time.",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Yield Wet Volume Per Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "[m3]sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "CommodityMoisture",
-      "name": "Commodity Moisture",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "CommodityMoisture",
       "description": "Sample moisture reading",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Commodity Moisture",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "HarvestHeight",
-      "name": "Harvest Height",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "HarvestHeight",
       "description": "Reported height of harvest",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Harvest Height",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "ApplicationHeight",
-      "name": "Application Height",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ApplicationHeight",
       "description": "Height above ground of application",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Application Height",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SeedingDepth",
-      "name": "Seeding Depth",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SeedingDepth",
       "description": "Depth below ground of seeding",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Seeding Depth",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "TillageDepth",
-      "name": "Tillage Depth",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "TillageDepth",
       "description": "Depth below ground of tillage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Tillage Depth",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "ApplicationDepth",
-      "name": "Application Depth",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ApplicationDepth",
       "description": "Depth below ground of application",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Application Depth",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "ElapsedTime",
-      "name": "Elapsed Time",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ElapsedTime",
       "description": "A report of elapsed time",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Elapsed Time",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "sec"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "DistanceTraveled",
-      "name": "Distance Traveled",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DistanceTraveled",
       "description": "The distance traveled by the device ",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Distance Traveled",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "Heading",
-      "name": "Device Heading",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Heading",
       "description": "A reported device heading",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Device Heading",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "rad"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "Elevation",
-      "name": "Ground Elevation",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Elevation",
       "description": "Reported elevation at ground level",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Ground Elevation",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SeedSpacing",
-      "name": "Seed Spacing",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SeedSpacing",
       "description": "Space between seeds (target, actual, summary)",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Seed Spacing",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SeedSingulation",
-      "name": "Seed Singulation",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SeedSingulation",
       "description": "Singulation percentage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Seed Singulation",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SeedSkips",
-      "name": "Seed Skips",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SeedSkips",
       "description": "Skips percentage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Seed Skips",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SeedDoubles",
-      "name": "Seed Multiples",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SeedDoubles",
       "description": "Doubles/Multiples percentage",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Seed Multiples",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "RideQuality",
-      "name": "Ride Quality",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "RideQuality",
       "description": "Reported Implement Ride Quality",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Ride Quality",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "GroundContact",
-      "name": "Ground Contact",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GroundContact",
       "description": "Reported Implement Ground Contact",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Ground Contact",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "DownforceMargin",
-      "name": "Downforce Margin",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DownforceMargin",
       "description": "Force acting on a planter row unit factoring its weight, additional downforce applied and the upward force of the soil.",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Downforce Margin",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "n"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "DownforceAppliedActual",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DownforceAppliedActual",
+      "description": "Downforce applied by a planter",
       "name": "Downforce Applied (Actual)",
-      "description": "Downforce applied by a planter",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "n"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "DownforceAppliedTarget",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DownforceAppliedTarget",
+      "description": "Downforce applied by a planter",
       "name": "Downforce Applied (Target)",
-      "description": "Downforce applied by a planter",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "n"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "DownforceAppliedControl",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DownforceAppliedControl",
+      "description": "Downforce applied by a planter",
       "name": "Downforce Applied (Control)",
-      "description": "Downforce applied by a planter",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "n"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SprayPressureActual",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SprayPressureActual",
       "name": "Spray Pressure (Target)",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SprayPressureTarget",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SprayPressureTarget",
       "name": "Spray Pressure (Actual)",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SpreayPressureControl",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SpreayPressureControl",
       "name": "Spray Pressure (Control)",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "TillagePressureActual",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "TillagePressureActual",
       "name": "Tillage Pressure (Actual)",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "TillagePressureTarget",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "TillagePressureTarget",
       "name": "Tillage Pressure (Target)",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "TillagePressureControl",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "TillagePressureControl",
       "name": "Tillage Pressure (Control)",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "RowCleanerPressureActual",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "RowCleanerPressureActual",
+      "description": "Row Cleaner pressure on a planter",
       "name": "Row Cleaner Pressure (Actual)",
-      "description": "Row Cleaner pressure on a planter",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "RowCleanerPressureTarget",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "RowCleanerPressureTarget",
+      "description": "Row Cleaner pressure on a planter",
       "name": "Row Cleaner Pressure (Target)",
-      "description": "Row Cleaner pressure on a planter",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "RowCleanerPressureControl",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "RowCleanerPressureControl",
+      "description": "Row Cleaner pressure on a planter",
       "name": "Row Cleaner Pressure (Control)",
-      "description": "Row Cleaner pressure on a planter",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SoilTemperature",
-      "name": "Soil Temperature",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SoilTemperature",
       "description": "Measured temperature of the soil",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Soil Temperature",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "K"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SoilMoisture",
-      "name": "Soil Moisture",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SoilMoisture",
       "description": "Measured moisture of soil",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Soil Moisture",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SoilOrganicMatter",
-      "name": "Soil Organic Matter",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SoilOrganicMatter",
       "description": "Amount of organic matter in soil",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Soil Organic Matter",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "SoilCationExchangeCapacity",
-      "name": "Soil Cation Exchange Capacity",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SoilCationExchangeCapacity",
       "description": "Reported Cation Exchange Capacity of Soil",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Soil Cation Exchange Capacity",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "mol1kg-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "FurrowResidue",
-      "name": "Furrow Residue",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "FurrowResidue",
       "description": "Amount of residue/trash in a plating furrow",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Furrow Residue",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "FurrowUniformity",
-      "name": "Furrow Uniformity",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "FurrowUniformity",
       "description": "Uniformity of planting furrow",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Furrow Uniformity",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "BillableArea",
-      "name": "Billable Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "BillableArea",
       "description": "The area used to bill for a service conducted on a field",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Field"
-        }
-      ],
+      "name": "Billable Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m2"
-      }
+      },
+      "scopes": [
+        "Field"
+      ]
     },
     {
-      "representationCode": "AppliedArea",
-      "name": "Applied Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AppliedArea",
       "description": "Area recorded by a field computer that is the as-applied area including some overlap due to machine limitations and is an attribute of a work record that is operation specific and not an attribute of the boundary",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Work Record, Operation"
-        }
-      ],
+      "name": "Applied Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m2"
-      }
+      },
+      "scopes": [
+        "Work Record, Operation"
+      ]
     },
     {
-      "representationCode": "ReportedArea",
-      "name": "Reported Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ReportedArea",
       "description": "The area included for reporting purposes such as insurance, green house gas, or governmental",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Field"
-        }
-      ],
+      "name": "Reported Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double"
-      }
+      },
+      "scopes": [
+        "Field"
+      ]
     },
     {
-      "representationCode": "CalculatedArea",
-      "name": "Calculated Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "CalculatedArea",
       "description": "Area calculated using a boundary or perimeter of area covered in a field operation also called GIS area",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Operation"
-        }
-      ],
+      "name": "Calculated Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double"
-      }
+      },
+      "scopes": [
+        "Operation"
+      ]
     },
     {
-      "representationCode": "ArableArea",
-      "name": "Arable Area",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ArableArea",
       "description": "Total area of a field that is cultivated, excluding areas such as waterways",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Farm, Field, CropZone"
-        }
-      ],
+      "name": "Arable Area",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double"
-      }
+      },
+      "scopes": [
+        "Farm, Field, CropZone"
+      ]
     },
     {
-      "representationCode": "AirTemperature",
-      "name": "Air Temperature",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AirTemperature",
       "description": "The measured air temperature",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Air Temperature",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "K"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "WindSpeed",
-      "name": "Wind Speed",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "WindSpeed",
       "description": "The measured wind speed",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Wind Speed",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m1sec-1"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "WindDirection",
-      "name": "Wind Direction",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "WindDirection",
       "description": "The measured wind direction from North",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Wind Direction",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "rad"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "RelativeHumidity",
-      "name": "Relative Humidity",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "RelativeHumidity",
       "description": "The measured relative humidity of the air",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Relative Humidity",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "unitless"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "AtmosphericPressure",
-      "name": "Atmospheric Pressure",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AtmosphericPressure",
       "description": "The measured atmospheric pressure",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Atmospheric Pressure",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "pa"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "Width",
-      "name": "Width",
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Width",
       "description": "A reported device width",
-      "representationBaseTypeCode": "Numeric",
-      "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
-      ],
+      "name": "Width",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
-      }
+      },
+      "scopes": [
+        "Variable"
+      ]
     },
     {
-      "representationCode": "IdType",
-      "name": "IdType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "IdType",
       "description": "Defined Type of Id",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Unique Id"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "UUID",
+            "enumerationItemStatusCode": "VALID",
             "name": "Uuid"
           },
           {
             "code": "STRING",
+            "enumerationItemStatusCode": "VALID",
             "name": "String"
           },
           {
             "code": "LONGINT",
+            "enumerationItemStatusCode": "VALID",
             "name": "Longint"
           },
           {
             "code": "URI",
+            "enumerationItemStatusCode": "VALID",
             "name": "Uri"
           },
           {
             "code": "GLN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Gln"
           }
         ]
-      }
+      },
+      "name": "IdType",
+      "scopes": [
+        "Unique Id"
+      ]
     },
     {
-      "representationCode": "IdSourceType",
-      "name": "IdSourceType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "IdSourceType",
       "description": "Defined type of an Id Source",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Unique Id"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "GLN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Gln"
           },
           {
             "code": "URI",
+            "enumerationItemStatusCode": "VALID",
             "name": "Uri"
           }
         ]
-      }
+      },
+      "name": "IdSourceType",
+      "scopes": [
+        "Unique Id"
+      ]
     },
     {
-      "representationCode": "DateContext",
-      "name": "DateContext",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DateContext",
       "description": "Nature of the date and/or time reported",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "TimeScope"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "APPROVAL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Approval"
           },
           {
             "code": "PROPOSED",
+            "enumerationItemStatusCode": "VALID",
             "name": "Proposed"
           },
           {
             "code": "ACTUAL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Actual"
           },
           {
             "code": "REQUESTED",
+            "enumerationItemStatusCode": "VALID",
             "name": "Requested"
           },
           {
             "code": "EXPIRATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Expiration"
           },
           {
             "code": "CREATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Creation"
           },
           {
             "code": "MODIFICATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Modification"
           },
           {
             "code": "VALIDITY",
+            "enumerationItemStatusCode": "VALID",
             "name": "Validity"
           },
           {
             "code": "REQUESTED_SHIPPING",
+            "enumerationItemStatusCode": "VALID",
             "name": "Requested Shipping"
           },
           {
             "code": "CALIBRATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Calibration"
           },
           {
             "code": "LOAD",
+            "enumerationItemStatusCode": "VALID",
             "name": "Load"
           },
           {
             "code": "UNLOAD",
+            "enumerationItemStatusCode": "VALID",
             "name": "Unload"
           },
           {
             "code": "SUSPEND",
+            "enumerationItemStatusCode": "VALID",
             "name": "Suspend"
           },
           {
             "code": "RESUME",
+            "enumerationItemStatusCode": "VALID",
             "name": "Resume"
           },
           {
             "code": "UNSPECIFIED",
+            "enumerationItemStatusCode": "VALID",
             "name": "Unspecified"
           },
           {
             "code": "INSTALLATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Installation"
           },
           {
             "code": "MAINTENANCE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Maintenance"
           },
           {
             "code": "PHENOMENON_TIME",
+            "enumerationItemStatusCode": "VALID",
             "name": "Phenomenon Time"
           },
           {
             "code": "RESULT_TIME",
+            "enumerationItemStatusCode": "VALID",
             "name": "Result Time"
           }
         ]
-      }
+      },
+      "name": "DateContext",
+      "scopes": [
+        "TimeScope"
+      ]
     },
     {
-      "representationCode": "Role",
-      "name": "Role",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Role",
       "description": "Defines the role a Party is performing in the given situation",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "PartyRole"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "UNKNOWN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Unknown"
           },
           {
             "code": "AUTHORIZER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Authorizer"
           },
           {
             "code": "CROP_ADVISOR",
+            "enumerationItemStatusCode": "VALID",
             "name": "Crop Advisor"
           },
           {
             "code": "CUSTOMER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Customer"
           },
           {
             "code": "CUSTOM_SERVICE_PROVIDER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Custom Service Provider"
           },
           {
             "code": "DATA_SERVICES_PROVIDER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Data Services Provider"
           },
           {
             "code": "END_USER",
+            "enumerationItemStatusCode": "VALID",
             "name": "End User"
           },
           {
             "code": "FARM_MANAGER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Farm Manager"
           },
           {
             "code": "FINANCIER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Financier"
           },
           {
             "code": "STATIONARY_ASSET_SUPPLIER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Stationary Asset Supplier"
           },
           {
             "code": "GOVERNMENT_AGENCY",
+            "enumerationItemStatusCode": "VALID",
             "name": "Government Agency"
           },
           {
             "code": "GROWER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Grower"
           },
           {
             "code": "INPUT_SUPPLIER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Input Supplier"
           },
           {
             "code": "INSURANCE_AGENT",
+            "enumerationItemStatusCode": "VALID",
             "name": "Insurance Agent"
           },
           {
             "code": "IRRIGATION_MANAGER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Irrigation Manager"
           },
           {
             "code": "LABORER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Laborer"
           },
           {
             "code": "MARKET_ADVISOR",
+            "enumerationItemStatusCode": "VALID",
             "name": "Market Advisor"
           },
           {
             "code": "MARKET_PROVIDER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Market Provider"
           },
           {
             "code": "MOBILE_ASSET_SUPPLIER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Mobile Asset Supplier"
           },
           {
             "code": "OPERATOR",
+            "enumerationItemStatusCode": "VALID",
             "name": "Operator"
           },
           {
             "code": "OWNER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Owner"
           },
           {
             "code": "TRANSPORTER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Transporter"
           }
         ]
-      }
+      },
+      "name": "Role",
+      "scopes": [
+        "PartyRole"
+      ]
     },
     {
-      "representationCode": "PartyType",
-      "name": "PartyType",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Party"
-        }
-      ],
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "PartyType",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "UNKNOWN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Unknown"
           },
           {
             "code": "BUSINESS",
+            "enumerationItemStatusCode": "VALID",
             "name": "Business"
           },
           {
             "code": "INDIVIDUAL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Individual"
           }
         ]
-      }
+      },
+      "name": "PartyType",
+      "scopes": [
+        "Party"
+      ]
     },
     {
-      "representationCode": "AddressContactType",
-      "name": "AddressContactType",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Contact Info"
-        }
-      ],
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "AddressContactType",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "PHYSICAL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Physical"
           },
           {
             "code": "POSTAL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Postal"
           },
           {
             "code": "LEGAL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Legal"
           }
         ]
-      }
+      },
+      "name": "AddressContactType",
+      "scopes": [
+        "Contact Info"
+      ]
     },
     {
-      "representationCode": "TelecommunicationContactType",
-      "name": "TelecommunicationContactType",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Contact Info"
-        }
-      ],
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "TelecommunicationContactType",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "FIXED_PHONE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Fixed Phone"
           },
           {
             "code": "MOBILE_PHONE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Mobile Phone"
           },
           {
             "code": "FAX",
+            "enumerationItemStatusCode": "VALID",
             "name": "Fax"
           },
           {
             "code": "EMAIL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Email"
           }
         ]
-      }
+      },
+      "name": "TelecommunicationContactType",
+      "scopes": [
+        "Contact Info"
+      ]
     },
     {
-      "representationCode": "LayerType",
-      "name": "LayerType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "LayerType",
       "description": "Classification of a Reference Layer",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Reference Layer"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "OTHER",
-            "name": "Other",
-            "description": "A type of Reference Layer not otherwise included in this list"
+            "description": "A type of Reference Layer not otherwise included in this list",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Other"
           },
           {
             "code": "IMAGERY",
-            "name": "Imagery",
-            "description": "Specific imagery to be used by the data consumer"
+            "description": "Specific imagery to be used by the data consumer",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Imagery"
           },
           {
             "code": "ADMINISTRATIVE_BOUNDARIES",
-            "name": "Administrative Boundaries",
-            "description": "Comprehensive field boundaries as defined by a governmental or other external entity"
+            "description": "Comprehensive field boundaries as defined by a governmental or other external entity",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Administrative Boundaries"
           },
           {
             "code": "ELEVATION",
-            "name": "Elevation",
-            "description": "Predefined elevation contours to be used by the data consumer"
+            "description": "Predefined elevation contours to be used by the data consumer",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Elevation"
           },
           {
             "code": "MANAGEMENT_ZONE",
-            "name": "Management Zone",
-            "description": "Features used or to be used in preparing agronomic recommendations."
+            "description": "Features used or to be used in preparing agronomic recommendations.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Management Zone"
           },
           {
             "code": "PROFIT",
-            "name": "Profit",
-            "description": "Pre-calculated farm profit data to be used by the data consumer"
+            "description": "Pre-calculated farm profit data to be used by the data consumer",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Profit"
           },
           {
             "code": "SOIL_TYPE",
-            "name": "Soil Type",
-            "description": "Features grouping ground sharing common soil taxonomic classification"
+            "description": "Features grouping ground sharing common soil taxonomic classification",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Soil Type"
           },
           {
             "code": "VARIETY_LOCATOR",
-            "name": "Variety Locator",
-            "description": "Features grouping planted varieties for use in spatial identification during harvest"
+            "description": "Features grouping planted varieties for use in spatial identification during harvest",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Variety Locator"
           },
           {
             "code": "OBSTACLES",
-            "name": "Obstacles",
-            "description": "General obstacles outside of the context of specific fields. For field-specific obstacles, use FieldBoundary.Obstacles."
+            "description": "General obstacles outside of the context of specific fields. For field-specific obstacles, use FieldBoundary.Obstacles.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Obstacles"
           }
         ]
-      }
+      },
+      "name": "LayerType",
+      "scopes": [
+        "Reference Layer"
+      ]
     },
     {
-      "representationCode": "LoadType",
-      "name": "LoadType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "LoadType",
       "description": "Classification of a Load Document",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Load"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "UNKNOWN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Unknown"
           },
           {
             "code": "TANK",
+            "enumerationItemStatusCode": "VALID",
             "name": "Tank"
           },
           {
             "code": "FIELD",
+            "enumerationItemStatusCode": "VALID",
             "name": "Field"
           },
           {
             "code": "TRUCK",
+            "enumerationItemStatusCode": "VALID",
             "name": "Truck"
           },
           {
             "code": "BALE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Bale"
           },
           {
             "code": "MODULE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Module"
           }
         ]
-      }
+      },
+      "name": "LoadType",
+      "scopes": [
+        "Load"
+      ]
     },
     {
-      "representationCode": "ProductType",
-      "name": "ProductType",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Product"
-        }
-      ],
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ProductType",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "NOT_SPECIFIED",
+            "enumerationItemStatusCode": "VALID",
             "name": "Not Specified"
           },
           {
             "code": "SEED",
-            "name": "Seed",
-            "description": "Undeveloped plant embryos"
+            "description": "Undeveloped plant embryos",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Seed"
           },
           {
             "code": "PLANT",
-            "name": "Plant",
-            "description": "Any stage of a plants other than seed used to initiate cultivation"
+            "description": "Any stage of a plants other than seed used to initiate cultivation",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Plant"
           },
           {
             "code": "FERTILIZER_CHEMICAL",
-            "name": "Fertilizer Chemical",
-            "description": "A synthetic crop nutrition product"
+            "description": "A synthetic crop nutrition product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Fertilizer Chemical"
           },
           {
             "code": "FERTILIZER_ORGANIC",
-            "name": "Fertilizer Organic",
-            "description": "An organic crop nutrition product"
+            "description": "An organic crop nutrition product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Fertilizer Organic"
           },
           {
             "code": "HERBICIDE",
-            "name": "Herbicide",
-            "description": "A weed control product"
+            "description": "A weed control product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Herbicide"
           },
           {
             "code": "INSECTICIDE",
-            "name": "Insecticide",
-            "description": "An insect control product"
+            "description": "An insect control product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Insecticide"
           },
           {
             "code": "FUNGICIDE",
-            "name": "Fungicide",
-            "description": "A fungus control product"
+            "description": "A fungus control product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Fungicide"
           },
           {
             "code": "RODENTICIDE",
-            "name": "Rodenticide",
-            "description": "A rodent control product"
+            "description": "A rodent control product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Rodenticide"
           },
           {
             "code": "NEMATICIDE",
-            "name": "Nematicide",
-            "description": "A nematode control product"
+            "description": "A nematode control product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Nematicide"
           },
           {
             "code": "SPRAY_ADJUVANT",
-            "name": "Spray Adjuvant",
-            "description": "Any substance added to a liquid spray product to enhance its performance"
+            "description": "Any substance added to a liquid spray product to enhance its performance",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Spray Adjuvant"
           },
           {
             "code": "NITROGEN_STABILIZER",
-            "name": "Nitrogen Stabilizer",
-            "description": "A product to limit soil nitrogen loss"
+            "description": "A product to limit soil nitrogen loss",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Nitrogen Stabilizer"
           },
           {
             "code": "GROWTH_REGULATOR",
-            "name": "Growth Regulator",
-            "description": "Non-nutrient chemicals that modify plant growth"
+            "description": "Non-nutrient chemicals that modify plant growth",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Growth Regulator"
           },
           {
             "code": "FEED",
-            "name": "Feed",
-            "description": "An animal nutrition product"
+            "description": "An animal nutrition product",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Feed"
           },
           {
             "code": "WATER",
-            "name": "Water",
-            "description": "Used for plant irrigation, animal hydration or as a spray carrier"
+            "description": "Used for plant irrigation, animal hydration or as a spray carrier",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Water"
           },
           {
             "code": "HARVESTED_PRODUCT",
-            "name": "Harvested Product",
-            "description": "The product harvested from the Crop on a Field"
+            "description": "The product harvested from the Crop on a Field",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Harvested Product"
           },
           {
             "code": "DEFOLIANT",
-            "name": "Defoliant",
-            "description": "A product used to remove the leaves on a cultivated crop before harvest.  When used to control weeds, use Herbicide above."
+            "description": "A product used to remove the leaves on a cultivated crop before harvest.  When used to control weeds, use Herbicide above.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Defoliant"
           },
           {
             "code": "MIX",
-            "name": "Mix",
-            "description": "Multiple products combined together to be applied simultaneously.   Configure Product.ProductComponents to define mix contents."
+            "description": "Multiple products combined together to be applied simultaneously.   Configure Product.ProductComponents to define mix contents.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Mix"
           }
         ]
-      }
+      },
+      "name": "ProductType",
+      "scopes": [
+        "Product"
+      ]
     },
     {
-      "representationCode": "ProductStatus",
-      "name": "ProductStatus",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ProductStatus",
       "description": "Whether a Product is in active usage",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Product"
-        },
-        {
-          "representationScopeCode": "Packaged Product"
-        },
-        {
-          "representationScopeCode": "Container Model"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "ACTIVE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Active"
           },
           {
             "code": "INACTIVE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Inactive"
           }
         ]
-      }
+      },
+      "name": "ProductStatus",
+      "scopes": [
+        "Product",
+        "Packaged Product",
+        "Container Model"
+      ]
     },
     {
-      "representationCode": "ProductForm",
-      "name": "ProductForm",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ProductForm",
       "description": "The physical form of a Product",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Product"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "UNKNOWN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Unknown"
           },
           {
             "code": "GAS",
+            "enumerationItemStatusCode": "VALID",
             "name": "Gas"
           },
           {
             "code": "LIQUID",
+            "enumerationItemStatusCode": "VALID",
             "name": "Liquid"
           },
           {
             "code": "SOLID",
+            "enumerationItemStatusCode": "VALID",
             "name": "Solid"
           }
         ]
-      }
+      },
+      "name": "ProductForm",
+      "scopes": [
+        "Product"
+      ]
     },
     {
-      "representationCode": "DocumentRelationshipType",
-      "name": "DocumentRelationshipType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DocumentRelationshipType",
       "description": "How one Adapt Document relates to another.",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "DocumentCorrelation"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "CAUSAL",
-            "name": "Causal",
-            "description": "Data in the originating document caused this document to be created."
+            "description": "Data in the originating document caused this document to be created.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Causal"
           },
           {
             "code": "CONTEXTUAL",
-            "name": "Contextual",
-            "description": "The originating document is used to inform this document."
+            "description": "The originating document is used to inform this document.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Contextual"
           },
           {
             "code": "COMPOSITIONAL",
-            "name": "Compositional",
-            "description": "This document is partially composed by the originating document."
+            "description": "This document is partially composed by the originating document.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Compositional"
           }
         ]
-      }
+      },
+      "name": "DocumentRelationshipType",
+      "scopes": [
+        "DocumentCorrelation"
+      ]
     },
     {
-      "representationCode": "CropNutritionIngredient",
-      "name": "CropNutritionIngredient",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "CropNutritionIngredient",
       "description": "Defines base nutrients in fertilizers",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Ingredient"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "NITROGEN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Nitrogen"
           },
           {
             "code": "PHOSPHORUS",
+            "enumerationItemStatusCode": "VALID",
             "name": "Phosphorus"
           },
           {
             "code": "POTASSIUM",
+            "enumerationItemStatusCode": "VALID",
             "name": "Potassium"
           },
           {
             "code": "CALCIUM",
+            "enumerationItemStatusCode": "VALID",
             "name": "Calcium"
           },
           {
             "code": "MAGNESIUM",
+            "enumerationItemStatusCode": "VALID",
             "name": "Magnesium"
           },
           {
             "code": "SULPHUR",
+            "enumerationItemStatusCode": "VALID",
             "name": "Sulphur"
           },
           {
             "code": "BORON",
+            "enumerationItemStatusCode": "VALID",
             "name": "Boron"
           },
           {
             "code": "CHLORINE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Chlorine"
           },
           {
             "code": "COPPER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Copper"
           },
           {
             "code": "IRON",
+            "enumerationItemStatusCode": "VALID",
             "name": "Iron"
           },
           {
             "code": "MANGANESE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Manganese"
           },
           {
             "code": "MOLYBDENUM",
+            "enumerationItemStatusCode": "VALID",
             "name": "Molybdenum"
           },
           {
             "code": "ZINC",
+            "enumerationItemStatusCode": "VALID",
             "name": "Zinc"
           },
           {
             "code": "FULVIC_ACID",
+            "enumerationItemStatusCode": "VALID",
             "name": "Fulvic Acid"
           },
           {
             "code": "HUMIC_ACID",
+            "enumerationItemStatusCode": "VALID",
             "name": "Humic Acid"
           }
         ]
-      }
+      },
+      "name": "CropNutritionIngredient",
+      "scopes": [
+        "Ingredient"
+      ]
     },
     {
-      "representationCode": "GuidancePatternType",
-      "name": "GuidancePatternType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GuidancePatternType",
       "description": "Classification of a Guidance Pattern",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Guidance Pattern"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "AB_LINE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Ab Line"
           },
           {
             "code": "A+",
+            "enumerationItemStatusCode": "VALID",
             "name": "A+"
           },
           {
             "code": "CURVE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Curve"
           },
           {
             "code": "CENTER_PIVOT",
+            "enumerationItemStatusCode": "VALID",
             "name": "Center Pivot"
           },
           {
             "code": "SPIRAL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Spiral"
           }
         ]
-      }
+      },
+      "name": "GuidancePatternType",
+      "scopes": [
+        "Guidance Pattern"
+      ]
     },
     {
-      "representationCode": "GuidancePatternExtension",
-      "name": "GuidancePatternExtension",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GuidancePatternExtension",
       "description": "Specifies how a Guidance Pattern should be extended",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Guidance Pattern"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "NONE",
+            "enumerationItemStatusCode": "VALID",
             "name": "None"
           },
           {
             "code": "FROM_BOTH_POINTS",
+            "enumerationItemStatusCode": "VALID",
             "name": "From Both Points"
           },
           {
             "code": "FROM_A",
+            "enumerationItemStatusCode": "VALID",
             "name": "From A"
           },
           {
             "code": "FROM_B",
+            "enumerationItemStatusCode": "VALID",
             "name": "From B"
           }
         ]
-      }
+      },
+      "name": "GuidancePatternExtension",
+      "scopes": [
+        "Guidance Pattern"
+      ]
     },
     {
-      "representationCode": "GuidancePatternPropagationDirection",
-      "name": "GuidancePatternPropagationDirection",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GuidancePatternPropagationDirection",
       "description": "Specifies the direction(s) a Guidance Pattern should be propagated",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Guidance Pattern:"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "NO_PROPAGATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "No Propagation"
           },
           {
             "code": "BOTH_DIRECTIONS",
+            "enumerationItemStatusCode": "VALID",
             "name": "Both Directions"
           },
           {
             "code": "LEFT_ONLY",
+            "enumerationItemStatusCode": "VALID",
             "name": "Left Only"
           },
           {
             "code": "RIGHT_ONLY",
+            "enumerationItemStatusCode": "VALID",
             "name": "Right Only"
           }
         ]
-      }
+      },
+      "name": "GuidancePatternPropagationDirection",
+      "scopes": [
+        "Guidance Pattern:"
+      ]
     },
     {
-      "representationCode": "DataDefinitionBaseType",
-      "name": "DataDefinitionBaseType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DataDefinitionBaseType",
       "description": "The root type of a Data Type Definition",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Data Type Definition"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "NUMERIC",
+            "enumerationItemStatusCode": "VALID",
             "name": "Numeric"
           },
           {
             "code": "ENUMERATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Enumeration"
           },
           {
             "code": "TEXT",
+            "enumerationItemStatusCode": "VALID",
             "name": "Text"
           },
           {
             "code": "BOOLEAN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Boolean"
           }
         ]
-      }
+      },
+      "name": "DataDefinitionBaseType",
+      "scopes": [
+        "Data Type Definition"
+      ]
     },
     {
-      "representationCode": "NumericDataType",
-      "name": "NumericDataType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "NumericDataType",
       "description": "Specifies how a numeric value is to be encoded in accompanying binary data",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Data Type Definition"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "INTEGER",
-            "name": "Integer",
-            "description": "A whole number, potentially negative"
+            "description": "A whole number, potentially negative",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Integer"
           },
           {
             "code": "DOUBLE",
-            "name": "Double",
-            "description": "An IEEE 753 Double precision floating point value"
+            "description": "An IEEE 753 Double precision floating point value",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Double"
           }
         ]
-      }
+      },
+      "name": "NumericDataType",
+      "scopes": [
+        "Data Type Definition"
+      ]
     },
     {
-      "representationCode": "Scope",
-      "name": "Scope",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Scope",
       "description": "Adapt component to which a Data Type Definition is relevant",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Data Type Definition"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "BRAND",
+            "enumerationItemStatusCode": "VALID",
             "name": "Brand"
           },
           {
             "code": "CATALOG",
+            "enumerationItemStatusCode": "VALID",
             "name": "Catalog"
           },
           {
             "code": "CONTACT_INFO",
+            "enumerationItemStatusCode": "VALID",
             "name": "Contact Info"
           },
           {
             "code": "CROP",
+            "enumerationItemStatusCode": "VALID",
             "name": "Crop"
           },
           {
             "code": "CROP_ZONE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Crop Zone"
           },
           {
             "code": "DEVICE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Device"
           },
           {
             "code": "DEVICE_CONFIGURATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Device Configuration"
           },
           {
             "code": "DEVICE_MODEL",
+            "enumerationItemStatusCode": "VALID",
             "name": "Device Model"
           },
           {
             "code": "FARM",
+            "enumerationItemStatusCode": "VALID",
             "name": "Farm"
           },
           {
             "code": "FIELD",
+            "enumerationItemStatusCode": "VALID",
             "name": "Field"
           },
           {
             "code": "FIELD_BOUNDARY",
+            "enumerationItemStatusCode": "VALID",
             "name": "Field Boundary"
           },
           {
             "code": "GROWER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Grower"
           },
           {
             "code": "GUIDANCE_ALLOCATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Guidance Allocation"
           },
           {
             "code": "GUIDANCE_GROUP",
+            "enumerationItemStatusCode": "VALID",
             "name": "Guidance Group"
           },
           {
             "code": "GUIDANCE_PATTERN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Guidance Pattern"
           },
           {
             "code": "HEADLAND",
+            "enumerationItemStatusCode": "VALID",
             "name": "Headland"
           },
           {
             "code": "INGREDIENT",
+            "enumerationItemStatusCode": "VALID",
             "name": "Ingredient"
           },
           {
             "code": "LOAD",
+            "enumerationItemStatusCode": "VALID",
             "name": "Load"
           },
           {
             "code": "MANUFACTURER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Manufacturer"
           },
           {
             "code": "OBSTACLE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Obstacle"
           },
           {
             "code": "OPERATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Operation"
           },
           {
             "code": "PARTY",
+            "enumerationItemStatusCode": "VALID",
             "name": "Party"
           },
           {
             "code": "PARTY_ROLE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Party Role"
           },
           {
             "code": "PLAN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Plan"
           },
           {
             "code": "PRODUCT",
+            "enumerationItemStatusCode": "VALID",
             "name": "Product"
           },
           {
             "code": "RECOMMENDATION",
+            "enumerationItemStatusCode": "VALID",
             "name": "Recommendation"
           },
           {
             "code": "REFERENCE_LAYER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Reference Layer"
           },
           {
             "code": "SEASON",
+            "enumerationItemStatusCode": "VALID",
             "name": "Season"
           },
           {
             "code": "SUMMARY_VALUE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Summary Value"
           },
           {
             "code": "TRAIT",
+            "enumerationItemStatusCode": "VALID",
             "name": "Trait"
           },
           {
             "code": "VARIABLE",
+            "enumerationItemStatusCode": "VALID",
             "name": "Variable"
           },
           {
             "code": "WORK_ORDER",
+            "enumerationItemStatusCode": "VALID",
             "name": "Work Order"
           },
           {
             "code": "WORK_RECORD",
+            "enumerationItemStatusCode": "VALID",
             "name": "Work Record"
           }
         ]
-      }
+      },
+      "name": "Scope",
+      "scopes": [
+        "Data Type Definition"
+      ]
     },
     {
-      "representationCode": "OperationType",
-      "name": "OperationType",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "OperationType",
       "description": "Classification of Field Operation",
-      "representationBaseTypeCode": "Enumeration",
-      "scopes": [
-        {
-          "representationScopeCode": "Operation"
-        },
-        {
-          "representationScopeCode": "Work Item Operation\nPrescription"
-        }
-      ],
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
             "code": "UNKNOWN",
+            "enumerationItemStatusCode": "VALID",
             "name": "Unknown"
           },
           {
             "code": "APPLICATION_GENERAL",
-            "name": "Application General",
-            "description": "Applying input(s) to a Field for purposes not otherwise specified in this list."
+            "description": "Applying input(s) to a Field for purposes not otherwise specified in this list, or involving individual product mixes that cross types. Examples include spreading lime, and applying a product mix with a liquid fertilizer carrier and crop protection ingredients. Seeds with crop protection treatments, however, should be classified as APPLICATION_SOWING_AND_PLANTING. Also note that where multiple products of different types are applied in a single pass, data should be configured in separate operations by type.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Application General"
           },
           {
             "code": "APPLICATION_FERTILIZING",
-            "name": "Application Fertilizing",
-            "description": "Applying crop nutrition input(s) to a Field."
+            "description": "Applying crop nutrition input(s) to a Field.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Application Fertilizing"
           },
           {
             "code": "APPLICATION_SOWING_AND_PLANTING",
-            "name": "Application Sowing And Planting",
-            "description": "Introducing the seeds or other plant material into a field."
+            "description": "Introducing the seeds or other plant material into a field.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Application Sowing And Planting"
           },
           {
             "code": "APPLICATION_CROP_PROTECTION",
-            "name": "Application Crop Protection",
-            "description": "Applying crop protection input(s) to a Field."
+            "description": "Applying crop protection input(s) to a Field.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Application Crop Protection"
           },
           {
             "code": "APPLICATION_IRRIGATION",
-            "name": "Application Irrigation",
-            "description": "Applying water to a Field for the purpose of irrigation."
+            "description": "Applying water to a Field for the purpose of irrigation.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Application Irrigation"
           },
           {
-            "code": "HARVEST_GENERAL",
-            "name": "Harvest General",
-            "description": "Harvesting a Field through means not otherwise specified in this list, including combining"
+            "code": "FIELD_PREPARATION_GENERAL",
+            "description": "Non-tillage activities to prepare a field for cultivation including chopping stover, picking rocks, leveling a field, building borders in flood-irrigated fields, shaping beds, etc.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Field Preparation General"
           },
           {
-            "code": "HARVEST_FORAGE_CHOPPING",
-            "name": "Harvest Forage Chopping",
-            "description": "Harvesting a Field with a forage chopper"
+            "code": "FIELD_PREPARATION_TILLAGE",
+            "description": "Ground engaging operation to size and incorporate residue or alter the soil structure for future cultivation.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Field Preparation Tillage"
           },
           {
-            "code": "HARVEST_BALING",
-            "name": "Harvest Baling",
-            "description": "Harvesting a crop into bales"
+            "code": "HARVEST_PRE_HARVEST",
+            "description": "In-field activities in preparation of harvest that are tracked separately, usually involving separate passes over the field from the harvest itself. Examples include swathing grain, mowing, raking and tedding hay, and removing foliage from or turning over root crops.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Harvest Pre Harvest"
           },
           {
-            "code": "HARVEST_MOWING_AND_SWATHING",
-            "name": "Harvest Mowing And Swathing",
-            "description": "Cutting the crop to be dried in the Field before a subsequent harvest operation."
+            "code": "HARVEST",
+            "description": "The specific activity of gathering the cultivated crop from its growing location converting it into a product. Examples include combining grain, chopping forage, baling hay, picking cotton or fruit.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Harvest"
           },
           {
-            "code": "HARVEST_WRAPPING",
-            "name": "Harvest Wrapping",
-            "description": "The activity of wrapping the harvested crop in protective material"
-          },
-          {
-            "code": "TILLAGE",
-            "name": "Tillage",
-            "description": "Mechanical preparation of soil for cultivation"
+            "code": "HARVEST_POST_HARVEST",
+            "description": "In-field activities following the actual harvest that are tracked separately, usually involving separate passes over the field from the harvest itself. Examples include carting grain, wrapping and hauling bales.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Harvest Post Harvest"
           },
           {
             "code": "OBSERVATION_GENERAL",
-            "name": "Observation General",
-            "description": "A Field Observation activity such as scouting or soil testing"
+            "description": "A Field Observation activity such as scouting or soil testing.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Observation General"
           },
           {
             "code": "VEHICLE_DATA_COLLECTION_GENERAL",
-            "name": "Vehicle Data Collection General",
-            "description": "The activity of collecting data from the tractor or other vehicle, often alongside another Operation Type or in transport between Fields."
+            "description": "The activity of collecting data from the tractor or other vehicle, often alongside another Operation Type or in transport between Fields.   Examples include fuel level and oil pressure.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Vehicle Data Collection General"
           }
         ]
-      }
-    },
-    {
-      "representationCode": "Timestamp",
-      "name": "Timestamp",
-      "representationBaseTypeCode": "Text",
+      },
+      "name": "OperationType",
       "scopes": [
-        {
-          "representationScopeCode": "Variable"
-        }
+        "Operation"
       ]
     },
     {
-      "representationCode": "US-EPA-RegistrationNumber",
-      "name": "US-EPA-RegistrationNumber",
-      "representationBaseTypeCode": "Text",
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "DataDefinitionStatus",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "VALID",
+            "description": "The entry is actively being used for new and existing data.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Valid"
+          },
+          {
+            "code": "INVALID",
+            "description": "The entry should not be used, because it is in error or otherwise unsuitable for use. It is kept in the infrastructure for forensic / reference purposes.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Invalid"
+          },
+          {
+            "code": "RETIRED",
+            "description": "The entry should not be used to support new data. It was valid in the past, and retained to support historic data. It is not automatically assumed to have been replaced by a new, valid entry.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Retired"
+          },
+          {
+            "code": "SUPERSEDED",
+            "description": "The entry should not be used to support new data, because there is a new item that should be used instead. The item in question was valid in the past, and is retained in order to support historic data. It is assumed to have been replaced by a new, valid entry, which it will reference.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Superseded"
+          },
+          {
+            "code": "CANDIDATE",
+            "description": "The entry is in a proposed state.  There is no expectation that data consumers support it until it is promoted to VALID.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Candidate"
+          }
+        ]
+      },
+      "name": "DataDefinitionStatus",
       "scopes": [
-        {
-          "representationScopeCode": "Product"
-        }
-      ],
+        "Data Type Definition"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "TEXT",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Timestamp",
+      "name": "Timestamp",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "TEXT",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "US-EPA-RegistrationNumber",
       "geoPoliticalContexts": [
         {
-          "ISO3166-2Code": "ISO 3166-2:US"
+          "iSO3166-2Code": "ISO 3166-2:US"
         }
+      ],
+      "name": "US-EPA-RegistrationNumber",
+      "scopes": [
+        "Product"
       ]
     },
     {
-      "representationCode": "GS1-GLN",
+      "dataDefinitionBaseTypeCode": "TEXT",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GS1-GLN",
       "name": "GS1-GLN",
-      "representationBaseTypeCode": "Text",
       "scopes": [
-        {
-          "representationScopeCode": "Farm"
-        },
-        {
-          "representationScopeCode": "Field"
-        }
+        "Farm",
+        "Field"
       ]
     }
-  ]
+  ],
+  "version": "1.0.0-alpha.2"
 }
