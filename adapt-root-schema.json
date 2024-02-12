@@ -1,24 +1,24 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://adaptstandard.org/root/1.0.0-alpha.1",
+  "$id": "https://adaptstandard.org/root/1.0.0-alpha.2",
   "type": "object",
-  "description": "Top level entity within an Adapt data instance, assembling all available data.  Serialized to file as \"adapt.json\"",
+  "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
   "properties": {
     "catalog": {
       "$ref": "#/$defs/catalog",
-      "description": "Data container for types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications."
+      "description": "Container for data types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications."
     },
     "documents": {
       "$ref": "#/$defs/documents",
-      "description": "Transactional data"
+      "description": "Container for transactional, frequently changing data.   Documents will necessarily reference master data defined in the Catalog."
     },
     "dataTypeDefinitionVersion": {
       "$ref": "#/$defs/dataTypeDefinitionVersion",
-      "description": "Version of a Data Type Definition.  Uses Semantic Versioning to identify updates to the entirety of the standard Data Types Definition list."
+      "description": "Version of the Standard Data Type Definitions used.  If omitted, the current version is assumed."
     },
     "unitSystemVersion": {
       "$ref": "#/$defs/unitSystemVersion",
-      "description": "Version identifier describing the Adapt Unit System used throughout the model.   If omitted, the current version is assumed."
+      "description": "Version identifier describing the ADAPT Unit System used throughout the model.   If omitted, the current version is assumed."
     }
   },
   "$defs": {
@@ -28,7 +28,7 @@
     },
     "activeBoundaryId": {
       "type": "string",
-      "description": "The Reference Id of the FieldBoundary currently active for this field"
+      "description": "An id mapping to the Reference Id of a Field Boundary, representing the one boundary that is current"
     },
     "addressContactTypeCode": {
       "type": "string",
@@ -48,7 +48,7 @@
     },
     "brandId": {
       "type": "string",
-      "description": "A mapping id to a Brand."
+      "description": "An id mapping to the Reference Id of a Brand"
     },
     "centerPoint": {
       "type": "string",
@@ -60,7 +60,7 @@
     },
     "code": {
       "type": "string",
-      "description": "Integer code for item.   Required."
+      "description": "Code for the item, taken from the list of valid codes for a given Enumerated Data Type Definition.   Required."
     },
     "country": {
       "type": "string",
@@ -72,7 +72,7 @@
     },
     "cropId": {
       "type": "string",
-      "description": "A mapping id to a Crop"
+      "description": "An id mapping to the Reference Id of a Crop"
     },
     "cropNutritionIngredientItemCode": {
       "type": "string",
@@ -80,11 +80,15 @@
     },
     "cropZoneId": {
       "type": "string",
-      "description": "A mapping id to a Crop Zone"
+      "description": "An id mapping to the Reference Id of a Crop Zone"
     },
     "dataDefinitionBaseTypeCode": {
       "type": "string",
       "description": "The code that identifies the enumeration item value from the Data Definition Base Type data type definition"
+    },
+    "dataDefinitionStatusCode": {
+      "type": "string",
+      "description": "The code that identifies the enumeration item value from the Data Definition Status data type definition"
     },
     "dataTypeDefinitionVersion": {
       "type": "number",
@@ -112,11 +116,11 @@
     },
     "deviceId": {
       "type": "string",
-      "description": "Mapping to a Device"
+      "description": "An id mapping to the Reference Id of a Device"
     },
     "deviceModelId": {
       "type": "string",
-      "description": "Mapping to a Device Model component"
+      "description": "An id mapping to the Reference Id of a Device Model"
     },
     "deviceSeries": {
       "type": "string",
@@ -138,13 +142,17 @@
       "type": "string",
       "description": "Coordinates for the end point of an object"
     },
+    "enumerationItemStatusCode": {
+      "type": "string",
+      "description": "The code that identifies the enumeration item value from the Data Definition Status data type definition"
+    },
     "farmId": {
       "type": "string",
-      "description": "Mapping to a farm containing this field"
+      "description": "An id mapping to the Reference Id of a Farm"
     },
     "fieldId": {
       "type": "string",
-      "description": "Reference to the field"
+      "description": "An id mapping to the Reference Id of a Field"
     },
     "fileDataIndex": {
       "type": "integer",
@@ -158,21 +166,17 @@
       "type": "string",
       "description": "The geometry of an object in Well Known Text"
     },
-    "gNSSSourceType": {
-      "type": "string",
-      "description": "Description of the GNSS Source Type.  E.g., RTK."
-    },
     "gNSSUTCTime": {
       "type": "string",
       "description": "The UTC time as reported by GNSS"
     },
     "growerId": {
       "type": "string",
-      "description": "Reference Id of the Grower entity that is a parent to this Farm"
+      "description": "An id mapping to the Reference Id of a Grower"
     },
     "guidanceGroupId": {
       "type": "string",
-      "description": "A mapping to a Guidance Group"
+      "description": "An id mapping to the Reference Id of a Guidance Group"
     },
     "guidancePatternExtensionCode": {
       "type": "string",
@@ -180,7 +184,7 @@
     },
     "guidancePatternId": {
       "type": "string",
-      "description": "Mapping to a guidance pattern"
+      "description": "An id mapping to the Reference Id of a Guidance Pattern"
     },
     "guidancePatternPropagationDirectionCode": {
       "type": "string",
@@ -242,10 +246,6 @@
       "type": "boolean",
       "description": "Whether the boundary may be crossed with a vehicle, e.g., a grass waterway (true) vs. a rock pile (false)"
     },
-    "isRetired": {
-      "type": "boolean",
-      "description": "Whether a concept has been retired."
-    },
     "iSO3166-2Code": {
       "type": "string",
       "description": "Code for a geographic region, as defined by ISO 3166-2.   I.e., a two-digit code for the country, followed by a code for the subdivision.  E.g., US-CA for California."
@@ -268,7 +268,7 @@
     },
     "loadId": {
       "type": "string",
-      "description": "Mapping to a Load component."
+      "description": "An id mapping to the Reference Id of a Load"
     },
     "loadNumber": {
       "type": "string",
@@ -284,7 +284,7 @@
     },
     "manufacturerId": {
       "type": "string",
-      "description": "A mapping id to a manufacturer"
+      "description": "An id mapping to the Reference Id of a Manufacturer."
     },
     "maximum": {
       "type": "number",
@@ -336,7 +336,7 @@
     },
     "originatingDocumentId": {
       "type": "string",
-      "description": "Foreign Key mapping to the originating Document."
+      "description": "An id mapping to the Reference Id of another document from which this document results"
     },
     "outOfFieldRate": {
       "type": "number",
@@ -344,15 +344,15 @@
     },
     "parentId": {
       "type": "string",
-      "description": "A mapping id to an object of the same type defined as the logical parent of the current object."
+      "description": "A mapping id to the Reference ID of an object of the same type defined as the logical parent of the current object."
     },
     "parentPartyId": {
       "type": "string",
-      "description": "Other Party that represents the logical parent to this Party within a hierarchy."
+      "description": "An id mapping to the Reference Id of another Party that represents the logical parent to this Party within a hierarchy."
     },
     "partyId": {
       "type": "string",
-      "description": "A mapping id to a Party"
+      "description": "An id mapping to the Reference Id of a Party"
     },
     "partyTypeCode": {
       "type": "string",
@@ -364,7 +364,7 @@
     },
     "prescribingOperationId": {
       "type": "string",
-      "description": "Any other Operation defined in this dataset that represents the preliminary Operation that prescribed this Operation."
+      "description": "Id mapping to the Reference ID of another Operation defined in this dataset representing the preliminary Operation that prescribed this Operation."
     },
     "productFormCode": {
       "type": "string",
@@ -372,7 +372,7 @@
     },
     "productId": {
       "type": "string",
-      "description": "Mapping to a single product"
+      "description": "An id mapping to the Reference Id of a Product"
     },
     "productStatusCode": {
       "type": "string",
@@ -388,7 +388,7 @@
     },
     "referenceLayerId": {
       "type": "string",
-      "description": "Id that maps to a Reference Layer"
+      "description": "An id mapping to the Reference Id of a Reference Layer"
     },
     "roleCode": {
       "type": "string",
@@ -400,7 +400,7 @@
     },
     "seasonId": {
       "type": "string",
-      "description": "Mapping to a Season"
+      "description": "An id mapping to the Reference Id of a Season"
     },
     "serialNumber": {
       "type": "string",
@@ -421,6 +421,10 @@
     "startPoint": {
       "type": "string",
       "description": "Coordinates for the start point of an object."
+    },
+    "supersededByCode": {
+      "type": "string",
+      "description": "Code identifying a different Data Type Definition or Enumeration Item that supersedes this item.  Required and relevant only when the status of the current item is SUPERSEDED."
     },
     "telecommunicationContactTypeCode": {
       "type": "string",
@@ -455,7 +459,7 @@
       "description": "For varieties, optional indicator to signify that the variety is genetically enhanced."
     },
     "version": {
-      "type": "number",
+      "type": "string",
       "description": "A version number"
     },
     "aPlusAttributes": {
@@ -597,7 +601,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -605,7 +609,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "manufacturerId": {
           "$ref": "#/$defs/manufacturerId",
@@ -625,26 +629,8 @@
       },
       "minItems": 1
     },
-    "capacity": {
-      "description": "Capacity",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
     "catalog": {
-      "description": "Data container for types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications.",
+      "description": "Container for data types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications.",
       "type": "object",
       "properties": {
         "description": {
@@ -653,67 +639,67 @@
         },
         "brands": {
           "$ref": "#/$defs/brands",
-          "description": "All Brands in the model instance"
+          "description": "All Brands in the data"
         },
         "crops": {
           "$ref": "#/$defs/crops",
-          "description": "All Crops in the model instance"
+          "description": "All Crops in the data"
         },
         "cropZones": {
           "$ref": "#/$defs/cropZones",
-          "description": "All Crop Zones in the model instance"
+          "description": "All Crop Zones in the data"
         },
         "customDataTypeDefinitions": {
           "$ref": "#/$defs/customDataTypeDefinitions",
-          "description": "All Custom Data Type Definitions in this data instance"
+          "description": "Any custom Data Type Definitions defined by the producer for this data.  By default, this list is empty and all definitions are sourced from the ADAPT Standard Data Type Definitions."
         },
         "deviceModels": {
           "$ref": "#/$defs/deviceModels",
-          "description": "All Device Models in the model instance"
+          "description": "All Device Models in the data"
         },
         "devices": {
           "$ref": "#/$defs/devices",
-          "description": "All Devices in the model instance"
+          "description": "All Devices in the data"
         },
         "farms": {
           "$ref": "#/$defs/farms",
-          "description": "All Farms in the model instance"
+          "description": "All Farms in the data"
         },
         "fieldBoundaries": {
           "$ref": "#/$defs/fieldBoundaries",
-          "description": "All Field Boundaries in the model instance"
+          "description": "All Field Boundaries in the data"
         },
         "fields": {
           "$ref": "#/$defs/fields",
-          "description": "All Fields in the model instance"
+          "description": "All Fields in the data"
         },
         "growers": {
           "$ref": "#/$defs/growers",
-          "description": "All Growers in the model instance"
+          "description": "All Growers in the data"
         },
         "guidanceGroups": {
           "$ref": "#/$defs/guidanceGroups",
-          "description": "All Guidance Groups in the model instance"
+          "description": "All Guidance Groups in the data"
         },
         "guidancePatterns": {
           "$ref": "#/$defs/guidancePatterns",
-          "description": "All Guidance Patterns in the model instance"
+          "description": "All Guidance Patterns in the data"
         },
         "manufacturers": {
           "$ref": "#/$defs/manufacturers",
-          "description": "All Manufacturers in the model instance"
+          "description": "All Manufacturers in the data"
         },
         "parties": {
           "$ref": "#/$defs/parties",
-          "description": "All Parties in the model instance"
+          "description": "All Parties in the data"
         },
         "products": {
           "$ref": "#/$defs/products",
-          "description": "All Products in the model instance"
+          "description": "All Products in the data"
         },
         "seasons": {
           "$ref": "#/$defs/seasons",
-          "description": "All Seasons in the model instance"
+          "description": "All Seasons in the data"
         }
       }
     },
@@ -723,7 +709,7 @@
       "properties": {
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "List of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "addressContactMethods": {
           "$ref": "#/$defs/addressContactMethods",
@@ -736,12 +722,12 @@
       }
     },
     "contextItem": {
-      "description": "Item in a list of Context Items",
+      "description": "Additional information with which a data element is tagged.",
       "type": "object",
       "properties": {
         "definitionCode": {
           "$ref": "#/$defs/definitionCode",
-          "description": "Code identifying a Data Type Definition, either in the standard list or within the Custom Data Type \nDefinitions in this data instance.  Required."
+          "description": "Code identifying a Data Type Definition, either in the ADAPT Standard Data Type Definitions or within the Catalog.Custom Data Type \nDefinitions.   Required."
         },
         "valueText": {
           "$ref": "#/$defs/valueText",
@@ -761,7 +747,7 @@
       ]
     },
     "contextItems": {
-      "description": "Collection of Context Items",
+      "description": "List of supplemental information with which a data element is tagged.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/contextItem"
@@ -778,7 +764,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -786,7 +772,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "parentId": {
           "$ref": "#/$defs/parentId",
@@ -807,7 +793,7 @@
       ]
     },
     "cropIds": {
-      "description": "Mappings to Crops",
+      "description": "Ids mapping to the Reference Id of a Crop",
       "type": "array",
       "items": {
         "$ref": "#/$defs/cropId"
@@ -881,7 +867,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -889,7 +875,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "timeScopes": {
           "$ref": "#/$defs/timeScopes",
@@ -937,7 +923,7 @@
       ]
     },
     "cropZoneIds": {
-      "description": "List of Crop Zone Ids",
+      "description": "Ids mapping to the Reference Id of a Crop Zone",
       "type": "array",
       "items": {
         "$ref": "#/$defs/cropZoneId"
@@ -968,98 +954,8 @@
       },
       "minItems": 1
     },
-    "dataLogDistanceInterval": {
-      "description": "The distance in which a Data Log Trigger is requested to log a new value.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "dataLogThresholdChange": {
-      "description": "Change in the output values range to trigger logging",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "dataLogThresholdMaximum": {
-      "description": "Maximum output value to trigger logging.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "dataLogThresholdMinimum": {
-      "description": "Minimum output value to trigger logging.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "dataLogTimeInterval": {
-      "description": "The time interval in which a Data Log Trigger is requested to log a new value.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
     "dataTypeDefinition": {
-      "description": "The defined definition of a type of data, as may exist either in a published list of standard types or to types defined within an individual ApplicationDataModel.",
+      "description": "The definition of a type of data, as may exist either in the published list of standard types or to types defined within an individual data instance.",
       "type": "object",
       "properties": {
         "definitionCode": {
@@ -1078,6 +974,14 @@
           "$ref": "#/$defs/dataDefinitionBaseTypeCode",
           "description": "The code that identifies the enumeration item value from the Data Definition Base Type data type definition.  Required."
         },
+        "dataDefinitionStatusCode": {
+          "$ref": "#/$defs/dataDefinitionStatusCode",
+          "description": "The code that identifies the enumeration item value from the Data Definition Status data type definition.  Required."
+        },
+        "supersededByCode": {
+          "$ref": "#/$defs/supersededByCode",
+          "description": "Code identifying a different Data Type Definition that replaces this one.  Required and relevant only when the status of the current item is SUPERSEDED."
+        },
         "scopes": {
           "$ref": "#/$defs/scopes",
           "description": "Any Scopes on the Data Type Representation"
@@ -1093,10 +997,6 @@
         "keywords": {
           "$ref": "#/$defs/keywords",
           "description": "Textual strings used for identification in searches.   Optional."
-        },
-        "isRetired": {
-          "$ref": "#/$defs/isRetired",
-          "description": "Indicator for data types that are retired from further usage.  Optional."
         },
         "numericDataTypeDefinitionAttributes": {
           "$ref": "#/$defs/numericDataTypeDefinitionAttributes",
@@ -1114,29 +1014,12 @@
       "required": [
         "definitionCode",
         "name",
-        "dataDefinitionBaseTypeCode"
+        "dataDefinitionBaseTypeCode",
+        "dataDefinitionStatusCode"
       ]
     },
     "density": {
       "description": "The density of the product (mass per volume)",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "depth": {
-      "description": "Irrigation Depth.",
       "type": "object",
       "properties": {
         "numericValue": {
@@ -1163,7 +1046,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1171,7 +1054,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "deviceModelId": {
           "$ref": "#/$defs/deviceModelId",
@@ -1193,7 +1076,7 @@
       "properties": {
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "List of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "deviceId": {
           "$ref": "#/$defs/deviceId",
@@ -1214,7 +1097,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1222,7 +1105,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "brandId": {
           "$ref": "#/$defs/brandId",
@@ -1273,55 +1156,37 @@
       ]
     },
     "documents": {
-      "description": "Single Documents component.",
+      "description": "Container for transactional, frequently changing data.   Documents will necessarily reference master data defined in the Catalog.",
       "type": "object",
       "properties": {
         "plans": {
           "$ref": "#/$defs/plans",
-          "description": "Any Plans"
+          "description": "All Plans in the data"
         },
         "recommendations": {
           "$ref": "#/$defs/recommendations",
-          "description": "Any Recommendations"
+          "description": "All Recommendations in the data"
         },
         "workOrders": {
           "$ref": "#/$defs/workOrders",
-          "description": "Any Work Order documents"
+          "description": "All Work Orders in the data"
         },
         "workRecords": {
           "$ref": "#/$defs/workRecords",
-          "description": "Any Work Records"
+          "description": "All Work Records in the data"
         },
         "loads": {
           "$ref": "#/$defs/loads",
-          "description": "Any Load documents describing harvest quantities."
+          "description": "All Loads in the data"
         },
         "referenceLayers": {
           "$ref": "#/$defs/referenceLayers",
-          "description": "List of any reference layers included in this instance.   E.g.s, Variety Locator layers for harvest, Soil Type layers."
+          "description": "All Reference Layers in the data"
         }
       }
     },
     "eastShift": {
       "description": "The shift East of a guidance pattern",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "endAngle": {
-      "description": "The end angle of a radial sector",
       "type": "object",
       "properties": {
         "numericValue": {
@@ -1361,7 +1226,7 @@
       "properties": {
         "code": {
           "$ref": "#/$defs/code",
-          "description": "Integer code for item.   Required."
+          "description": "Code for the item, taken from the list of valid codes for a given Enumerated Data Type Definition.   Required."
         },
         "name": {
           "$ref": "#/$defs/name",
@@ -1371,6 +1236,14 @@
           "$ref": "#/$defs/description",
           "description": "Optional description of item"
         },
+        "enumerationItemStatusCode": {
+          "$ref": "#/$defs/enumerationItemStatusCode",
+          "description": "The status of this Enumeration Item.  Required."
+        },
+        "supersededByCode": {
+          "$ref": "#/$defs/supersededByCode",
+          "description": "Code identifying a different Enumeration Item that supersedes this item.  Required and relevant only when the status of the current item is SUPERSEDED."
+        },
         "labels": {
           "$ref": "#/$defs/labels",
           "description": ""
@@ -1378,29 +1251,12 @@
       },
       "required": [
         "code",
-        "name"
+        "name",
+        "enumerationItemStatusCode"
       ]
     },
     "estimatedArea": {
       "description": "Numeric value for Estimated Area.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "estimatedEfficiency": {
-      "description": "Estimated Efficiency for an item.",
       "type": "object",
       "properties": {
         "numericValue": {
@@ -1445,7 +1301,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1453,7 +1309,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "growerId": {
           "$ref": "#/$defs/growerId",
@@ -1487,7 +1343,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1495,11 +1351,11 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "farmId": {
           "$ref": "#/$defs/farmId",
-          "description": "Mapping to a farm containing this field"
+          "description": "Mapping to a Farm containing this field.   If the source data model does not use the farm concept and maps the field directly to a grower, the data producer must create a Farm with the Grower name to complete the data linkage."
         },
         "arableArea": {
           "$ref": "#/$defs/arableArea",
@@ -1537,7 +1393,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1545,7 +1401,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "fieldId": {
           "$ref": "#/$defs/fieldId",
@@ -1580,7 +1436,7 @@
       ]
     },
     "fieldIds": {
-      "description": "Mappings to Fields",
+      "description": "Ids mapping to the Reference Id of a Field",
       "type": "array",
       "items": {
         "$ref": "#/$defs/fieldId"
@@ -1647,30 +1503,8 @@
         "gNSSUTCTime": {
           "$ref": "#/$defs/gNSSUTCTime",
           "description": "The UTC time as reported by GNSS corresponding to this source information."
-        },
-        "gNSSSourceType": {
-          "$ref": "#/$defs/gNSSSourceType",
-          "description": "Description of the GNSS Source Type.  E.g., RTK."
         }
       }
-    },
-    "grossWeight": {
-      "description": "Numeric Value Representing Gross Weight.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "grower": {
       "description": "An individual/business entity engaged in agricultural production.",
@@ -1682,7 +1516,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1690,7 +1524,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "partyId": {
           "$ref": "#/$defs/partyId",
@@ -1720,7 +1554,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1728,7 +1562,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "guidanceGroupId": {
           "$ref": "#/$defs/guidanceGroupId",
@@ -1767,7 +1601,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1775,7 +1609,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "guidancePatternIds": {
           "$ref": "#/$defs/guidancePatternIds",
@@ -1818,7 +1652,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -1826,7 +1660,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "guidancePatternTypeCode": {
           "$ref": "#/$defs/guidancePatternTypeCode",
@@ -1888,7 +1722,7 @@
       ]
     },
     "guidancePatternIds": {
-      "description": "Mappings to Guidance Patterns",
+      "description": "Ids mapping to the Reference Id of a Guidance Pattern",
       "type": "array",
       "items": {
         "$ref": "#/$defs/guidancePatternId"
@@ -1935,11 +1769,16 @@
     },
     "harvestedProductAttributes": {
       "description": "Relevant attributes for Products of type Harvested Product",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/cropId"
+      "type": "object",
+      "properties": {
+        "cropId": {
+          "$ref": "#/$defs/cropId",
+          "description": "Required"
+        }
       },
-      "minItems": 1
+      "required": [
+        "cropId"
+      ]
     },
     "headland": {
       "description": "Ground near the ends of a field that is cultivated differently than the main body of the field",
@@ -1947,7 +1786,7 @@
       "properties": {
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "List of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "name": {
           "$ref": "#/$defs/name",
@@ -1970,24 +1809,6 @@
         "$ref": "#/$defs/headland"
       },
       "minItems": 1
-    },
-    "height": {
-      "description": "Physical height of a component.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "horizontalAccuracy": {
       "description": "Numerical value for the horizontal accuracy.",
@@ -2034,7 +1855,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -2042,7 +1863,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "cropNutritionIngredientItemCode": {
           "$ref": "#/$defs/cropNutritionIngredientItemCode",
@@ -2065,24 +1886,6 @@
         "$ref": "#/$defs/ingredient"
       },
       "minItems": 1
-    },
-    "innerRadius": {
-      "description": "The distance from the center to the inner perimeter of a radial sector",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "items": {
       "description": "List of enumerated items within an enumeration.",
@@ -2122,24 +1925,6 @@
       },
       "minItems": 1
     },
-    "length": {
-      "description": "The length of a component",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
     "load": {
       "description": "Identifier for a collected amount of something for the purpose of managing as a unit",
       "type": "object",
@@ -2150,7 +1935,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -2158,7 +1943,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "timeScopes": {
           "$ref": "#/$defs/timeScopes",
@@ -2221,7 +2006,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -2229,7 +2014,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         }
       },
       "required": [
@@ -2245,70 +2030,21 @@
       },
       "minItems": 1
     },
-    "maxValue": {
-      "description": "Maximum value allowed.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "minValue": {
-      "description": "Minimum value allowed.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
     "mixProductAttributes": {
       "description": "Product attributes required for type Mix",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/mixTotalQuantity"
+      "type": "object",
+      "properties": {
+        "mixTotalQuantity": {
+          "$ref": "#/$defs/mixTotalQuantity",
+          "description": "The total quantity of the mix recipe.  Required."
+        }
       },
-      "minItems": 1
+      "required": [
+        "mixTotalQuantity"
+      ]
     },
     "mixTotalQuantity": {
       "description": "For products of type mix, the total quantity of the mix recipe.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "netWeight": {
-      "description": "Numeric value representing Net Weight of item.",
       "type": "object",
       "properties": {
         "numericValue": {
@@ -2387,7 +2123,7 @@
       "properties": {
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "List of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "name": {
           "$ref": "#/$defs/name",
@@ -2415,7 +2151,7 @@
       "minItems": 1
     },
     "operation": {
-      "description": "A collection of records for a single operation on a field at one time.   In the case of single pass applications (e.g., seeding + application), each is a unique Operation within an Operation Group.",
+      "description": "A collection of records for a single operation on a field at one time.",
       "type": "object",
       "properties": {
         "id": {
@@ -2424,7 +2160,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -2432,7 +2168,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "operationTypeCode": {
           "$ref": "#/$defs/operationTypeCode",
@@ -2460,7 +2196,7 @@
         },
         "prescribingOperationId": {
           "$ref": "#/$defs/prescribingOperationId",
-          "description": "Mapping to other Operation defined in this dataset that representing what prescribed this Operation."
+          "description": "Mapping to other Operation defined within this dataset that prescribed this Operation.   The prescribing operation would generally be part of a Work Order, Recommendation or Plan."
         },
         "productIds": {
           "$ref": "#/$defs/productIds",
@@ -2498,30 +2234,12 @@
       ]
     },
     "operations": {
-      "description": "One or more Operations",
+      "description": "Collections of records for individual operations on a field at one time.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/operation"
       },
       "minItems": 1
-    },
-    "outerRadius": {
-      "description": "The distance from the center to the outer perimeter of a radial sector",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "parties": {
       "description": "A list of Parties",
@@ -2541,7 +2259,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -2549,7 +2267,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "contactInfo": {
           "$ref": "#/$defs/contactInfo",
@@ -2576,7 +2294,7 @@
       "properties": {
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "List of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "timeScopes": {
           "$ref": "#/$defs/timeScopes",
@@ -2603,24 +2321,6 @@
         "$ref": "#/$defs/partyRole"
       },
       "minItems": 1
-    },
-    "physicalWidth": {
-      "description": "The physical width of a component",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "pivotAttributes": {
       "description": "Relevant Attributes for the Pivot Guidance Pattern.   One of the three pivot definitions is required.",
@@ -2653,7 +2353,7 @@
       ]
     },
     "plan": {
-      "description": "Optional document collecting operational intent for a growing season. A plan may define a collection of intended Crop Zones, defining a crop for each field/partial field and may further define dates and intended operations (WorkItems).  Alternatively, a Plan may simply define a number of acres of a given crop to be planted across the operation. Multiple mutually exclusive plans may exist for a single season to allow for runtime flexibility. A plan documents management intent.",
+      "description": "Document collecting operational intent for a growing season. A plan may define a collection of intended Crop Zones, defining a crop for each field/partial field and may further define dates and intended operations (WorkItems).  Alternatively, a Plan may simply define a number of acres of a given crop to be planted across the operation. Multiple mutually exclusive plans may exist for a single season to allow for runtime flexibility. A plan documents management intent.",
       "type": "object",
       "properties": {
         "id": {
@@ -2662,7 +2362,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -2670,7 +2370,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId",
@@ -2720,64 +2420,12 @@
       ]
     },
     "plans": {
-      "description": "One or more Plan documents",
+      "description": "Documents collecting operational intent for a growing season",
       "type": "array",
       "items": {
         "$ref": "#/$defs/plan"
       },
       "minItems": 1
-    },
-    "prescribedRate": {
-      "description": "A prescription component that defines a rate variable.",
-      "type": "object",
-      "properties": {
-        "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
-        },
-        "name": {
-          "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
-        },
-        "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
-        },
-        "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
-        }
-      },
-      "required": [
-        "id",
-        "name"
-      ]
-    },
-    "prescribedRates": {
-      "description": "List of Prescribed Rates",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/prescribedRate"
-      },
-      "minItems": 1
-    },
-    "pressure": {
-      "description": "The pressure of an entity",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "product": {
       "description": "Agricultural input or produce",
@@ -2789,7 +2437,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -2797,7 +2445,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "brandId": {
           "$ref": "#/$defs/brandId",
@@ -2895,48 +2543,12 @@
       "minItems": 1
     },
     "productIds": {
-      "description": "One or more Product Ids",
+      "description": "Ids mapping to the Reference Id of a Product",
       "type": "array",
       "items": {
         "$ref": "#/$defs/productId"
       },
       "minItems": 1
-    },
-    "productQuantity": {
-      "description": "Numeric value indicating Product Quantity.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "productTotal": {
-      "description": "A total amount of product",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "products": {
       "description": "A list of Products",
@@ -3001,7 +2613,7 @@
       ]
     },
     "recommendation": {
-      "description": "Optional document collecting agronomic actions prescribed by agronomic advisors or decision makers for a single antecedent plan or independent set of agronomic advice. A recommendation will define a collection of Work Items.  A recommendation documents agronomic advice given.",
+      "description": "Document summarizing guidance to a Grower from an advisor.  An example might be recommendations for amounts of specific crops to plant from a financial or market advisor, specific varieties or crop protection chemicals to use from an agronomic advisor, etc.\n\nE.g.s, if an advisor recommends a Grower plant a specific variety on 3 fields, the Recommendation.FieldIds would map to those fields, and there would be one Operation of type Application - Sowing and Planting simply referring to the product id of the recommended variety.\n\nIf an advisor is recommending the Grower apply a certain crop protection chemical for all fields with a certain crop, the Recommendation.CropIds would map to a single crop, and there would be one Operation of type Application - Crop Protection, mapping to the product id of the specified chemical, optionally containing a Time Scopes object to specify the recommended date range.",
       "type": "object",
       "properties": {
         "id": {
@@ -3010,7 +2622,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -3018,7 +2630,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId",
@@ -3068,7 +2680,7 @@
       ]
     },
     "recommendations": {
-      "description": "One or more Recommendations",
+      "description": "Documents summarizing guidance to a Grower from an advisor.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/recommendation"
@@ -3085,7 +2697,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -3093,7 +2705,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "layerTypeCode": {
           "$ref": "#/$defs/layerTypeCode",
@@ -3129,7 +2741,7 @@
       ]
     },
     "referenceLayerIds": {
-      "description": "Mappings to Reference Layers",
+      "description": "Ids mapping to the Reference Id of a Reference Layer",
       "type": "array",
       "items": {
         "$ref": "#/$defs/referenceLayerId"
@@ -3163,24 +2775,24 @@
       ]
     },
     "root": {
-      "description": "Top level entity within an Adapt data instance, assembling all available data.  Serialized to file as \"adapt.json\"",
+      "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
       "type": "object",
       "properties": {
         "catalog": {
           "$ref": "#/$defs/catalog",
-          "description": "Data container for types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications."
+          "description": "Container for data types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications."
         },
         "documents": {
           "$ref": "#/$defs/documents",
-          "description": "Transactional data"
+          "description": "Container for transactional, frequently changing data.   Documents will necessarily reference master data defined in the Catalog."
         },
         "dataTypeDefinitionVersion": {
           "$ref": "#/$defs/dataTypeDefinitionVersion",
-          "description": "Version of a Data Type Definition.  Uses Semantic Versioning to identify updates to the entirety of the standard Data Types Definition list."
+          "description": "Version of the Standard Data Type Definitions used.  If omitted, the current version is assumed."
         },
         "unitSystemVersion": {
           "$ref": "#/$defs/unitSystemVersion",
-          "description": "Version identifier describing the Adapt Unit System used throughout the model.   If omitted, the current version is assumed."
+          "description": "Version identifier describing the ADAPT Unit System used throughout the model.   If omitted, the current version is assumed."
         }
       },
       "required": [
@@ -3205,7 +2817,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -3213,7 +2825,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "start": {
           "$ref": "#/$defs/start",
@@ -3247,32 +2859,19 @@
     },
     "spiralAttributes": {
       "description": "Relevant attributes for the Spiral Guidance Pattern type",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/lineStrings"
-      },
-      "minItems": 1
-    },
-    "standardPayableMoisture": {
-      "description": "The targeted moisture value at which the commodity is sold",
       "type": "object",
       "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+        "lineStrings": {
+          "$ref": "#/$defs/lineStrings",
+          "description": "One or more line strings that compose the Spiral"
         }
       },
       "required": [
-        "numericValue",
-        "unitOfMeasureCode"
+        "lineStrings"
       ]
     },
-    "startAngle": {
-      "description": "The start angle of a radial sector",
+    "standardPayableMoisture": {
+      "description": "The targeted moisture value at which the commodity is sold",
       "type": "object",
       "properties": {
         "numericValue": {
@@ -3369,11 +2968,13 @@
     },
     "textDataTypeDefinitionAttributes": {
       "description": "Data Type Definition attributes specific to the text type",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/validationRegularExpression"
-      },
-      "minItems": 0
+      "type": "object",
+      "properties": {
+        "validationRegularExpression": {
+          "$ref": "#/$defs/validationRegularExpression",
+          "description": "Optional regular expression to validate textual values"
+        }
+      }
     },
     "timeScope": {
       "description": "A period of time, optionally containing a defined start or end,  locational context, or simply duration.",
@@ -3408,60 +3009,6 @@
       },
       "minItems": 1
     },
-    "totalArea": {
-      "description": "Total area of a component that has a physical definition",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "totalDistanceTravelled": {
-      "description": "Measured distance",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "totalElapsedTime": {
-      "description": "Total time",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
     "trait": {
       "description": "Genetic attribute of a seed variety",
       "type": "object",
@@ -3472,7 +3019,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -3480,7 +3027,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "manufacturerId": {
           "$ref": "#/$defs/manufacturerId",
@@ -3539,24 +3086,6 @@
       },
       "minItems": 1
     },
-    "value": {
-      "description": "An instance of a Numeric Value",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
     "variable": {
       "description": "An individual type of measurement during a field operation that will be populated at multiple points in the field.",
       "type": "object",
@@ -3567,7 +3096,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -3575,7 +3104,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "definitionCode": {
           "$ref": "#/$defs/definitionCode",
@@ -3634,26 +3163,8 @@
         "unitOfMeasureCode"
       ]
     },
-    "volume": {
-      "description": "Total Volume.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
     "workOrder": {
-      "description": "Optional document summarizing the final collection of agronomic instructions (Work Items) to be acted upon once operational decisions are taken.. A work order documents operational decisions made.",
+      "description": "Document summarizing the final collection of agronomic instructions (Operations) to be acted upon once operational decisions are taken. A work order documents operational decisions made.  A common example would be a list of fixed or variable rate prescriptions.\n\nThe Operations represent agronomic instruction(s) for a single Field or Crop Zone at a single time.  Where a Crop is not known/relevant, the Work Order must reference a Field.  Where a Crop is known, the Work Order must reference a CropZone.  Example WorkItems: a CropZone should be planted and fertilized on a particular date/date range, utilize a prescribed flat rate (Summary Value) or rates (Spatial Records File).  Prescriptions are represented as individual Operations.",
       "type": "object",
       "properties": {
         "id": {
@@ -3662,7 +3173,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -3670,7 +3181,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId",
@@ -3702,7 +3213,7 @@
         },
         "operations": {
           "$ref": "#/$defs/operations",
-          "description": "The prescribed Operations that comprise this Work Order.  Required.\n\nThe Operations represent agronomic instruction(s) for a single Field or Crop Zone at a single time.  Where a Crop is not known/relevant, the Work Order must reference a Field.  Where a Crop is known, the Work Order must reference a CropZone.  Example WorkItems: a CropZone should be planted and fertilized on a particular date/date range, utilize a prescribed flat rate (Summary Value) or rates (Spatial Records File).  Prescriptions are represented as individual Operations."
+          "description": "The prescribed Operations that comprise this Work Order.  Required."
         }
       },
       "required": [
@@ -3713,7 +3224,7 @@
       ]
     },
     "workOrders": {
-      "description": "One or more Work Order documents",
+      "description": "Documents summarizing the final agronomic instructions to be acted upon",
       "type": "array",
       "items": {
         "$ref": "#/$defs/workOrder"
@@ -3721,7 +3232,7 @@
       "minItems": 1
     },
     "workRecord": {
-      "description": "A single Work Record document",
+      "description": "A record of completed work, contemporaneous in nature and scoped to a single Field or Crop Zone.     At least one Operation.   E.g.s., \n-The harvest of a single Crop Zone completed by two combines over several days.   Each combine would record separate Operations.\n-The single-pass seeding/starter fertilizer/insecticide application of a corn Crop Zone by one row planter.   The Work Record would contain three Operation objects for each type of application.\n-A manual record of total harvested values, without knowledge of the harvesting equipment.   One Operation would record one or more Summary Values.",
       "type": "object",
       "properties": {
         "id": {
@@ -3730,7 +3241,7 @@
         },
         "name": {
           "$ref": "#/$defs/name",
-          "description": "A short textual string by which an item is known.  Required."
+          "description": "The name of this item.  Required."
         },
         "description": {
           "$ref": "#/$defs/description",
@@ -3738,7 +3249,7 @@
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems",
-          "description": "Collection of Context Items on this component"
+          "description": "List of supplemental information for this data element"
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId",
@@ -3770,7 +3281,7 @@
         },
         "operations": {
           "$ref": "#/$defs/operations",
-          "description": "The completed Operations that comprise this Word Record. Required.\n\nE.g.s., a tractor pulling a row planter with seeding, liquid fertilizer and granular insecticide application capabilities would have its data grouped into 4 constituent Operations: Application - SowingAndPlanting, Application - Fertilizing, Application - Crop Proections, and Misc - Transport/Vehicle Data.\n\nManually entered records of harvest yield rate by variety would be entered into a single Operation of type Application - SowingAndPlanting"
+          "description": "The completed Operations that comprise this Word Record. Required.\n\nE.g.s., a tractor pulling a row planter with seeding, liquid fertilizer and granular insecticide application capabilities would have its data grouped into 4 constituent Operations: Application - SowingAndPlanting, Application - Fertilizing, Application - Crop Protection, and Vehicle Data Collection.\n\nManually entered information can also be logged as Summary Values."
         }
       },
       "required": [
@@ -3781,7 +3292,7 @@
       ]
     },
     "workRecords": {
-      "description": "One or more Work Records",
+      "description": "Records of completed work, contemporaneous in nature and scoped to a single Field or Crop Zone",
       "type": "array",
       "items": {
         "$ref": "#/$defs/workRecord"
