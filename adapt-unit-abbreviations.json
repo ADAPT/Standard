@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "domains": [
     {
       "domain": "Distance",
@@ -649,6 +649,10 @@
         {
           "key": "J",
           "value": "Joule"
+        },
+        {
+          "key": "MJ",
+          "value": "megajoule"
         }
       ]
     },
@@ -680,6 +684,27 @@
         {
           "key": "Nm",
           "value": "newton meter"
+        }
+      ]
+    },
+    {
+      "domain": "AmountOfSubstance",
+      "units": [
+        {
+          "key": "mol",
+          "value": "mole"
+        },
+        {
+          "key": "cmol",
+          "value": "centimole"
+        },
+        {
+          "key": "mmol",
+          "value": "millimole"
+        },
+        {
+          "key": "mEq",
+          "value": "milliequivalent"
         }
       ]
     }
