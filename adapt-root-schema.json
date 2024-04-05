@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://adaptstandard.org/root/1.0.0-alpha.2",
+  "$id": "https://adaptstandard.org/root/1.0.0-alpha.3",
   "type": "object",
   "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
   "properties": {
@@ -24,7 +24,7 @@
   "$defs": {
     "a": {
       "type": "string",
-      "description": "The A point of an AB or A+ Line"
+      "description": "The A point (WKT) of an AB or A+ Line"
     },
     "activeBoundaryId": {
       "type": "string",
@@ -40,11 +40,11 @@
     },
     "b": {
       "type": "string",
-      "description": "The B point of an AB Line"
+      "description": "The B point (WKT) of an AB Line"
     },
     "boundaryGeometry": {
       "type": "string",
-      "description": "Polygon or Multi Polygon representing the enclosing area of an object."
+      "description": "Polygon or Multi Polygon WKT representing the enclosing area of an object."
     },
     "brandId": {
       "type": "string",
@@ -52,7 +52,7 @@
     },
     "centerPoint": {
       "type": "string",
-      "description": "Coordinates for the center of an object."
+      "description": "WKT Coordinates for the center of an object."
     },
     "city": {
       "type": "string",
@@ -136,11 +136,11 @@
     },
     "end": {
       "type": "string",
-      "description": "The date and time at the end of an event."
+      "description": "The date and time (UTC) at the end of an event."
     },
     "endPoint": {
       "type": "string",
-      "description": "Coordinates for the end point of an object"
+      "description": "WKT coordinates for the end point of an object"
     },
     "enumerationItemStatusCode": {
       "type": "string",
@@ -416,11 +416,11 @@
     },
     "start": {
       "type": "string",
-      "description": "The date and time at the start of an event."
+      "description": "The date and time (UTC) at the start of an event."
     },
     "startPoint": {
       "type": "string",
-      "description": "Coordinates for the start point of an object."
+      "description": "WKT coordinates for the start point of an object."
     },
     "supersededByCode": {
       "type": "string",
@@ -429,6 +429,10 @@
     "telecommunicationContactTypeCode": {
       "type": "string",
       "description": "The code that identifies the enumeration item value from the Telecommunication Contact Type data type definition"
+    },
+    "timeZone": {
+      "type": "string",
+      "description": "Time zone identifier from the IANA/tz database, defining the local time zone at a location. May be used to interpret ADAPT's required UTC timestamps into a local times for that location."
     },
     "traitCode": {
       "type": "string",
@@ -1368,6 +1372,10 @@
         "guidanceGroupIds": {
           "$ref": "#/$defs/guidanceGroupIds",
           "description": "Mappings to any Guidance Groups for this Field"
+        },
+        "timeZone": {
+          "$ref": "#/$defs/timeZone",
+          "description": "Time zone identifier from the IANA/tz database, defining the local time zone at a location. May be used to interpret ADAPT's required UTC timestamps into a local times for that location.  Optional."
         }
       },
       "required": [
@@ -2328,7 +2336,7 @@
       "properties": {
         "centerPoint": {
           "$ref": "#/$defs/centerPoint",
-          "description": "Center point of the pivot.  Required."
+          "description": "WKT for the center point of the pivot.  Required."
         },
         "radius": {
           "$ref": "#/$defs/radius",
@@ -2336,11 +2344,11 @@
         },
         "startPoint": {
           "$ref": "#/$defs/startPoint",
-          "description": "A start point for the pivot.   Required for partial pivots."
+          "description": "WKT for a start point of the pivot.   Required for partial pivots."
         },
         "endPoint": {
           "$ref": "#/$defs/endPoint",
-          "description": "An end point for the pivot.   Required for partial pivots."
+          "description": "WKT for an end point of the pivot.   Required for partial pivots."
         },
         "isClockwise": {
           "$ref": "#/$defs/isClockwise",
@@ -2808,7 +2816,7 @@
       "minItems": 1
     },
     "season": {
-      "description": "The span of time for which field operations contribute to a particular growing season.   For many areas, this is approximately a year in length.  E.g., In the northern hemisphere, Season \"2022\" may extend from the first operations following harvest in the fall of 2021 to the last harvest activities in the fall of 2022.",
+      "description": "The span of time for which field operations contribute to a particular growing season.   For many areas, this is approximately a year in length.  E.g., In the northern hemisphere, Season \"2022\" may extend from the first operations following harvest in the fall of 2021 to the last harvest activities in the fall of 2022.  As such, seasons may overlap in months where harvest operations in the prior season are ongoing as field prep and fertilizer operations are starting for the new season.",
       "type": "object",
       "properties": {
         "id": {
@@ -2986,11 +2994,11 @@
         },
         "start": {
           "$ref": "#/$defs/start",
-          "description": "The date and time at the start of an event."
+          "description": "The date and time (UTC) at the start of an event."
         },
         "end": {
           "$ref": "#/$defs/end",
-          "description": "The date and time at the end of an event."
+          "description": "The date and time (UTC) at the end of an event."
         },
         "dateContextCode": {
           "$ref": "#/$defs/dateContextCode",
