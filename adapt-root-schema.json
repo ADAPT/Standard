@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://adaptstandard.org/root/1.0.0-alpha.3",
+  "$id": "https://adaptstandard.org/root/1.0.0-beta.1",
   "type": "object",
   "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
   "properties": {
@@ -69,6 +69,10 @@
     "countryCode": {
       "type": "string",
       "description": "An ISO 3166 alpha-2 code for a Country"
+    },
+    "countrySubdivision": {
+      "type": "string",
+      "description": "Subdivision or region of a country such as a state or province."
     },
     "cropId": {
       "type": "string",
@@ -194,6 +198,10 @@
       "type": "string",
       "description": "The code that identifies the enumeration item value from the Guidance Pattern Type data type definition"
     },
+    "harvestLoadIdentifier": {
+      "type": "string",
+      "description": "The textual identifier of a harvest load.  E.g., \"Load 1\""
+    },
     "hasBiological": {
       "type": "boolean",
       "description": "Whether the CropProtectionProduct contains biological ingredients"
@@ -265,18 +273,6 @@
     "lineStrings": {
       "type": "string",
       "description": "One or more Line Strings in Well Known Text as a Line String or Multi Line String"
-    },
-    "loadId": {
-      "type": "string",
-      "description": "An id mapping to the Reference Id of a Load"
-    },
-    "loadNumber": {
-      "type": "string",
-      "description": "The name of the load, often \"Load 1\", etc.  Required."
-    },
-    "loadTypeCode": {
-      "type": "string",
-      "description": "The code that identifies the enumeration item value from the Load Type data type definition"
     },
     "lossOfGNSSRate": {
       "type": "number",
@@ -543,6 +539,10 @@
         "postalCode": {
           "$ref": "#/$defs/postalCode",
           "description": "The postal code within the Address"
+        },
+        "countrySubdivision": {
+          "$ref": "#/$defs/countrySubdivision",
+          "description": "Subdivision or region of a country such as a state or province, including entries in ISO-3166."
         },
         "country": {
           "$ref": "#/$defs/country",
@@ -1178,10 +1178,6 @@
         "workRecords": {
           "$ref": "#/$defs/workRecords",
           "description": "All Work Records in the data"
-        },
-        "loads": {
-          "$ref": "#/$defs/loads",
-          "description": "All Loads in the data"
         },
         "referenceLayers": {
           "$ref": "#/$defs/referenceLayers",
@@ -1933,77 +1929,6 @@
       },
       "minItems": 1
     },
-    "load": {
-      "description": "Identifier for a collected amount of something for the purpose of managing as a unit",
-      "type": "object",
-      "properties": {
-        "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
-        },
-        "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
-        },
-        "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
-        },
-        "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
-        },
-        "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes governing the duration/location of this Load."
-        },
-        "loadNumber": {
-          "$ref": "#/$defs/loadNumber",
-          "description": "The name of the load, often \"Load 1\", etc.  Required."
-        },
-        "loadTypeCode": {
-          "$ref": "#/$defs/loadTypeCode",
-          "description": "The code that identifies the enumeration item value from the Load Type Representation.   Required."
-        },
-        "loadQuantity": {
-          "$ref": "#/$defs/loadQuantity",
-          "description": "The amount of the load.  Required."
-        }
-      },
-      "required": [
-        "id",
-        "name",
-        "loadNumber",
-        "loadTypeCode",
-        "loadQuantity"
-      ]
-    },
-    "loadQuantity": {
-      "description": "Numerical quantity for the Load.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "loads": {
-      "description": "One or more Load documents",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/load"
-      },
-      "minItems": 1
-    },
     "manufacturer": {
       "description": "The entity who manufactured a given market good.",
       "type": "object",
@@ -2159,7 +2084,7 @@
       "minItems": 1
     },
     "operation": {
-      "description": "A collection of records for a single operation on a field at one time.",
+      "description": "Records for a single OperationType on a single Field at one time.  If Device Configuration is specified (implements are known), data from each separate Device must be in a separate Operation.",
       "type": "object",
       "properties": {
         "id": {
@@ -2198,9 +2123,9 @@
           "$ref": "#/$defs/deviceConfiguration",
           "description": "A mapping to a specific Device Configuration where the Device for the Operation is known."
         },
-        "loadId": {
-          "$ref": "#/$defs/loadId",
-          "description": "Optional mapping to a Load document. Operations must be split by separate Loads."
+        "harvestLoadIdentifier": {
+          "$ref": "#/$defs/harvestLoadIdentifier",
+          "description": "On Work Record Operations, the textual identifier of a harvest load.  E.g., \"Load 1\".  Separate loads must be tracked as separate Operations.  Any load quantities may consequently be tracked as Summary Values."
         },
         "prescribingOperationId": {
           "$ref": "#/$defs/prescribingOperationId",
@@ -2242,7 +2167,7 @@
       ]
     },
     "operations": {
-      "description": "Collections of records for individual operations on a field at one time.",
+      "description": "Collections of records for a single OperationType on a single Field at one time.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/operation"

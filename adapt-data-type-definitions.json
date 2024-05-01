@@ -926,7 +926,7 @@
       "name": "Soil Cation Exchange Capacity",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "meq1hg-1"
+        "unitOfMeasureCode": "mEq1hg-1"
       },
       "scopes": [
         "Variable"
@@ -1565,50 +1565,6 @@
       "name": "LayerType",
       "scopes": [
         "Reference Layer"
-      ]
-    },
-    {
-      "dataDefinitionBaseTypeCode": "ENUMERATION",
-      "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "LoadType",
-      "description": "Classification of a Load Document",
-      "enumeratedDataTypeDefinitionAttributes": {
-        "items": [
-          {
-            "code": "UNKNOWN",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Unknown"
-          },
-          {
-            "code": "TANK",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Tank"
-          },
-          {
-            "code": "FIELD",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Field"
-          },
-          {
-            "code": "TRUCK",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Truck"
-          },
-          {
-            "code": "BALE",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Bale"
-          },
-          {
-            "code": "MODULE",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Module"
-          }
-        ]
-      },
-      "name": "LoadType",
-      "scopes": [
-        "Load"
       ]
     },
     {
@@ -2426,5 +2382,5 @@
       ]
     }
   ],
-  "version": "1.0.0-alpha.3"
+  "version": "1.0.0-beta.1"
 }
