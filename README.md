@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The purpose of this repository is to store the ADAPT Standard schema and related documentation, as well as to manage ADAPT Standard issues. It does not contain code. The ADAPT Standard-related issues are managed in a [GitHub project](https://github.com/ADAPT/Standard/projects/1). Each issue is in a state as specified below.
+The purpose of this repository is to store the ADAPT Standard schema and related documentation, as well as to manage ADAPT Standard issues. The ADAPT Standard-related issues are managed in a [GitHub project](https://github.com/ADAPT/Standard/projects/1). Each issue is in a state as specified below.
 
 ## Supplementary discussion page
 
