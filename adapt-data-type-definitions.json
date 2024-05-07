@@ -451,9 +451,9 @@
     {
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "ApplicationHeight",
+      "definitionCode": "ApplicationHeightActual",
       "description": "Height above ground of application",
-      "name": "Application Height",
+      "name": "Application Height (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
@@ -465,9 +465,37 @@
     {
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "SeedingDepth",
+      "definitionCode": "ApplicationHeightTarget",
+      "description": "Height above ground of application",
+      "name": "Application Height (Target)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ApplicationHeightControl",
+      "description": "Height above ground of application",
+      "name": "Application Height (Control)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SeedingDepthActual",
       "description": "Depth below ground of seeding",
-      "name": "Seeding Depth",
+      "name": "Seeding Depth (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
@@ -479,9 +507,37 @@
     {
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "TillageDepth",
+      "definitionCode": "SeedingDepthTarget",
+      "description": "Depth below ground of seeding",
+      "name": "Seeding Depth (Target)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "SeedingDepthControl",
+      "description": "Depth below ground of seeding",
+      "name": "Seeding Depth (Control)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "TillageDepthActual",
       "description": "Depth below ground of tillage",
-      "name": "Tillage Depth",
+      "name": "Tillage Depth (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
@@ -493,9 +549,65 @@
     {
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "ApplicationDepth",
+      "definitionCode": "TillageDepthTarget",
+      "description": "Depth below ground of tillage",
+      "name": "Tillage Depth (Target)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "TillageDepthControl",
+      "description": "Depth below ground of tillage",
+      "name": "Tillage Depth (Control)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ApplicationDepthActual",
       "description": "Depth below ground of application",
-      "name": "Application Depth",
+      "name": "Application Depth (Actual)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ApplicationDepthTarget",
+      "description": "Depth below ground of application",
+      "name": "Application Depth (Target)",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "ApplicationDepthControl",
+      "description": "Depth below ground of application",
+      "name": "Application Depth (Control)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
@@ -2382,5 +2494,5 @@
       ]
     }
   ],
-  "version": "1.0.0-beta.1"
+  "version": "1.0.0-beta.2"
 }
