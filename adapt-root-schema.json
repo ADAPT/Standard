@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://adaptstandard.org/root/1.0.0-beta.3",
+  "$id": "https://adaptstandard.org/root/1.0.0",
   "type": "object",
   "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
   "properties": {
@@ -160,7 +160,7 @@
     },
     "fileDataIndex": {
       "type": "integer",
-      "description": "The column or band index for a specific variable within an external file."
+      "description": "The 1-based column or band index for a specific variable within an external file."
     },
     "geoNamesId": {
       "type": "string",
@@ -2963,7 +2963,7 @@
         },
         "fileDataIndex": {
           "$ref": "#/$defs/fileDataIndex",
-          "description": "The column index in a corresponding GeoParquet file, or the band index in a corresponding GeoTiff file.   Required when data is reported on Spatial Records."
+          "description": "1-based column index in a corresponding GeoParquet file, or the band index in a corresponding GeoTiff file.   Required when data is reported on Spatial Records."
         },
         "productId": {
           "$ref": "#/$defs/productId",
