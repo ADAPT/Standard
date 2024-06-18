@@ -1,4 +1,8 @@
-# ADAPT Standard Issue Management
+# AgGateway's ADAPT Standard documentation
+
+ADAPT Standard documentation is available at https://adaptstandard.org.
+
+# ADAPT Standard issue management
 
 ## Introduction
 
