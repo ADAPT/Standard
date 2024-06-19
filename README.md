@@ -16,7 +16,7 @@ For discussion content that stakeholders feel is not well supported by this repo
 
 ![connectSpec _ ADAPT Standard Issue Management](https://github.com/ADAPT/Standard/assets/2702530/fdfeb1ea-03be-40d6-a4a2-cbac6888db5f)
 
-## Issue states!
+## Issue states
 
 State | Score CC State | Description
 --- | --- | ---
