@@ -16,9 +16,9 @@ For discussion content that stakeholders feel is not well supported by this repo
 
 ![connectSpec _ ADAPT Standard Issue Management](https://github.com/ADAPT/Standard/assets/2702530/fdfeb1ea-03be-40d6-a4a2-cbac6888db5f)
 
-## Issue states
+## GitHub Issue states and connectCenter CC states
 
-State | Score CC State | Description
+GitHub<br />Issue<br />State | connectCenter<br />CC State | Description
 --- | --- | ---
 Approved | Draft | An Architecture Committee review team has approved the issue.
 AC review | Draft | The submitter has the set of related issues (perhaps only one) ready to review with the ADAPT Committee.
@@ -31,9 +31,9 @@ New | N/A | A submitter submitted the issue. The submitter may need to refine th
 Ready for release | Release | The member review is complete with nothing left to process
 Reconsider | Draft or Candidate | A member of the AC believes that, in the interest of ADAPT Standard quality, the issue should be reconsidered.
 
-## Issue transitions
+## GitHub issue state transitions
 
-From state | To state | Guard conditions (i.e., what must be true for the transition to occur)
+From state | To state | Guard conditions<br />(i.e., what must be true for the transition to occur)
 --- | --- | ---
 AC review | Approved | <ul><li>AC approves the issue.</li></ul>
 AC review | Implementing | <ul><li>AC rejects the issue.</li></ul>
