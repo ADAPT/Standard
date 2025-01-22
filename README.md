@@ -1,22 +1,19 @@
-# AgGateway's ADAPT Standard documentation
+# ADAPT Standard
+The ADAPT Standard is a data schema, set of standard data type defintions and unit of measure abbeviations designed for the business-to-business transfer of agricultural production data.
 
-ADAPT Standard documentation is available at https://adaptstandard.org.
+It is the successor to the [AgGateway ADAPT Framework](https://github.com/adapt/adapt) released in 2015 that served as a software plugin toolkit to read proprietary files. Unlike the earlier toolkit, the ADAPT Standard does not have any software dependencies. It is data only.
 
-# ADAPT Standard issue management
+For more info, visit https://adaptstandard.org.
 
-## Introduction
+## Issue management
 
-The purpose of this repository is to store the ADAPT Standard schema and related documentation, as well as to manage ADAPT Standard issues. The ADAPT Standard-related issues are managed in a [GitHub project](https://github.com/ADAPT/Standard/projects/1). Each issue is in a state as specified below.
+New topics/issues are managed in a [GitHub project](https://github.com/ADAPT/Standard/projects/2). Each issue is in a state as specified below.
 
-## Supplementary discussion page
-
-For discussion content that stakeholders feel is not well supported by this repo, consider the following AgGateway Confluence page: [ADAPT Standard changes discussion](https://aggateway.atlassian.net/wiki/x/AwDGxg)
-
-## GitHub Issue state diagram
+### GitHub Issue state diagram
 
 ![connectSpec _ ADAPT Standard Issue Management](https://github.com/ADAPT/Standard/assets/2702530/fdfeb1ea-03be-40d6-a4a2-cbac6888db5f)
 
-## GitHub Issue states and connectCenter CC states
+### GitHub Issue states
 
 GitHub<br />Issue<br />State | connectCenter<br />CC State | Description
 --- | --- | ---
@@ -31,7 +28,7 @@ New | N/A | A submitter submitted the issue. The submitter may need to refine th
 Ready for release | Release | The member review is complete with nothing left to process
 Reconsider | Draft or Candidate | A member of the AC believes that, in the interest of ADAPT Standard quality, the issue should be reconsidered.
 
-## GitHub issue state transitions
+### GitHub issue state transitions
 
 From state | To state | Guard conditions<br />(i.e., what must be true for the transition to occur)
 --- | --- | ---
