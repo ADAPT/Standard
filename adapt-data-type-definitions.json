@@ -1535,8 +1535,14 @@
           },
           {
             "code": "BUSINESS",
-            "enumerationItemStatusCode": "VALID",
+            "enumerationItemStatusCode": "INVALID",
+            "supersededByCode": "ORGANIZATION",
             "name": "Business"
+          },
+          {
+            "code": "ORGANIZATION",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Organization"
           },
           {
             "code": "INDIVIDUAL",
