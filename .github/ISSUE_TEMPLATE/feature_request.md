@@ -7,9 +7,6 @@ assignees: ''
 
 ---
 
-## Name
-Give the feature a name.
-
 ## Use Case
 Briefly describe the use case(s) for this feature.
 
