@@ -861,7 +861,7 @@
       "name": "Spray Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -874,7 +874,7 @@
       "name": "Spray Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -887,7 +887,7 @@
       "name": "Spray Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -900,7 +900,7 @@
       "name": "Tillage Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -913,7 +913,7 @@
       "name": "Tillage Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -926,7 +926,7 @@
       "name": "Tillage Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -940,7 +940,7 @@
       "name": "Row Cleaner Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -954,7 +954,7 @@
       "name": "Row Cleaner Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -968,7 +968,7 @@
       "name": "Row Cleaner Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -1206,7 +1206,7 @@
       "name": "Atmospheric Pressure",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -1535,14 +1535,8 @@
           },
           {
             "code": "BUSINESS",
-            "enumerationItemStatusCode": "INVALID",
-            "supersededByCode": "ORGANIZATION",
-            "name": "Business"
-          },
-          {
-            "code": "ORGANIZATION",
             "enumerationItemStatusCode": "VALID",
-            "name": "Organization"
+            "name": "Business"
           },
           {
             "code": "INDIVIDUAL",
@@ -2500,5 +2494,5 @@
       ]
     }
   ],
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
