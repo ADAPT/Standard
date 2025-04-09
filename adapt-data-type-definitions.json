@@ -1227,6 +1227,202 @@
       ]
     },
     {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSDistanceFromBase",
+      "description": "For points recorded with positioning technologies, how far the point is from the base station",
+      "name": "Distance from Base Station",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Speed",
+      "description": "Speed at which a Device is traveling",
+      "name": "Device Speed",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m1sec-1"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSReceiverSatelliteCount",
+      "description": "Count of  Satellites in use by GNSS Receiver the at the time a point was recorded",
+      "name": "Receiver Satellite Count",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Integer",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSBaseStationSatelliteCount",
+      "description": "Count of  Satellites in use by GNSS Base Station the at the time a point was recorded",
+      "name": "Base Station Satellite Count",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Integer",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "hDOP",
+      "description": "Dimensionless measure of GNSS horizontal accuracy degradation due to satellite positions",
+      "name": "Horizontal Dilution of Precision",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "vDOP",
+      "description": "Dimensionless measure of GNSS vertical accuracy degradation due to satellite positions",
+      "name": "Vertical Dilution of Precision",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSAgeOfCorrection",
+      "description": "Defines elapsed time since the last GNSS correction information received",
+      "name": "Age of Correction",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "sec"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSSignalStrength",
+      "description": "Power level of signal received by GNSS receiver",
+      "name": "Signal Strength",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "dB-Hz"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSSemiMajorErrorElipse",
+      "description": "Longest radius of error elipse",
+      "name": "Semi Major Error Elipse",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSSemiMinorErrorElipse",
+      "description": "Shortest radious of error elipse",
+      "name": "Semi Minor Error Elipse",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSOrientationErrorElipse",
+      "description": "The angle between the major axis of the error ellipse and true North.",
+      "name": "Orientation Error Ellipse",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "arcdeg"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSLatitudeError",
+      "description": "Estimated error in Latitude",
+      "name": "Latitude Error",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSLongitudeError",
+      "description": "Estimated error in Longitude",
+      "name": "Longitude Error",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSAltitudeError",
+      "description": "Estimated error in Altitude",
+      "name": "Altitude Error",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "IdType",
@@ -1535,13 +1731,19 @@
           },
           {
             "code": "BUSINESS",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Business"
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Business",
+            "supersededByCode": "ORGANIZATION"
           },
           {
             "code": "INDIVIDUAL",
             "enumerationItemStatusCode": "VALID",
             "name": "Individual"
+          },
+          {
+            "code": "ORGANIZATION",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Organization"
           }
         ]
       },
@@ -1671,6 +1873,12 @@
             "description": "General obstacles outside of the context of specific fields. For field-specific obstacles, use FieldBoundary.Obstacles.",
             "enumerationItemStatusCode": "VALID",
             "name": "Obstacles"
+          },
+          {
+            "code": "HIGH_FIDELITY_GEOMETRY_SOURCE",
+            "description": "Defines a point layer attributed by detailed GNSS data on each point.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "High Fidelity Geometry Source"
           }
         ]
       },
@@ -2353,8 +2561,21 @@
           {
             "code": "APPLICATION_SOWING_AND_PLANTING",
             "description": "Introducing the seeds or other plant material into a field.",
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Application Sowing And Planting",
+            "supersededByCode": "APPLICATION_SOWING_AND_PLANTING_SEEDS"
+          },
+          {
+            "code": "APPLICATION_SOWING_AND_PLANTING_SEEDS",
+            "description": "Introducing seeds into a field.",
             "enumerationItemStatusCode": "VALID",
-            "name": "Application Sowing And Planting"
+            "name": "Application Sowing And Planting Seeds"
+          },
+          {
+            "code": "APPLICATION_TRANSPLANTING",
+            "description": "Introducing plants/seedlings into a field.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Application Transplanting"
           },
           {
             "code": "APPLICATION_CROP_PROTECTION",
@@ -2379,6 +2600,12 @@
             "description": "Ground engaging operation to size and incorporate residue or alter the soil structure for future cultivation.",
             "enumerationItemStatusCode": "VALID",
             "name": "Field Preparation Tillage"
+          },
+          {
+            "code": "FIELD_PREPARATION_LAND_LEVELING",
+            "description": "Leveling the land surface of an upland (vs. paddy) field",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Field Preparation Land Leveling"
           },
           {
             "code": "HARVEST_PRE_HARVEST",
@@ -2409,6 +2636,36 @@
             "description": "The activity of collecting data from the tractor or other vehicle, often alongside another Operation Type or in transport between Fields.   Examples include fuel level and oil pressure.",
             "enumerationItemStatusCode": "VALID",
             "name": "Vehicle Data Collection General"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_PUDDLING",
+            "description": "Pulverization, leveling, water retention, and weeding by crushing\nthe clods in flooded paddy fields",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Puddling"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_DITCHING",
+            "description": "Digging drainage trenches in paddy fields",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Ditching"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_DRAINAGE",
+            "description": "Process of removing surface or subsurface water from a soil profile or area.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Drainage"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_LAND_LEVELING",
+            "description": "Leveling the land surface of a paddy field",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Land Leveling"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_LEVEE_COATING",
+            "description": "Compacting ridges (bunds) and plastering it with mud in paddy fields to\nminimize water loss",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Levee Coating"
           }
         ]
       },
@@ -2461,6 +2718,230 @@
       ]
     },
     {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSQualityIndicator",
+      "description": "",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "FIX_NOT_VALID",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Fix Not Valid"
+          },
+          {
+            "code": "GNSS_FIX",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Gnss Fix"
+          },
+          {
+            "code": "DIFFERENTIAL_GNSS_FIX",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Differential Gnss Fix"
+          },
+          {
+            "code": "NOT_APPLICABLE",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Not Applicable"
+          },
+          {
+            "code": "RTK_FIXED",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Rtk Fixed"
+          },
+          {
+            "code": "RTK_FLOAT",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Rtk Float"
+          },
+          {
+            "code": "INS_DEAD_RECKONING",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Ins Dead Reckoning"
+          }
+        ]
+      },
+      "name": "GNSSQualityIndicator",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "NMEA0183TalkerID",
+      "description": "",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "GPS_ONLY",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Gps Only"
+          },
+          {
+            "code": "GLONASS_ONLY",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Glonass Only"
+          },
+          {
+            "code": "GALILEO",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Galileo"
+          },
+          {
+            "code": "BAIDOU",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Baidou"
+          },
+          {
+            "code": "NAVIC",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Navic"
+          },
+          {
+            "code": "COMBINED",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Combined"
+          }
+        ]
+      },
+      "name": "NMEA0183TalkerID",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSPositionFix",
+      "description": "",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "2DFIX",
+            "enumerationItemStatusCode": "VALID",
+            "name": "2Dfix"
+          },
+          {
+            "code": "3DFIX",
+            "enumerationItemStatusCode": "VALID",
+            "name": "3Dfix"
+          },
+          {
+            "code": "RTKFIX",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Rtkfix"
+          },
+          {
+            "code": "PPPFIX",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Pppfix"
+          }
+        ]
+      },
+      "name": "GNSSPositionFix",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GeometryCreationMethod",
+      "description": "",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "MANUAL",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Manual"
+          },
+          {
+            "code": "DRIVEN",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Driven"
+          },
+          {
+            "code": "SURVEYED",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Surveyed"
+          },
+          {
+            "code": "AUTO_OPERATION",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Auto Operation"
+          },
+          {
+            "code": "AUTO_IMAGERY",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Auto Imagery"
+          },
+          {
+            "code": "ADMINISTRATIVE",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Administrative"
+          }
+        ]
+      },
+      "name": "GeometryCreationMethod",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSBaseSurveyType",
+      "description": "",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "MOBILE_BASE",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Mobile Base"
+          },
+          {
+            "code": "PROFESSIONAL",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Professional"
+          },
+          {
+            "code": "VIRTUAL",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Virtual"
+          }
+        ]
+      },
+      "name": "GNSSBaseSurveyType",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSBaseStationType",
+      "description": "",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "PHYSICAL",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Physical"
+          },
+          {
+            "code": "VIRTUAL",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Virtual"
+          }
+        ]
+      },
+      "name": "GNSSBaseStationType",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
       "dataDefinitionBaseTypeCode": "TEXT",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "Timestamp",
@@ -2491,6 +2972,15 @@
       "scopes": [
         "Farm",
         "Field"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "TEXT",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSS_Fallback_Status",
+      "name": "GNSS_Fallback_Status",
+      "scopes": [
+        "Variable"
       ]
     }
   ],

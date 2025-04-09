@@ -707,6 +707,15 @@
           "value": "milliequivalent"
         }
       ]
+    },
+    {
+      "domain": "SignalToNoise",
+      "units": [
+        {
+          "key": "dB-Hz",
+          "value": "Decibles relative to Hertz"
+        }
+      ]
     }
   ]
 }
