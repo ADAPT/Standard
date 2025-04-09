@@ -713,7 +713,7 @@
       "units": [
         {
           "key": "dB-Hz",
-          "value": "Decibles relative to Hertz"
+          "value": "Decibels relative to Hertz"
         }
       ]
     }
