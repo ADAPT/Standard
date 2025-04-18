@@ -1230,7 +1230,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSDistanceFromBase",
-      "description": "For points recorded with positioning technologies, how far the point is from the base station",
+      "description": "The horizontal distance between the GNSS receiver (often referred to as the rover) and the reference station (base station) providing correction data",
       "name": "Distance from Base Station",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1258,7 +1258,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSReceiverSatelliteCount",
-      "description": "Count of  Satellites in use by GNSS Receiver the at the time a point was recorded",
+      "description": "The number of GNSS satellites that the receiver is able to track and use to calculate its position at a given time.",
       "name": "Receiver Satellite Count",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Integer",
@@ -1272,7 +1272,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSBaseStationSatelliteCount",
-      "description": "Count of  Satellites in use by GNSS Base Station the at the time a point was recorded",
+      "description": "The number of GNSS satellites that the base station is able to track and use to calculate correction for at a given time.",
       "name": "Base Station Satellite Count",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Integer",
@@ -1286,7 +1286,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "hDOP",
-      "description": "Dimensionless measure of GNSS horizontal accuracy degradation due to satellite positions",
+      "description": "Horizontal Dilution of Precision is a measure of the accuracy of a GNSS receiver's horizontal position (latitude and longitude) based on the geometry of the satellites in view. ",
       "name": "Horizontal Dilution of Precision",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1300,7 +1300,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "vDOP",
-      "description": "Dimensionless measure of GNSS vertical accuracy degradation due to satellite positions",
+      "description": "Vertical Dilution of Precision is a measure of the accuracy of a GNSS receiver's vertical position (altitude) based on the geometry of the satellites in view. ",
       "name": "Vertical Dilution of Precision",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1314,7 +1314,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSAgeOfCorrection",
-      "description": "Defines elapsed time since the last GNSS correction information received",
+      "description": "The time elapsed since the last correction signal was received by the GNSS receiver from a base station or correction network.",
       "name": "Age of Correction",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1328,11 +1328,11 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSSignalStrength",
-      "description": "Power level of signal received by GNSS receiver",
+      "description": "The power or intensity of the GNSS signals being received from the satellites.",
       "name": "Signal Strength",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "dB-Hz"
+        "unitOfMeasureCode": "dBm"
       },
       "scopes": [
         "Variable"
@@ -1342,7 +1342,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSSemiMajorErrorElipse",
-      "description": "Longest radius of error elipse",
+      "description": "The larger axis of an error ellipse that represents the uncertainty or potential error in the calculated position.",
       "name": "Semi Major Error Elipse",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1356,7 +1356,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSSemiMinorErrorElipse",
-      "description": "Shortest radious of error elipse",
+      "description": "The shorter axis of the error ellipse, which represents the uncertainty or potential error in the calculated position along the direction of least uncertainty. ",
       "name": "Semi Minor Error Elipse",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1370,7 +1370,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSOrientationErrorElipse",
-      "description": "The angle between the major axis of the error ellipse and true North.",
+      "description": "The orientation or alignment of the error ellipse that represents the uncertainty in the receiver's position. ",
       "name": "Orientation Error Ellipse",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1384,7 +1384,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSLatitudeError",
-      "description": "Estimated error in Latitude",
+      "description": "The positional error or uncertainty in the calculated latitude of the receiver's location.",
       "name": "Latitude Error",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1398,7 +1398,7 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSLongitudeError",
-      "description": "Estimated error in Longitude",
+      "description": "The positional error or uncertainty in the calculated longitude of the receiver's location.",
       "name": "Longitude Error",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
@@ -1412,12 +1412,32 @@
       "dataDefinitionBaseTypeCode": "NUMERIC",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSAltitudeError",
-      "description": "Estimated error in Altitude",
+      "description": "The positional error or uncertainty in the calculated altitude (height) of the receiver's location.",
       "name": "Altitude Error",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
         "unitOfMeasureCode": "m"
       },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSRollCompensation",
+      "description": "Whether roll compensation is used. Roll compensation is the adjustment made to the GNSS position data to account for the roll (tilt left/right), pitch (tilt front/back) and yaw (rotation relative to vehicle's vertical axis) of the vehicle or equipment that the receiver is mounted on.",
+      "name": "GNSS Roll Compensation",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSFallbackStatus",
+      "description": "Whether the state of the GNSS receiver is switched to a backup or less accurate positioning method due to issues with the primary satellite signals or correction data.",
+      "name": "GNSS Fallback Status",
       "scopes": [
         "Variable"
       ]
@@ -2721,43 +2741,50 @@
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSQualityIndicator",
-      "description": "",
+      "description": "Enumeration from NMEA 0183 v4.11 describing the what type of correction source is being used",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "FIX_NOT_VALID",
+            "code": "0",
+            "description": "Fix not valid",
             "enumerationItemStatusCode": "VALID",
-            "name": "Fix Not Valid"
+            "name": "Fix not valid"
           },
           {
-            "code": "GNSS_FIX",
+            "code": "1",
+            "description": "10 meter accuracy",
             "enumerationItemStatusCode": "VALID",
-            "name": "Gnss Fix"
+            "name": "GNSS fix"
           },
           {
-            "code": "DIFFERENTIAL_GNSS_FIX",
+            "code": "2",
+            "description": "Sub-meter accuracy",
             "enumerationItemStatusCode": "VALID",
-            "name": "Differential Gnss Fix"
+            "name": "Differential GNSS fix (DGNSS), SBAS"
           },
           {
-            "code": "NOT_APPLICABLE",
+            "code": "3",
+            "description": "Not used",
             "enumerationItemStatusCode": "VALID",
             "name": "Not Applicable"
           },
           {
-            "code": "RTK_FIXED",
+            "code": "4",
+            "description": "Centimeter accuracy",
             "enumerationItemStatusCode": "VALID",
-            "name": "Rtk Fixed"
+            "name": "RTK Fixed"
           },
           {
-            "code": "RTK_FLOAT",
+            "code": "5",
+            "description": "Decimeter accuracy",
             "enumerationItemStatusCode": "VALID",
-            "name": "Rtk Float"
+            "name": "RTK Float"
           },
           {
-            "code": "INS_DEAD_RECKONING",
+            "code": "6",
+            "description": "Accuracy varies",
             "enumerationItemStatusCode": "VALID",
-            "name": "Ins Dead Reckoning"
+            "name": "INS Dead Reckoning"
           }
         ]
       },
@@ -2770,36 +2797,42 @@
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "NMEA0183TalkerID",
-      "description": "",
+      "description": "Enumeration from NMEA 0183 v4.11 describing which  satellite constellations are being used",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "GPS_ONLY",
+            "code": "0",
+            "description": "GPS Only",
             "enumerationItemStatusCode": "VALID",
-            "name": "Gps Only"
+            "name": "GPS Only"
           },
           {
-            "code": "GLONASS_ONLY",
+            "code": "1",
+            "description": "GLONASS Only",
             "enumerationItemStatusCode": "VALID",
-            "name": "Glonass Only"
+            "name": "GLONASS Only"
           },
           {
-            "code": "GALILEO",
+            "code": "2",
+            "description": "GALILEO",
             "enumerationItemStatusCode": "VALID",
-            "name": "Galileo"
+            "name": "GALILEO"
           },
           {
-            "code": "BAIDOU",
+            "code": "3",
+            "description": "BAIDOU",
             "enumerationItemStatusCode": "VALID",
-            "name": "Baidou"
+            "name": "BAIDOU"
           },
           {
-            "code": "NAVIC",
+            "code": "4",
+            "description": "NAVIC",
             "enumerationItemStatusCode": "VALID",
-            "name": "Navic"
+            "name": "NAVIC"
           },
           {
-            "code": "COMBINED",
+            "code": "5",
+            "description": "Combined",
             "enumerationItemStatusCode": "VALID",
             "name": "Combined"
           }
@@ -2814,28 +2847,32 @@
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSPositionFix",
-      "description": "",
+      "description": "Defines the process by which the receiver calculates its position based on the signals it receives from multiple satellites.",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "2DFIX",
+            "code": "0",
+            "description": "A position fix that provides only latitude and longitude (horizontal position).",
             "enumerationItemStatusCode": "VALID",
-            "name": "2Dfix"
+            "name": "2DFIX"
           },
           {
-            "code": "3DFIX",
+            "code": "1",
+            "description": "A position fix that provides latitude, longitude, and altitude (vertical position).",
             "enumerationItemStatusCode": "VALID",
-            "name": "3Dfix"
+            "name": "3DFIX"
           },
           {
-            "code": "RTKFIX",
+            "code": "2",
+            "description": "A high-accuracy fix derived from correction data generated from a base station, often used in real-time kinematic systems for centimeter-level accuracy.",
             "enumerationItemStatusCode": "VALID",
-            "name": "Rtkfix"
+            "name": "RTKFIX"
           },
           {
-            "code": "PPPFIX",
+            "code": "3",
+            "description": "Precise Point Positioning is a high-accuracy fix derived from a single GNSS receiver that uses models or and algorithms to make corrections.",
             "enumerationItemStatusCode": "VALID",
-            "name": "Pppfix"
+            "name": "PPPFIX"
           }
         ]
       },
@@ -2848,36 +2885,48 @@
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GeometryCreationMethod",
-      "description": "",
+      "description": "Defines the method used to create the boundary",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "MANUAL",
+            "code": "0",
+            "description": "Creation method is unknown",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Unknown"
+          },
+          {
+            "code": "1",
+            "description": "Hand drawn in a computer system (FMIS) based on imagery or other information.",
             "enumerationItemStatusCode": "VALID",
             "name": "Manual"
           },
           {
-            "code": "DRIVEN",
+            "code": "2",
+            "description": "Record a series of points that define the boundary by driving a machine (e.g. tractor) equipped with a GNSS receiver around the perimeter of the field.",
             "enumerationItemStatusCode": "VALID",
             "name": "Driven"
           },
           {
-            "code": "SURVEYED",
+            "code": "3",
+            "description": "Defined by a professional surveyor",
             "enumerationItemStatusCode": "VALID",
             "name": "Surveyed"
           },
           {
-            "code": "AUTO_OPERATION",
+            "code": "4",
+            "description": "Automatically generated in a software tool based on an as-applied/coverage map from a field operation",
             "enumerationItemStatusCode": "VALID",
             "name": "Auto Operation"
           },
           {
-            "code": "AUTO_IMAGERY",
+            "code": "5",
+            "description": "Automatically generated in a software tool based imagery",
             "enumerationItemStatusCode": "VALID",
             "name": "Auto Imagery"
           },
           {
-            "code": "ADMINISTRATIVE",
+            "code": "6",
+            "description": "Boundary is provided by some third party authority (generally governmental) and actual creation method is unknown",
             "enumerationItemStatusCode": "VALID",
             "name": "Administrative"
           }
@@ -2892,21 +2941,24 @@
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSBaseSurveyType",
-      "description": "",
+      "description": "Defines the type of survey used in placing the base station",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "MOBILE_BASE",
+            "code": "0",
+            "description": "A base station that is not on a fixed mounting point, often setup on a tripod by a machine operator near the field",
             "enumerationItemStatusCode": "VALID",
             "name": "Mobile Base"
           },
           {
-            "code": "PROFESSIONAL",
+            "code": "1",
+            "description": "A base station placed on a permanent mounting point that was positioned by a professional surveyor",
             "enumerationItemStatusCode": "VALID",
             "name": "Professional"
           },
           {
-            "code": "VIRTUAL",
+            "code": "2",
+            "description": "A virtual base station that is part of a correction network but does not physically exist",
             "enumerationItemStatusCode": "VALID",
             "name": "Virtual"
           }
@@ -2921,16 +2973,18 @@
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GNSSBaseStationType",
-      "description": "",
+      "description": "Defines the type of base station",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "PHYSICAL",
+            "code": "0",
+            "description": "A physical base station",
             "enumerationItemStatusCode": "VALID",
             "name": "Physical"
           },
           {
-            "code": "VIRTUAL",
+            "code": "1",
+            "description": "A virtual base station",
             "enumerationItemStatusCode": "VALID",
             "name": "Virtual"
           }
@@ -2977,8 +3031,6 @@
     {
       "dataDefinitionBaseTypeCode": "TEXT",
       "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "GNSS_Fallback_Status",
-      "name": "GNSS_Fallback_Status",
       "scopes": [
         "Variable"
       ]

@@ -292,6 +292,10 @@
         {
           "key": "unitless",
           "value": "unitless"
+        },
+        {
+          "key": "dBm",
+          "value": "decibel-milliwatts"
         }
       ]
     },
@@ -705,15 +709,6 @@
         {
           "key": "mEq",
           "value": "milliequivalent"
-        }
-      ]
-    },
-    {
-      "domain": "SignalToNoise",
-      "units": [
-        {
-          "key": "dB-Hz",
-          "value": "Decibels relative to Hertz"
         }
       ]
     }
