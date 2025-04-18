@@ -2889,43 +2889,43 @@
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "0",
+            "code": "UNKNOWN",
             "description": "Creation method is unknown",
             "enumerationItemStatusCode": "VALID",
             "name": "Unknown"
           },
           {
-            "code": "1",
+            "code": "MANUAL",
             "description": "Hand drawn in a computer system (FMIS) based on imagery or other information.",
             "enumerationItemStatusCode": "VALID",
             "name": "Manual"
           },
           {
-            "code": "2",
+            "code": "DRIVEN",
             "description": "Record a series of points that define the boundary by driving a machine (e.g. tractor) equipped with a GNSS receiver around the perimeter of the field.",
             "enumerationItemStatusCode": "VALID",
             "name": "Driven"
           },
           {
-            "code": "3",
+            "code": "SURVEYED",
             "description": "Defined by a professional surveyor",
             "enumerationItemStatusCode": "VALID",
             "name": "Surveyed"
           },
           {
-            "code": "4",
+            "code": "AUTO_OPERATION",
             "description": "Automatically generated in a software tool based on an as-applied/coverage map from a field operation",
             "enumerationItemStatusCode": "VALID",
             "name": "Auto Operation"
           },
           {
-            "code": "5",
+            "code": "AUTO_IMAGERY",
             "description": "Automatically generated in a software tool based imagery",
             "enumerationItemStatusCode": "VALID",
             "name": "Auto Imagery"
           },
           {
-            "code": "6",
+            "code": "ADMINISTRATIVE",
             "description": "Boundary is provided by some third party authority (generally governmental) and actual creation method is unknown",
             "enumerationItemStatusCode": "VALID",
             "name": "Administrative"
@@ -2934,7 +2934,7 @@
       },
       "name": "GeometryCreationMethod",
       "scopes": [
-        "Variable"
+        "Boundary Properties"
       ]
     },
     {
@@ -2945,19 +2945,19 @@
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "0",
+            "code": "MOBILE_BASE",
             "description": "A base station that is not on a fixed mounting point, often setup on a tripod by a machine operator near the field",
             "enumerationItemStatusCode": "VALID",
             "name": "Mobile Base"
           },
           {
-            "code": "1",
+            "code": "PROFESSIONAL",
             "description": "A base station placed on a permanent mounting point that was positioned by a professional surveyor",
             "enumerationItemStatusCode": "VALID",
             "name": "Professional"
           },
           {
-            "code": "2",
+            "code": "VIRTUAL",
             "description": "A virtual base station that is part of a correction network but does not physically exist",
             "enumerationItemStatusCode": "VALID",
             "name": "Virtual"
@@ -2966,7 +2966,7 @@
       },
       "name": "GNSSBaseSurveyType",
       "scopes": [
-        "Variable"
+        "Base Station Metadata"
       ]
     },
     {
@@ -2977,13 +2977,13 @@
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
           {
-            "code": "0",
+            "code": "PHYSICAL",
             "description": "A physical base station",
             "enumerationItemStatusCode": "VALID",
             "name": "Physical"
           },
           {
-            "code": "1",
+            "code": "VIRTUAL",
             "description": "A virtual base station",
             "enumerationItemStatusCode": "VALID",
             "name": "Virtual"
@@ -2992,7 +2992,7 @@
       },
       "name": "GNSSBaseStationType",
       "scopes": [
-        "Variable"
+        "Base Station Metadata"
       ]
     },
     {
