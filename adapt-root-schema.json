@@ -60,7 +60,7 @@
     },
     "code": {
       "type": "string",
-      "description": "Code for the item, taken from the list of valid codes for a given Enumerated Data Type Definition.   Required."
+      "description": "A code is a character string of letters, numbers, special characters (except escape sequences); and symbols. It represents a definitive value,\na method, or a property description in an abbreviated or language-independent form that is part of a finite list of allowed values."
     },
     "country": {
       "type": "string",
@@ -77,10 +77,6 @@
     "cropId": {
       "type": "string",
       "description": "An id mapping to the Reference Id of a Crop"
-    },
-    "cropNutritionIngredientItemCode": {
-      "type": "string",
-      "description": "The code that identifies the enumeration item value from the Crop Nutrition Ingredient data type definition"
     },
     "cropZoneId": {
       "type": "string",
@@ -230,6 +226,14 @@
       "type": "string",
       "description": "The code that identifies the enumeration item value from the Id Type data type definition"
     },
+    "ingredientCode": {
+      "type": "string",
+      "description": "For product components that are ingredients (i.e., no further subdivision of product component is possible), a meaningful code defining the ingredient such as a chemical formula or code from a defined vocabulary."
+    },
+    "ingredientCodeSource": {
+      "type": "string",
+      "description": "The vocabulary that defines the Ingredient Code."
+    },
     "isActiveIngredient": {
       "type": "boolean",
       "description": "True for active ingredients, false for inert ingredients"
@@ -241,10 +245,6 @@
     "isClockwise": {
       "type": "boolean",
       "description": "True if clockwise, false if counter-clockwise"
-    },
-    "isManure": {
-      "type": "boolean",
-      "description": "Whether a Crop Nutrition product is manure."
     },
     "isPassable": {
       "type": "boolean",
@@ -440,7 +440,7 @@
     },
     "valueText": {
       "type": "string",
-      "description": "The value of this contact item.  E.g., phone number."
+      "description": "The value of a data element, expressed as a text string"
     },
     "variableId": {
       "type": "string",
@@ -568,6 +568,24 @@
         "$ref": "#/$defs/addressLine"
       },
       "minItems": 1
+    },
+    "amount": {
+      "description": "Amount of a product component within the parent product.  Valid amounts are in volume or mass per volume or mass.  E.g.s, 3 floz1gal-1, 0.26 lb1lb-1, 1oz1gal-1.   For ingredients, amounts may be expressed as percentages.",
+      "type": "object",
+      "properties": {
+        "numericValue": {
+          "$ref": "#/$defs/numericValue",
+          "description": "The actual value of the Measurement"
+        },
+        "unitOfMeasureCode": {
+          "$ref": "#/$defs/unitOfMeasureCode",
+          "description": "The unit of measure for the given value.  Required."
+        }
+      },
+      "required": [
+        "numericValue",
+        "unitOfMeasureCode"
+      ]
     },
     "arableArea": {
       "description": "Total area of the Field that is cultivated, excluding areas such as waterways",
@@ -796,28 +814,10 @@
       },
       "minItems": 1
     },
-    "cropNutritionProductAttributes": {
-      "description": "Product Attributes relevant for Crop Nutrition products",
-      "type": "object",
-      "properties": {
-        "ingredients": {
-          "$ref": "#/$defs/ingredients",
-          "description": "Any defined Ingredients on this Product"
-        },
-        "isManure": {
-          "$ref": "#/$defs/isManure",
-          "description": "Whether a Crop Nutrition product is manure."
-        }
-      }
-    },
     "cropProtectionProductAttributes": {
       "description": "Product Attributes relevant for Products of type Crop Protection.",
       "type": "object",
       "properties": {
-        "ingredients": {
-          "$ref": "#/$defs/ingredients",
-          "description": "Any defined Ingredients on this Product"
-        },
         "hasCarbamate": {
           "$ref": "#/$defs/hasCarbamate",
           "description": "Whether the CropProtectionProduct contains carbamate ingredients"
@@ -1767,47 +1767,26 @@
         "referenceId"
       ]
     },
-    "ingredient": {
-      "description": "A basic (non-product) ingredient within a Product.   Often a chemical element or compound.",
+    "ingredientId": {
+      "description": "A product component defined by a meaningful code and not further subdivided into components.",
       "type": "object",
       "properties": {
-        "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+        "ingredientCode": {
+          "$ref": "#/$defs/ingredientCode",
+          "description": "For product components that are ingredients (i.e., no further subdivision of product component is possible), a meaningful code defining the ingredient such as a chemical formula or code from a defined vocabulary."
         },
-        "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
-        },
-        "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
-        },
-        "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
-        },
-        "cropNutritionIngredientItemCode": {
-          "$ref": "#/$defs/cropNutritionIngredientItemCode",
-          "description": "Value from the Crop Nutrition Ingredient Representation.   Required for Crop Nutrition Ingredients.  Omitted for Crop Protection Ingredients."
+        "ingredientCodeSource": {
+          "$ref": "#/$defs/ingredientCodeSource",
+          "description": "The vocabulary that defines the Ingredient Code."
         },
         "isActiveIngredient": {
           "$ref": "#/$defs/isActiveIngredient",
-          "description": "Required for Crop Protection products.  True if this is an active ingredient.   False if it is an inert ingredient.   Omitted for Crop Nutrition Ingredients."
+          "description": "Where known, whether this ingredient is classified as active or inert."
         }
       },
       "required": [
-        "id",
-        "name"
+        "ingredientCode"
       ]
-    },
-    "ingredients": {
-      "description": "A list of Ingredients",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/ingredient"
-      },
-      "minItems": 1
     },
     "items": {
       "description": "List of enumerated items within an enumeration.",
@@ -1880,37 +1859,6 @@
         "$ref": "#/$defs/manufacturer"
       },
       "minItems": 1
-    },
-    "mixProductAttributes": {
-      "description": "Product attributes required for type Mix",
-      "type": "object",
-      "properties": {
-        "mixTotalQuantity": {
-          "$ref": "#/$defs/mixTotalQuantity",
-          "description": "The total quantity of the mix recipe.  Required."
-        }
-      },
-      "required": [
-        "mixTotalQuantity"
-      ]
-    },
-    "mixTotalQuantity": {
-      "description": "For products of type mix, the total quantity of the mix recipe.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
-        },
-        "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
     },
     "northShift": {
       "description": "The North shift of a Guidance Pattern",
@@ -2298,6 +2246,22 @@
           "$ref": "#/$defs/contextItems",
           "description": "List of supplemental information for this data element"
         },
+        "productTypeCode": {
+          "$ref": "#/$defs/productTypeCode",
+          "description": "The code that identifies the enumeration item value from the Product Type Representation.  Required."
+        },
+        "productStatusCode": {
+          "$ref": "#/$defs/productStatusCode",
+          "description": "The code that identifies the enumeration item value from the Product Status Representation.   Optional."
+        },
+        "productFormCode": {
+          "$ref": "#/$defs/productFormCode",
+          "description": "The code that identifies the enumeration item value from the Product Form Representation.   Required."
+        },
+        "manufacturerId": {
+          "$ref": "#/$defs/manufacturerId",
+          "description": "Where known, the id of the product manufacturer."
+        },
         "brandId": {
           "$ref": "#/$defs/brandId",
           "description": "Where known, the id of the product brand."
@@ -2310,29 +2274,13 @@
           "$ref": "#/$defs/specificGravity",
           "description": "The unitless specific gravity ratio of the product"
         },
-        "manufacturerId": {
-          "$ref": "#/$defs/manufacturerId",
-          "description": "Where known, the id of the product manufacturer."
-        },
         "productComponents": {
           "$ref": "#/$defs/productComponents",
           "description": "Optional list of the components that make up this product."
         },
-        "productTypeCode": {
-          "$ref": "#/$defs/productTypeCode",
-          "description": "The code that identifies the enumeration item value from the Product Type Representation.  Required."
-        },
-        "mixProductAttributes": {
-          "$ref": "#/$defs/mixProductAttributes",
-          "description": "Relevant attributes for products of type Mix"
-        },
         "cropVarietyProductAttributes": {
           "$ref": "#/$defs/cropVarietyProductAttributes",
           "description": "Relevant attributes for products of type Crop Variety"
-        },
-        "cropNutritionProductAttributes": {
-          "$ref": "#/$defs/cropNutritionProductAttributes",
-          "description": "Relevant attributes for products of type Crop Nutrition Product"
         },
         "cropProtectionProductAttributes": {
           "$ref": "#/$defs/cropProtectionProductAttributes",
@@ -2341,14 +2289,6 @@
         "harvestedProductAttributes": {
           "$ref": "#/$defs/harvestedProductAttributes",
           "description": ""
-        },
-        "productFormCode": {
-          "$ref": "#/$defs/productFormCode",
-          "description": "The code that identifies the enumeration item value from the Product Form Representation.   Required."
-        },
-        "productStatusCode": {
-          "$ref": "#/$defs/productStatusCode",
-          "description": "The code that identifies the enumeration item value from the Product Status Representation.   Optional."
         }
       },
       "required": [
@@ -2362,27 +2302,34 @@
       "description": "Details on an individual component that comprises part of a Product.",
       "type": "object",
       "properties": {
+        "productId": {
+          "$ref": "#/$defs/productId",
+          "description": "Mapping to a Product in the Catalog that defines this Component.  Either Product Id or Ingredient Id is required."
+        },
+        "ingredientId": {
+          "$ref": "#/$defs/ingredientId",
+          "description": "A product component defined by a meaningful code and not further subdivided into components. Either Product Id or Ingredient Id is required."
+        },
         "quantity": {
           "$ref": "#/$defs/quantity",
           "description": "Quantity may be set in any appropriate Representation.\nE.g.s, vrProvidedAmountMass, vrProvidedAmountVolume, vrProductContent, vrSolutionRateLiquid, vrActiveIngredientMassPerMass, etc."
         },
+        "amount": {
+          "$ref": "#/$defs/amount",
+          "description": "Amount of a product component within the parent product.  Valid amounts are in volume or mass per volume or mass.  E.g.s, 3 floz1gal-1, 0.26 lb1lb-1, 1oz1gal-1. For ingredients, amounts may be expressed as percentages."
+        },
         "isCarrier": {
           "$ref": "#/$defs/isCarrier",
-          "description": "True if this component represents the primary (generally liquid) contents of a mix"
+          "description": "For product components in mixes,  true if this component represents the primary (generally liquid) contents of a mix"
         },
         "mixOrder": {
           "$ref": "#/$defs/mixOrder",
-          "description": "In what order was this component added to the mix? (1 = First).\nCan have duplicate numbers, representing a situation where two or more components are added simultaneously."
-        },
-        "productId": {
-          "$ref": "#/$defs/productId",
-          "description": "Mapping to the product that defines this component."
+          "description": "For product components in mixes, the 1-based index which defines the order in which it was added.  Duplicate numbers are possible, representing a situation where two or more components are added simultaneously."
         }
       },
       "required": [
         "quantity",
-        "isCarrier",
-        "productId"
+        "amount"
       ]
     },
     "productComponents": {
