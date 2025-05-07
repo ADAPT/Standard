@@ -1443,6 +1443,46 @@
       ]
     },
     {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "CropVarietyIsGeneticallyEnhanced",
+      "description": "Whether a crop variety is genetically enhanced",
+      "name": "Crop Variety Is Genetically Enhhanced",
+      "scopes": [
+        "Product"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "HasCarbamate",
+      "description": "Whether a crop protection product has carbamate active ingredient(s)",
+      "name": "Has Carbamate",
+      "scopes": [
+        "Product"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "HasOrganophosphate",
+      "description": "Whether a crop protection product has organophosphate active ingredient(s)",
+      "name": "Has Organophosphate",
+      "scopes": [
+        "Product"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "HasBiological",
+      "description": "Whether a crop protection product has biological active ingredient(s)",
+      "name": "Has Biological",
+      "scopes": [
+        "Product"
+      ]
+    },
+    {
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "IdType",
@@ -2795,7 +2835,7 @@
     {
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "GeometryCreationMethod",
+      "definitionCode": "BoundaryCreationMethod",
       "description": "Defines the method used to create the boundary",
       "enumeratedDataTypeDefinitionAttributes": {
         "items": [
@@ -2843,7 +2883,7 @@
           }
         ]
       },
-      "name": "GeometryCreationMethod",
+      "name": "BoundaryCreationMethod",
       "scopes": [
         "Boundary Properties"
       ]
