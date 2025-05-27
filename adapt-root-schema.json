@@ -42,6 +42,14 @@
       "type": "string",
       "description": "The B point (WKT) of an AB Line"
     },
+    "baseStationPosition": {
+      "type": "string",
+      "description": "WKT of physical point defining the location of the base station."
+    },
+    "boundaryCreationMethodCode": {
+      "type": "string",
+      "description": "Code identifying the Creation Method from the BoundaryCreationMethod enumerated Data Type Definition"
+    },
     "boundaryGeometry": {
       "type": "string",
       "description": "Polygon or Multi Polygon WKT representing the enclosing area of an object in WGS84 coordinates"
@@ -166,6 +174,22 @@
       "type": "string",
       "description": "The geometry of an object in Well Known Text in WGS84 coordinates."
     },
+    "gNSSBaseStationTypeCode": {
+      "type": "string",
+      "description": "Code from the GNSS Base Station Type enumeration"
+    },
+    "gNSSBaseSurveyTypeCode": {
+      "type": "string",
+      "description": "Code from the GNSS Base Survey Type Enumeration"
+    },
+    "gNSSCorrectionNetworkBrand": {
+      "type": "string",
+      "description": "The name or identifier of the company, organization, or service provider that operates a specific network of reference stations delivering correction data to GNSS receivers."
+    },
+    "gNSSCorrectionNetworkName": {
+      "type": "string",
+      "description": "The identifier for a specific network of base stations that provide correction data to improve the accuracy of GNSS positioning."
+    },
     "growerId": {
       "type": "string",
       "description": "An id mapping to the Reference Id of a Grower"
@@ -194,21 +218,13 @@
       "type": "string",
       "description": "The textual identifier of a harvest load.  E.g., \"Load 1\""
     },
-    "hasBiological": {
-      "type": "boolean",
-      "description": "Whether the CropProtectionProduct contains biological ingredients"
-    },
-    "hasCarbamate": {
-      "type": "boolean",
-      "description": "Whether the CropProtectionProduct contains carbamate ingredients"
-    },
-    "hasOrganophosphate": {
-      "type": "boolean",
-      "description": "Whether the CropProtectionProduct contains organophosphate ingredients"
-    },
     "heading": {
       "type": "number",
       "description": "Direction of heading, in arc degrees from north"
+    },
+    "highDefinitionSourceLayerId": {
+      "type": "string",
+      "description": "Mapping to a Reference Layer referencing an associated Geoparquet file containing point-by-point attributes for a simple geometry.  The projection of the layer should be specified in the Geoparquet file metadata and it may vary from the associated simple geometry that must be in WGS84."
     },
     "idSource": {
       "type": "string",
@@ -270,6 +286,10 @@
       "type": "string",
       "description": "One or more Line Strings in Well Known Text as a Line String or Multi Line String in WGS84 coordinates"
     },
+    "loggingRate": {
+      "type": "integer",
+      "description": "The logging rate (or sampling rate) refers to the frequency at which the device records position data. Use 0 if the boundary was defined in a system that does not have a logging rate"
+    },
     "lossOfGNSSRate": {
       "type": "number",
       "description": "A default prescribed rate for a Product should the implement lose its position signal"
@@ -285,6 +305,10 @@
     "minimum": {
       "type": "number",
       "description": "A numeric minimum"
+    },
+    "minimumGNSSQualityIndicatorCode": {
+      "type": "string",
+      "description": "For a given geospatial dataset, the GNSS Quality Indicator Code for the point(s) with the lowest GNSS quality"
     },
     "mixOrder": {
       "type": "integer",
@@ -446,10 +470,6 @@
       "type": "string",
       "description": "Mapping to a Variable"
     },
-    "varietyIsGeneticallyEnhanced": {
-      "type": "boolean",
-      "description": "For varieties, optional indicator to signify that the variety is genetically enhanced."
-    },
     "version": {
       "type": "string",
       "description": "A version number"
@@ -587,6 +607,24 @@
         "unitOfMeasureCode"
       ]
     },
+    "appliedOffsets": {
+      "description": "For informational purposes, spatial offsets from a source point such as a GNSS receiver that have been applied by the data producer. ADAPT requires all offsets to be applied in mapped data, and this property is to be used only for geospatial data quality assessments and data provenance.  In no circumstances will the data consumer need to apply these data to any geometry.",
+      "type": "object",
+      "properties": {
+        "xOffset": {
+          "$ref": "#/$defs/xOffset",
+          "description": "Offset in the X (inline) direction.  Positive values are forward, negative values are backward."
+        },
+        "yOffset": {
+          "$ref": "#/$defs/yOffset",
+          "description": "Offset in the Y (lateral) direction.  Positive values are right, negative values are left."
+        },
+        "zOffset": {
+          "$ref": "#/$defs/zOffset",
+          "description": "Offset in the Z (Vertical) direction.  Positive values are upward."
+        }
+      }
+    },
     "arableArea": {
       "description": "Total area of the Field that is cultivated, excluding areas such as waterways",
       "type": "object",
@@ -603,6 +641,59 @@
       "required": [
         "numericValue",
         "unitOfMeasureCode"
+      ]
+    },
+    "boundary": {
+      "description": "An unattributed geospatial definition of an enclosed region, optionally including source metadata.",
+      "type": "object",
+      "properties": {
+        "geometry": {
+          "$ref": "#/$defs/geometry",
+          "description": "WKT of Polygon or Multi Polygon describing the enclosed region.  Must be in EPSG 4326 (WGS84) projection.  Required."
+        },
+        "boundaryCreationMethodCode": {
+          "$ref": "#/$defs/boundaryCreationMethodCode",
+          "description": "Method used to create the boundary.  Taken from BoundaryCreationMethod enumerated Data Type Definition."
+        },
+        "highDefinitionSourceLayerId": {
+          "$ref": "#/$defs/highDefinitionSourceLayerId",
+          "description": "Mapping to a Reference Layer referencing an associated Geoparquet file containing point-by-point attributes for the source of the Geometry.  The projection of the layer should be specified in the Geoparquet file metadata and it may vary from the Geometry property that must be in WGS84."
+        },
+        "gNSSBaseStationTypeCode": {
+          "$ref": "#/$defs/gNSSBaseStationTypeCode",
+          "description": "Code from the GNSS Base Station Type enumeration"
+        },
+        "gNSSBaseSurveyTypeCode": {
+          "$ref": "#/$defs/gNSSBaseSurveyTypeCode",
+          "description": "Code from the GNSS Base Survey Type Enumeration"
+        },
+        "gNSSCorrectionNetworkName": {
+          "$ref": "#/$defs/gNSSCorrectionNetworkName",
+          "description": "The identifier for a specific network of base stations that provide correction data to improve the accuracy of GNSS positioning."
+        },
+        "gNSSCorrectionNetworkBrand": {
+          "$ref": "#/$defs/gNSSCorrectionNetworkBrand",
+          "description": "The name or identifier of the company, organization, or service provider that operates a specific network of reference stations delivering correction data to GNSS receivers."
+        },
+        "gNSSReceiverMetadata": {
+          "$ref": "#/$defs/gNSSReceiverMetadata",
+          "description": "Information about the GNSS receiver used to record spatial data."
+        },
+        "gNSSMobileBaseStationMetadata": {
+          "$ref": "#/$defs/gNSSMobileBaseStationMetadata",
+          "description": "Information about the GNSS Base Station used in the collection of spatial data"
+        },
+        "gNSSQualityData": {
+          "$ref": "#/$defs/gNSSQualityData",
+          "description": "Values provided to help the consumer judge the purposes to which the data is suited."
+        },
+        "partyRoles": {
+          "$ref": "#/$defs/partyRoles",
+          "description": "Definition of parties involved in the boundary creation.   PartyRole code COLLECTOR is intended to define the party that drove or \"collected\" the data for the boundary."
+        }
+      },
+      "required": [
+        "geometry"
       ]
     },
     "brand": {
@@ -814,45 +905,6 @@
       },
       "minItems": 1
     },
-    "cropProtectionProductAttributes": {
-      "description": "Product Attributes relevant for Products of type Crop Protection.",
-      "type": "object",
-      "properties": {
-        "hasCarbamate": {
-          "$ref": "#/$defs/hasCarbamate",
-          "description": "Whether the CropProtectionProduct contains carbamate ingredients"
-        },
-        "hasOrganophosphate": {
-          "$ref": "#/$defs/hasOrganophosphate",
-          "description": "Whether the CropProtectionProduct contains organophosphate ingredients"
-        },
-        "hasBiological": {
-          "$ref": "#/$defs/hasBiological",
-          "description": "Whether the CropProtectionProduct contains biological ingredients"
-        }
-      }
-    },
-    "cropVarietyProductAttributes": {
-      "description": "Product attributes relevant when the type is Crop Variety",
-      "type": "object",
-      "properties": {
-        "cropId": {
-          "$ref": "#/$defs/cropId",
-          "description": "Required mapping to the crop"
-        },
-        "traits": {
-          "$ref": "#/$defs/traits",
-          "description": "Any defined genetic Traits on this Variety."
-        },
-        "varietyIsGeneticallyEnhanced": {
-          "$ref": "#/$defs/varietyIsGeneticallyEnhanced",
-          "description": "For varieties, optional indicator to signify that the variety is genetically enhanced."
-        }
-      },
-      "required": [
-        "cropId"
-      ]
-    },
     "cropZone": {
       "description": "A more detailed representation of/within a Field, defining a crop, its growing season and usually a separate boundary.   Where Crop Zone is used, Field is also required.",
       "type": "object",
@@ -895,6 +947,10 @@
         },
         "boundaryGeometry": {
           "$ref": "#/$defs/boundaryGeometry",
+          "description": "The boundary polygon/multipolygon defining the Crop Zone region"
+        },
+        "boundary": {
+          "$ref": "#/$defs/boundary",
           "description": "The boundary polygon/multipolygon defining the Crop Zone region"
         },
         "notes": {
@@ -1385,6 +1441,10 @@
           "$ref": "#/$defs/seasonIds",
           "description": "Any specific Seasons to which this boundary applies."
         },
+        "boundary": {
+          "$ref": "#/$defs/boundary",
+          "description": "The geospatial definition of the boundary.  Required."
+        },
         "geometry": {
           "$ref": "#/$defs/geometry",
           "description": "The geospatial definition of the boundary.  Required.  Must be a Polygon or Multi Polygon."
@@ -1402,7 +1462,7 @@
         "id",
         "name",
         "fieldId",
-        "geometry"
+        "boundary"
       ]
     },
     "fieldIds": {
@@ -1449,6 +1509,67 @@
         "$ref": "#/$defs/geoPoliticalContext"
       },
       "minItems": 1
+    },
+    "gNSSMobileBaseStationMetadata": {
+      "description": "Information about the GNSS Base Station used in the collection of spatial data",
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "$ref": "#/$defs/deviceId",
+          "description": "Id mapping to the Device definition that maps back to the Model, Brand and Manufacturer."
+        },
+        "baseStationPosition": {
+          "$ref": "#/$defs/baseStationPosition",
+          "description": "WKT of physical point defining the location of the base station."
+        },
+        "surveyTime": {
+          "$ref": "#/$defs/surveyTime",
+          "description": "The amount of time the GNSS reference station spends collecting data to establish a precise position.  Uses \"ACTUAL\" DateContext Code"
+        }
+      }
+    },
+    "gNSSQualityData": {
+      "description": "Values provided to help the consumer judge the purposes to which the data is suited.",
+      "type": "object",
+      "properties": {
+        "gNSSQualityStatistics": {
+          "$ref": "#/$defs/gNSSQualityStatistics",
+          "description": "Collection of summarized statistics for use in determining quality of GNSS data.  Uses defined Data Type Definitions scoped to this item (e.g.s., GNSSStandardDeviationAverageLatitude, GNSSMaximumAgeOfCorrection)"
+        },
+        "minimumGNSSQualityIndicatorCode": {
+          "$ref": "#/$defs/minimumGNSSQualityIndicatorCode",
+          "description": "For a given geospatial dataset, the GNSS Quality Indicator Code for the point(s) with the lowest GNSS quality"
+        },
+        "appliedOffsets": {
+          "$ref": "#/$defs/appliedOffsets",
+          "description": "For informational purposes, spatial offsets from the GNSS receiver that have been applied by the data producer. ADAPT requires all offsets to be applied in mapped data, and this property is to be used only for geospatial data quality assessments and data provenance.  In no circumstances will the data consumer need to apply these data to any geometry."
+        }
+      }
+    },
+    "gNSSQualityStatistics": {
+      "description": "Collection of summarized statistics for use in determining quality of GNSS data.  Uses defined Data Type Definitions scoped to this item.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/summaryValue"
+      },
+      "minItems": 1
+    },
+    "gNSSReceiverMetadata": {
+      "description": "Information about the GNSS receiver used to record spatial data.",
+      "type": "object",
+      "properties": {
+        "loggingRate": {
+          "$ref": "#/$defs/loggingRate",
+          "description": "The logging rate (or sampling rate) refers to the frequency at which the device records position data. Use 0 if the boundary was defined in a system that does not have a logging rate"
+        },
+        "deviceId": {
+          "$ref": "#/$defs/deviceId",
+          "description": "Id mapping to the Device definition that maps back to the Model, Brand and Manufacturer."
+        }
+      },
+      "required": [
+        "loggingRate"
+      ]
     },
     "grower": {
       "description": "An individual/business entity engaged in agricultural production.",
@@ -1562,6 +1683,10 @@
         "boundaryGeometry": {
           "$ref": "#/$defs/boundaryGeometry",
           "description": "Geometry defining the spatial extent of the Guidance Group"
+        },
+        "boundary": {
+          "$ref": "#/$defs/boundary",
+          "description": "Geometry defining the spatial extent of the Guidance Group"
         }
       },
       "required": [
@@ -1632,6 +1757,10 @@
         },
         "boundaryGeometry": {
           "$ref": "#/$defs/boundaryGeometry",
+          "description": "Any fixed spatial extent in which the Guidance Pattern is valid.  Optional."
+        },
+        "boundary": {
+          "$ref": "#/$defs/boundary",
           "description": "Any fixed spatial extent in which the Guidance Pattern is valid.  Optional."
         },
         "aBCurveAttributes": {
@@ -1707,19 +1836,6 @@
         }
       }
     },
-    "harvestedProductAttributes": {
-      "description": "Relevant attributes for Products of type Harvested Product",
-      "type": "object",
-      "properties": {
-        "cropId": {
-          "$ref": "#/$defs/cropId",
-          "description": "Required"
-        }
-      },
-      "required": [
-        "cropId"
-      ]
-    },
     "headland": {
       "description": "Ground near the ends of a field that is cultivated differently than the main body of the field",
       "type": "object",
@@ -1735,11 +1851,15 @@
         "geometry": {
           "$ref": "#/$defs/geometry",
           "description": "Polygon / Multi Polygon defining the Headland.   Required."
+        },
+        "boundary": {
+          "$ref": "#/$defs/boundary",
+          "description": "Polygon / Multi Polygon defining the Headland.   Required."
         }
       },
       "required": [
         "name",
-        "geometry"
+        "boundary"
       ]
     },
     "headlands": {
@@ -1932,13 +2052,17 @@
           "$ref": "#/$defs/geometry",
           "description": "Spatial definition of the Obstacle.   Required."
         },
+        "boundary": {
+          "$ref": "#/$defs/boundary",
+          "description": "Spatial definition of the Obstacle.   Required."
+        },
         "isPassable": {
           "$ref": "#/$defs/isPassable",
           "description": "Whether the boundary may be crossed with a vehicle, e.g., a grass waterway (true) vs. a rock pile (false)"
         }
       },
       "required": [
-        "geometry"
+        "boundary"
       ]
     },
     "obstacles": {
@@ -2020,6 +2144,10 @@
         "boundaryGeometry": {
           "$ref": "#/$defs/boundaryGeometry",
           "description": "The boundary of this Operation.  Optional."
+        },
+        "boundary": {
+          "$ref": "#/$defs/boundary",
+          "description": "The boundary of this Operation, often generated as the hull around collected coverage geometries (BoundaryCreationMethod: AUTO_OPERATION)."
         },
         "referenceLayerIds": {
           "$ref": "#/$defs/referenceLayerIds",
@@ -2250,13 +2378,13 @@
           "$ref": "#/$defs/productTypeCode",
           "description": "The code that identifies the enumeration item value from the Product Type Representation.  Required."
         },
-        "productStatusCode": {
-          "$ref": "#/$defs/productStatusCode",
-          "description": "The code that identifies the enumeration item value from the Product Status Representation.   Optional."
-        },
         "productFormCode": {
           "$ref": "#/$defs/productFormCode",
           "description": "The code that identifies the enumeration item value from the Product Form Representation.   Required."
+        },
+        "productStatusCode": {
+          "$ref": "#/$defs/productStatusCode",
+          "description": "The code that identifies the enumeration item value from the Product Status Representation.   Optional."
         },
         "manufacturerId": {
           "$ref": "#/$defs/manufacturerId",
@@ -2278,17 +2406,13 @@
           "$ref": "#/$defs/productComponents",
           "description": "Optional list of the components that make up this product."
         },
-        "cropVarietyProductAttributes": {
-          "$ref": "#/$defs/cropVarietyProductAttributes",
-          "description": "Relevant attributes for products of type Crop Variety"
+        "cropId": {
+          "$ref": "#/$defs/cropId",
+          "description": "For types Crop Variety and Harvested Product, a required mapping to the Crop. Not applicable for other product types."
         },
-        "cropProtectionProductAttributes": {
-          "$ref": "#/$defs/cropProtectionProductAttributes",
-          "description": "Relevant attributes for products of type Crop Protection Product"
-        },
-        "harvestedProductAttributes": {
-          "$ref": "#/$defs/harvestedProductAttributes",
-          "description": ""
+        "traits": {
+          "$ref": "#/$defs/traits",
+          "description": "For Crop Variety products, list of traits."
         }
       },
       "required": [
@@ -2328,7 +2452,6 @@
         }
       },
       "required": [
-        "quantity",
         "amount"
       ]
     },
@@ -2720,6 +2843,31 @@
       },
       "minItems": 1
     },
+    "surveyTime": {
+      "description": "The amount of time a GNSS reference station spends collecting data to establish a precise position.",
+      "type": "object",
+      "properties": {
+        "duration": {
+          "$ref": "#/$defs/duration",
+          "description": "Duration of the event in seconds.  Included separately from End Date/Time for cases where only the duration is relevant."
+        },
+        "start": {
+          "$ref": "#/$defs/start",
+          "description": "The date and time (UTC) at the start of an event."
+        },
+        "end": {
+          "$ref": "#/$defs/end",
+          "description": "The date and time (UTC) at the end of an event."
+        },
+        "dateContextCode": {
+          "$ref": "#/$defs/dateContextCode",
+          "description": "Code matching the relevant item in the Date Context Representation.  Required."
+        }
+      },
+      "required": [
+        "dateContextCode"
+      ]
+    },
     "swathWidth": {
       "description": "A defined width of a point or pass on a field, based on the implement's active width.",
       "type": "object",
@@ -3078,6 +3226,60 @@
         "$ref": "#/$defs/workRecord"
       },
       "minItems": 1
+    },
+    "xOffset": {
+      "description": "Offset in the X (inline) direction.  Positive values are forward, negative values are backward.",
+      "type": "object",
+      "properties": {
+        "numericValue": {
+          "$ref": "#/$defs/numericValue",
+          "description": "The actual value of the Measurement"
+        },
+        "unitOfMeasureCode": {
+          "$ref": "#/$defs/unitOfMeasureCode",
+          "description": "The unit of measure for the given value.  Required."
+        }
+      },
+      "required": [
+        "numericValue",
+        "unitOfMeasureCode"
+      ]
+    },
+    "yOffset": {
+      "description": "Offset in the Y (lateral) direction.  Positive values are right, negative values are left.",
+      "type": "object",
+      "properties": {
+        "numericValue": {
+          "$ref": "#/$defs/numericValue",
+          "description": "The actual value of the Measurement"
+        },
+        "unitOfMeasureCode": {
+          "$ref": "#/$defs/unitOfMeasureCode",
+          "description": "The unit of measure for the given value.  Required."
+        }
+      },
+      "required": [
+        "numericValue",
+        "unitOfMeasureCode"
+      ]
+    },
+    "zOffset": {
+      "description": "Offset in the Z (Vertical) direction.  Positive values are upward.",
+      "type": "object",
+      "properties": {
+        "numericValue": {
+          "$ref": "#/$defs/numericValue",
+          "description": "The actual value of the Measurement"
+        },
+        "unitOfMeasureCode": {
+          "$ref": "#/$defs/unitOfMeasureCode",
+          "description": "The unit of measure for the given value.  Required."
+        }
+      },
+      "required": [
+        "numericValue",
+        "unitOfMeasureCode"
+      ]
     }
   }
 }
