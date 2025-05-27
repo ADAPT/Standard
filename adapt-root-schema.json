@@ -945,10 +945,6 @@
           "$ref": "#/$defs/arableArea",
           "description": "Total area of the Crop Zone that is cultivated, excluding areas such as waterways"
         },
-        "boundaryGeometry": {
-          "$ref": "#/$defs/boundaryGeometry",
-          "description": "The boundary polygon/multipolygon defining the Crop Zone region"
-        },
         "boundary": {
           "$ref": "#/$defs/boundary",
           "description": "The boundary polygon/multipolygon defining the Crop Zone region"
@@ -1445,10 +1441,6 @@
           "$ref": "#/$defs/boundary",
           "description": "The geospatial definition of the boundary.  Required."
         },
-        "geometry": {
-          "$ref": "#/$defs/geometry",
-          "description": "The geospatial definition of the boundary.  Required.  Must be a Polygon or Multi Polygon."
-        },
         "obstacles": {
           "$ref": "#/$defs/obstacles",
           "description": "Any Obstacles defined within this Field Boundary"
@@ -1680,10 +1672,6 @@
           "$ref": "#/$defs/guidancePatternIds",
           "description": "List of the Guidance Patterns in this Group.   Required."
         },
-        "boundaryGeometry": {
-          "$ref": "#/$defs/boundaryGeometry",
-          "description": "Geometry defining the spatial extent of the Guidance Group"
-        },
         "boundary": {
           "$ref": "#/$defs/boundary",
           "description": "Geometry defining the spatial extent of the Guidance Group"
@@ -1754,10 +1742,6 @@
         "numberOfSwathsRight": {
           "$ref": "#/$defs/numberOfSwathsRight",
           "description": "Number of swaths to propagate the pattern to the right.  Optional."
-        },
-        "boundaryGeometry": {
-          "$ref": "#/$defs/boundaryGeometry",
-          "description": "Any fixed spatial extent in which the Guidance Pattern is valid.  Optional."
         },
         "boundary": {
           "$ref": "#/$defs/boundary",
@@ -1847,10 +1831,6 @@
         "name": {
           "$ref": "#/$defs/name",
           "description": "Name of the headland.  Required."
-        },
-        "geometry": {
-          "$ref": "#/$defs/geometry",
-          "description": "Polygon / Multi Polygon defining the Headland.   Required."
         },
         "boundary": {
           "$ref": "#/$defs/boundary",
@@ -2048,10 +2028,6 @@
           "$ref": "#/$defs/name",
           "description": "Name of the interior boundary attribute.   Optional."
         },
-        "geometry": {
-          "$ref": "#/$defs/geometry",
-          "description": "Spatial definition of the Obstacle.   Required."
-        },
         "boundary": {
           "$ref": "#/$defs/boundary",
           "description": "Spatial definition of the Obstacle.   Required."
@@ -2140,10 +2116,6 @@
         "notes": {
           "$ref": "#/$defs/notes",
           "description": "Any Notes on the Operation"
-        },
-        "boundaryGeometry": {
-          "$ref": "#/$defs/boundaryGeometry",
-          "description": "The boundary of this Operation.  Optional."
         },
         "boundary": {
           "$ref": "#/$defs/boundary",
@@ -2433,10 +2405,6 @@
         "ingredientId": {
           "$ref": "#/$defs/ingredientId",
           "description": "A product component defined by a meaningful code and not further subdivided into components. Either Product Id or Ingredient Id is required."
-        },
-        "quantity": {
-          "$ref": "#/$defs/quantity",
-          "description": "Quantity may be set in any appropriate Representation.\nE.g.s, vrProvidedAmountMass, vrProvidedAmountVolume, vrProductContent, vrSolutionRateLiquid, vrActiveIngredientMassPerMass, etc."
         },
         "amount": {
           "$ref": "#/$defs/amount",
