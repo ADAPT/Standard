@@ -3110,14 +3110,7 @@
         "Farm",
         "Field"
       ]
-    },
-    {
-      "dataDefinitionBaseTypeCode": "TEXT",
-      "dataDefinitionStatusCode": "VALID",
-      "scopes": [
-        "Variable"
-      ]
     }
   ],
-  "version": "1.0.1"
+  "version": "2.0.0"
 }
