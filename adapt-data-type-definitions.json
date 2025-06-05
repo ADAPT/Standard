@@ -1433,7 +1433,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1447,7 +1447,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1461,7 +1461,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1475,7 +1475,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1489,7 +1489,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1503,7 +1503,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1517,7 +1517,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1531,7 +1531,7 @@
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
       ]
     },
     {
@@ -1545,7 +1545,21 @@
         "unitOfMeasureCode": "sec"
       },
       "scopes": [
-        "GNSS Quality Statistics"
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "MinimumGNSSQualityIndicatorCode",
+      "description": "The code from the GNSSQualityIndicator Data Type Definition representing the lowest level of quality present in a given dataset.",
+      "name": "Minimum GNSS Quality Indicator Code",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
       ]
     },
     {

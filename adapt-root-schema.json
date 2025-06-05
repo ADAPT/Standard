@@ -306,10 +306,6 @@
       "type": "number",
       "description": "A numeric minimum"
     },
-    "minimumGNSSQualityIndicatorCode": {
-      "type": "string",
-      "description": "For a given geospatial dataset, the GNSS Quality Indicator Code for the point(s) with the lowest GNSS quality"
-    },
     "mixOrder": {
       "type": "integer",
       "description": "In what order was this component added to the mix? (1 = First).\nCan have duplicate numbers, representing a situation where two or more components are added simultaneously."
@@ -683,9 +679,9 @@
           "$ref": "#/$defs/gNSSMobileBaseStationMetadata",
           "description": "Information about the GNSS Base Station used in the collection of spatial data"
         },
-        "gNSSQualityData": {
-          "$ref": "#/$defs/gNSSQualityData",
-          "description": "Values provided to help the consumer judge the purposes to which the data is suited."
+        "gNSSDataQualityMetrics": {
+          "$ref": "#/$defs/gNSSDataQualityMetrics",
+          "description": "Collection of metrics supplied to document the quality of a GNSS dataset.  Comprised of Data Types scoped at the GNSS Data Quality Metrics component."
         },
         "partyRoles": {
           "$ref": "#/$defs/partyRoles",
@@ -1060,6 +1056,24 @@
         "name",
         "dataDefinitionBaseTypeCode",
         "dataDefinitionStatusCode"
+      ]
+    },
+    "dataValue": {
+      "description": "A value paired with a Data Type Definition code to define what it represents.",
+      "type": "object",
+      "properties": {
+        "definitionCode": {
+          "$ref": "#/$defs/definitionCode",
+          "description": "Code identifying the Data Type Definition, required."
+        },
+        "valueText": {
+          "$ref": "#/$defs/valueText",
+          "description": "The value of a data element, expressed as a text string.  Required.  The Definition Code maps to information defining how the value may be parsed."
+        }
+      },
+      "required": [
+        "definitionCode",
+        "valueText"
       ]
     },
     "density": {
@@ -1502,6 +1516,14 @@
       },
       "minItems": 1
     },
+    "gNSSDataQualityMetrics": {
+      "description": "Collection of metrics supplied to document the quality of a GNSS dataset.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dataValue"
+      },
+      "minItems": 1
+    },
     "gNSSMobileBaseStationMetadata": {
       "description": "Information about the GNSS Base Station used in the collection of spatial data",
       "type": "object",
@@ -1520,32 +1542,6 @@
         }
       }
     },
-    "gNSSQualityData": {
-      "description": "Values provided to help the consumer judge the purposes to which the data is suited.",
-      "type": "object",
-      "properties": {
-        "gNSSQualityStatistics": {
-          "$ref": "#/$defs/gNSSQualityStatistics",
-          "description": "Collection of summarized statistics for use in determining quality of GNSS data.  Uses defined Data Type Definitions scoped to this item (e.g.s., GNSSStandardDeviationAverageLatitude, GNSSMaximumAgeOfCorrection)"
-        },
-        "minimumGNSSQualityIndicatorCode": {
-          "$ref": "#/$defs/minimumGNSSQualityIndicatorCode",
-          "description": "For a given geospatial dataset, the GNSS Quality Indicator Code for the point(s) with the lowest GNSS quality"
-        },
-        "appliedOffsets": {
-          "$ref": "#/$defs/appliedOffsets",
-          "description": "For informational purposes, spatial offsets from the GNSS receiver that have been applied by the data producer. ADAPT requires all offsets to be applied in mapped data, and this property is to be used only for geospatial data quality assessments and data provenance.  In no circumstances will the data consumer need to apply these data to any geometry."
-        }
-      }
-    },
-    "gNSSQualityStatistics": {
-      "description": "Collection of summarized statistics for use in determining quality of GNSS data.  Uses defined Data Type Definitions scoped to this item.",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/summaryValue"
-      },
-      "minItems": 1
-    },
     "gNSSReceiverMetadata": {
       "description": "Information about the GNSS receiver used to record spatial data.",
       "type": "object",
@@ -1557,6 +1553,10 @@
         "deviceId": {
           "$ref": "#/$defs/deviceId",
           "description": "Id mapping to the Device definition that maps back to the Model, Brand and Manufacturer."
+        },
+        "appliedOffsets": {
+          "$ref": "#/$defs/appliedOffsets",
+          "description": "For informational purposes, spatial offsets from a GNSS-positioned point that have been applied by the data producer. ADAPT requires all offsets to be applied in mapped data, and this property is to be used only for geospatial data quality assessments and data provenance.  In no circumstances will the data consumer need to apply these data to any geometry."
         }
       },
       "required": [
@@ -2788,14 +2788,6 @@
         "valueText": {
           "$ref": "#/$defs/valueText",
           "description": "The actual value of the Summary Value represented as text.   The data type of the associated Variable will determine into what type it may be parsed.   Required."
-        },
-        "partyRole": {
-          "$ref": "#/$defs/partyRole",
-          "description": "Any Party Role associated to this Summary Value.   E.g., An equipment operator associated to a fuel usage total."
-        },
-        "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Time Scopes describing the Summary Value data.  E.g., Start and End times for an application total of a specific product within a multi-product Operation."
         }
       },
       "required": [
