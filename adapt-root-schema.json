@@ -5,20 +5,16 @@
   "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
   "properties": {
     "catalog": {
-      "$ref": "#/$defs/catalog",
-      "description": "Container for data types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications."
+      "$ref": "#/$defs/catalog"
     },
     "documents": {
-      "$ref": "#/$defs/documents",
-      "description": "Container for transactional, frequently changing data.   Documents will necessarily reference master data defined in the Catalog."
+      "$ref": "#/$defs/documents"
     },
     "dataTypeDefinitionVersion": {
-      "$ref": "#/$defs/dataTypeDefinitionVersion",
-      "description": "Version of the Standard Data Type Definitions used.  If omitted, the current version is assumed."
+      "$ref": "#/$defs/dataTypeDefinitionVersion"
     },
     "unitSystemVersion": {
-      "$ref": "#/$defs/unitSystemVersion",
-      "description": "Version identifier describing the ADAPT Unit System used throughout the model.   If omitted, the current version is assumed."
+      "$ref": "#/$defs/unitSystemVersion"
     }
   },
   "$defs": {
@@ -475,12 +471,10 @@
       "type": "object",
       "properties": {
         "a": {
-          "$ref": "#/$defs/a",
-          "description": "The start (A) point.   Required."
+          "$ref": "#/$defs/a"
         },
         "heading": {
-          "$ref": "#/$defs/heading",
-          "description": "Required."
+          "$ref": "#/$defs/heading"
         }
       },
       "required": [
@@ -493,16 +487,13 @@
       "type": "object",
       "properties": {
         "numberOfSegments": {
-          "$ref": "#/$defs/numberOfSegments",
-          "description": "For an ABCurve, the number of segments in the curve"
+          "$ref": "#/$defs/numberOfSegments"
         },
         "lineStrings": {
-          "$ref": "#/$defs/lineStrings",
-          "description": "One or more line strings that compose the curve. Required."
+          "$ref": "#/$defs/lineStrings"
         },
         "heading": {
-          "$ref": "#/$defs/heading",
-          "description": "Optional"
+          "$ref": "#/$defs/heading"
         }
       },
       "required": [
@@ -515,16 +506,13 @@
       "type": "object",
       "properties": {
         "a": {
-          "$ref": "#/$defs/a",
-          "description": "The Start (A) point.   Required."
+          "$ref": "#/$defs/a"
         },
         "b": {
-          "$ref": "#/$defs/b",
-          "description": "The end (B) point.   Required."
+          "$ref": "#/$defs/b"
         },
         "heading": {
-          "$ref": "#/$defs/heading",
-          "description": "Optional"
+          "$ref": "#/$defs/heading"
         }
       },
       "required": [
@@ -537,32 +525,25 @@
       "type": "object",
       "properties": {
         "addressLines": {
-          "$ref": "#/$defs/addressLines",
-          "description": "Address lines that precede the City.   Street address, PO Box, etc."
+          "$ref": "#/$defs/addressLines"
         },
         "city": {
-          "$ref": "#/$defs/city",
-          "description": "The city within the Address"
+          "$ref": "#/$defs/city"
         },
         "postalCode": {
-          "$ref": "#/$defs/postalCode",
-          "description": "The postal code within the Address"
+          "$ref": "#/$defs/postalCode"
         },
         "countrySubdivision": {
-          "$ref": "#/$defs/countrySubdivision",
-          "description": "Subdivision or region of a country such as a state or province, including entries in ISO-3166."
+          "$ref": "#/$defs/countrySubdivision"
         },
         "country": {
-          "$ref": "#/$defs/country",
-          "description": "The country defined within the Address"
+          "$ref": "#/$defs/country"
         },
         "countryCode": {
-          "$ref": "#/$defs/countryCode",
-          "description": "ISO 3166 alpha-2 code.  Optional."
+          "$ref": "#/$defs/countryCode"
         },
         "addressContactTypeCode": {
-          "$ref": "#/$defs/addressContactTypeCode",
-          "description": "The code that identifies the enumeration item value from the Address Contact Type Representation"
+          "$ref": "#/$defs/addressContactTypeCode"
         }
       },
       "required": [
@@ -590,12 +571,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -608,16 +587,13 @@
       "type": "object",
       "properties": {
         "xOffset": {
-          "$ref": "#/$defs/xOffset",
-          "description": "Offset in the X (inline) direction.  Positive values are forward, negative values are backward."
+          "$ref": "#/$defs/xOffset"
         },
         "yOffset": {
-          "$ref": "#/$defs/yOffset",
-          "description": "Offset in the Y (lateral) direction.  Positive values are right, negative values are left."
+          "$ref": "#/$defs/yOffset"
         },
         "zOffset": {
-          "$ref": "#/$defs/zOffset",
-          "description": "Offset in the Z (Vertical) direction.  Positive values are upward."
+          "$ref": "#/$defs/zOffset"
         }
       }
     },
@@ -626,12 +602,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -644,48 +618,37 @@
       "type": "object",
       "properties": {
         "geometry": {
-          "$ref": "#/$defs/geometry",
-          "description": "WKT of Polygon or Multi Polygon describing the enclosed region.  Must be in EPSG 4326 (WGS84) projection.  Required."
+          "$ref": "#/$defs/geometry"
         },
         "boundaryCreationMethodCode": {
-          "$ref": "#/$defs/boundaryCreationMethodCode",
-          "description": "Method used to create the boundary.  Taken from BoundaryCreationMethod enumerated Data Type Definition."
+          "$ref": "#/$defs/boundaryCreationMethodCode"
         },
         "highDefinitionSourceLayerId": {
-          "$ref": "#/$defs/highDefinitionSourceLayerId",
-          "description": "Mapping to a Reference Layer referencing an associated Geoparquet file containing point-by-point attributes for the source of the Geometry.  The projection of the layer should be specified in the Geoparquet file metadata and it may vary from the Geometry property that must be in WGS84."
+          "$ref": "#/$defs/highDefinitionSourceLayerId"
         },
         "gNSSBaseStationTypeCode": {
-          "$ref": "#/$defs/gNSSBaseStationTypeCode",
-          "description": "Code from the GNSS Base Station Type enumeration"
+          "$ref": "#/$defs/gNSSBaseStationTypeCode"
         },
         "gNSSBaseSurveyTypeCode": {
-          "$ref": "#/$defs/gNSSBaseSurveyTypeCode",
-          "description": "Code from the GNSS Base Survey Type Enumeration"
+          "$ref": "#/$defs/gNSSBaseSurveyTypeCode"
         },
         "gNSSCorrectionNetworkName": {
-          "$ref": "#/$defs/gNSSCorrectionNetworkName",
-          "description": "The identifier for a specific network of base stations that provide correction data to improve the accuracy of GNSS positioning."
+          "$ref": "#/$defs/gNSSCorrectionNetworkName"
         },
         "gNSSCorrectionNetworkBrand": {
-          "$ref": "#/$defs/gNSSCorrectionNetworkBrand",
-          "description": "The name or identifier of the company, organization, or service provider that operates a specific network of reference stations delivering correction data to GNSS receivers."
+          "$ref": "#/$defs/gNSSCorrectionNetworkBrand"
         },
         "gNSSReceiverMetadata": {
-          "$ref": "#/$defs/gNSSReceiverMetadata",
-          "description": "Information about the GNSS receiver used to record spatial data."
+          "$ref": "#/$defs/gNSSReceiverMetadata"
         },
         "gNSSMobileBaseStationMetadata": {
-          "$ref": "#/$defs/gNSSMobileBaseStationMetadata",
-          "description": "Information about the GNSS Base Station used in the collection of spatial data"
+          "$ref": "#/$defs/gNSSMobileBaseStationMetadata"
         },
         "gNSSDataQualityMetrics": {
-          "$ref": "#/$defs/gNSSDataQualityMetrics",
-          "description": "Collection of metrics supplied to document the quality of a GNSS dataset.  Comprised of Data Types scoped at the GNSS Data Quality Metrics component."
+          "$ref": "#/$defs/gNSSDataQualityMetrics"
         },
         "partyRoles": {
-          "$ref": "#/$defs/partyRoles",
-          "description": "Definition of parties involved in the boundary creation.   PartyRole code COLLECTOR is intended to define the party that drove or \"collected\" the data for the boundary."
+          "$ref": "#/$defs/partyRoles"
         }
       },
       "required": [
@@ -697,24 +660,19 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "manufacturerId": {
-          "$ref": "#/$defs/manufacturerId",
-          "description": "Optional mapping to Manufacturer"
+          "$ref": "#/$defs/manufacturerId"
         }
       },
       "required": [
@@ -735,72 +693,60 @@
       "type": "object",
       "properties": {
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "brands": {
-          "$ref": "#/$defs/brands",
-          "description": "All Brands in the data"
+          "description": "All Brands in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/brand"
+          },
+          "minItems": 0
         },
         "crops": {
-          "$ref": "#/$defs/crops",
-          "description": "All Crops in the data"
+          "$ref": "#/$defs/crops"
         },
         "cropZones": {
-          "$ref": "#/$defs/cropZones",
-          "description": "All Crop Zones in the data"
+          "$ref": "#/$defs/cropZones"
         },
         "customDataTypeDefinitions": {
-          "$ref": "#/$defs/customDataTypeDefinitions",
-          "description": "Any custom Data Type Definitions defined by the producer for this data.  By default, this list is empty and all definitions are sourced from the ADAPT Standard Data Type Definitions."
+          "$ref": "#/$defs/customDataTypeDefinitions"
         },
         "deviceModels": {
-          "$ref": "#/$defs/deviceModels",
-          "description": "All Device Models in the data"
+          "$ref": "#/$defs/deviceModels"
         },
         "devices": {
-          "$ref": "#/$defs/devices",
-          "description": "All Devices in the data"
+          "$ref": "#/$defs/devices"
         },
         "farms": {
-          "$ref": "#/$defs/farms",
-          "description": "All Farms in the data"
+          "$ref": "#/$defs/farms"
         },
         "fieldBoundaries": {
-          "$ref": "#/$defs/fieldBoundaries",
-          "description": "All Field Boundaries in the data"
+          "$ref": "#/$defs/fieldBoundaries"
         },
         "fields": {
-          "$ref": "#/$defs/fields",
-          "description": "All Fields in the data"
+          "$ref": "#/$defs/fields"
         },
         "growers": {
-          "$ref": "#/$defs/growers",
-          "description": "All Growers in the data"
+          "$ref": "#/$defs/growers"
         },
         "guidanceGroups": {
-          "$ref": "#/$defs/guidanceGroups",
-          "description": "All Guidance Groups in the data"
+          "$ref": "#/$defs/guidanceGroups"
         },
         "guidancePatterns": {
-          "$ref": "#/$defs/guidancePatterns",
-          "description": "All Guidance Patterns in the data"
+          "$ref": "#/$defs/guidancePatterns"
         },
         "manufacturers": {
-          "$ref": "#/$defs/manufacturers",
-          "description": "All Manufacturers in the data"
+          "$ref": "#/$defs/manufacturers"
         },
         "parties": {
-          "$ref": "#/$defs/parties",
-          "description": "All Parties in the data"
+          "$ref": "#/$defs/parties"
         },
         "products": {
-          "$ref": "#/$defs/products",
-          "description": "All Products in the data"
+          "$ref": "#/$defs/products"
         },
         "seasons": {
-          "$ref": "#/$defs/seasons",
-          "description": "All Seasons in the data"
+          "$ref": "#/$defs/seasons"
         }
       }
     },
@@ -809,16 +755,13 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "addressContactMethods": {
-          "$ref": "#/$defs/addressContactMethods",
-          "description": "Any Addresses as part of this Contact Info"
+          "$ref": "#/$defs/addressContactMethods"
         },
         "telecommunicationContactMethods": {
-          "$ref": "#/$defs/telecommunicationContactMethods",
-          "description": "Any telephone numbers/email addresses as part of this Contact Info"
+          "$ref": "#/$defs/telecommunicationContactMethods"
         }
       }
     },
@@ -827,20 +770,16 @@
       "type": "object",
       "properties": {
         "definitionCode": {
-          "$ref": "#/$defs/definitionCode",
-          "description": "Code identifying a Data Type Definition, either in the ADAPT Standard Data Type Definitions or within the Catalog.Custom Data Type \nDefinitions.   Required."
+          "$ref": "#/$defs/definitionCode"
         },
         "valueText": {
-          "$ref": "#/$defs/valueText",
-          "description": "The value of the Context Item expressed in text.  Required unless nested Context Items are used as the values."
+          "$ref": "#/$defs/valueText"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes governing the Context Item"
+          "$ref": "#/$defs/timeScopes"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "Nested Context Items used as the value for this Context item. Either this property or Value Text is required."
+          "$ref": "#/$defs/contextItems"
         }
       },
       "required": [
@@ -860,32 +799,25 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "parentId": {
-          "$ref": "#/$defs/parentId",
-          "description": "Reference Id of the Crop identified as the hierarchical parent to this crop in the given crop taxonomy"
+          "$ref": "#/$defs/parentId"
         },
         "referenceWeight": {
-          "$ref": "#/$defs/referenceWeight",
-          "description": "Reference weight for the crop.  E.g., 56 lb/bu."
+          "$ref": "#/$defs/referenceWeight"
         },
         "standardPayableMoisture": {
-          "$ref": "#/$defs/standardPayableMoisture",
-          "description": "The targeted moisture value at which the commodity is sold.  E.g., 15.5%"
+          "$ref": "#/$defs/standardPayableMoisture"
         }
       },
       "required": [
@@ -906,52 +838,40 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes describing the Crop Zone.   Season should be reported separately via Season Ids."
+          "$ref": "#/$defs/timeScopes"
         },
         "fieldId": {
-          "$ref": "#/$defs/fieldId",
-          "description": "Required mapping to the parent field"
+          "$ref": "#/$defs/fieldId"
         },
         "cropId": {
-          "$ref": "#/$defs/cropId",
-          "description": "Required mapping to the crop"
+          "$ref": "#/$defs/cropId"
         },
         "seasonIds": {
-          "$ref": "#/$defs/seasonIds",
-          "description": "One or more seasons to which this Cropzone relates."
+          "$ref": "#/$defs/seasonIds"
         },
         "arableArea": {
-          "$ref": "#/$defs/arableArea",
-          "description": "Total area of the Crop Zone that is cultivated, excluding areas such as waterways"
+          "$ref": "#/$defs/arableArea"
         },
         "boundary": {
-          "$ref": "#/$defs/boundary",
-          "description": "The boundary polygon/multipolygon defining the Crop Zone region"
+          "$ref": "#/$defs/boundary"
         },
         "notes": {
-          "$ref": "#/$defs/notes",
-          "description": "Any Notes on the Crop Zone"
+          "$ref": "#/$defs/notes"
         },
         "guidanceGroupIds": {
-          "$ref": "#/$defs/guidanceGroupIds",
-          "description": "Mappings to any Guidance Groups for this Crop Zone"
+          "$ref": "#/$defs/guidanceGroupIds"
         }
       },
       "required": [
@@ -999,56 +919,43 @@
       "type": "object",
       "properties": {
         "definitionCode": {
-          "$ref": "#/$defs/definitionCode",
-          "description": "Code identifying a Data Type Definition, either in the standard list or within the Custom Data Type \nDefinitions in this data instance.  Required."
+          "$ref": "#/$defs/definitionCode"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The short name of the Data Type Definition"
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A long description.  Optional."
+          "$ref": "#/$defs/description"
         },
         "dataDefinitionBaseTypeCode": {
-          "$ref": "#/$defs/dataDefinitionBaseTypeCode",
-          "description": "The code that identifies the enumeration item value from the Data Definition Base Type data type definition.  Required."
+          "$ref": "#/$defs/dataDefinitionBaseTypeCode"
         },
         "dataDefinitionStatusCode": {
-          "$ref": "#/$defs/dataDefinitionStatusCode",
-          "description": "The code that identifies the enumeration item value from the Data Definition Status data type definition.  Required."
+          "$ref": "#/$defs/dataDefinitionStatusCode"
         },
         "supersededByCode": {
-          "$ref": "#/$defs/supersededByCode",
-          "description": "Code identifying a different Data Type Definition that replaces this one.  Required and relevant only when the status of the current item is SUPERSEDED."
+          "$ref": "#/$defs/supersededByCode"
         },
         "scopes": {
-          "$ref": "#/$defs/scopes",
-          "description": "Any Scopes on the Data Type Representation"
+          "$ref": "#/$defs/scopes"
         },
         "labels": {
-          "$ref": "#/$defs/labels",
-          "description": ""
+          "$ref": "#/$defs/labels"
         },
         "geoPoliticalContexts": {
-          "$ref": "#/$defs/geoPoliticalContexts",
-          "description": "Any Geo Political Contexts to which the Data Type Definition applies"
+          "$ref": "#/$defs/geoPoliticalContexts"
         },
         "keywords": {
-          "$ref": "#/$defs/keywords",
-          "description": "Textual strings used for identification in searches.   Optional."
+          "$ref": "#/$defs/keywords"
         },
         "numericDataTypeDefinitionAttributes": {
-          "$ref": "#/$defs/numericDataTypeDefinitionAttributes",
-          "description": "Numeric type attributes.   Required if Base Type is Numeric."
+          "$ref": "#/$defs/numericDataTypeDefinitionAttributes"
         },
         "enumeratedDataTypeDefinitionAttributes": {
-          "$ref": "#/$defs/enumeratedDataTypeDefinitionAttributes",
-          "description": "Numeric type attributes.   Required if Base Type is Enumerated."
+          "$ref": "#/$defs/enumeratedDataTypeDefinitionAttributes"
         },
         "textDataTypeDefinitionAttributes": {
-          "$ref": "#/$defs/textDataTypeDefinitionAttributes",
-          "description": "Numeric type attributes.   Required if Base Type is Text."
+          "$ref": "#/$defs/textDataTypeDefinitionAttributes"
         }
       },
       "required": [
@@ -1063,12 +970,10 @@
       "type": "object",
       "properties": {
         "definitionCode": {
-          "$ref": "#/$defs/definitionCode",
-          "description": "Code identifying the Data Type Definition, required."
+          "$ref": "#/$defs/definitionCode"
         },
         "valueText": {
-          "$ref": "#/$defs/valueText",
-          "description": "The value of a data element, expressed as a text string.  Required.  The Definition Code maps to information defining how the value may be parsed."
+          "$ref": "#/$defs/valueText"
         }
       },
       "required": [
@@ -1081,12 +986,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -1099,28 +1002,22 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "deviceModelId": {
-          "$ref": "#/$defs/deviceModelId",
-          "description": "Optional Model of the Device"
+          "$ref": "#/$defs/deviceModelId"
         },
         "serialNumber": {
-          "$ref": "#/$defs/serialNumber",
-          "description": "The serial number of the device."
+          "$ref": "#/$defs/serialNumber"
         }
       },
       "required": [
@@ -1133,12 +1030,10 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "deviceId": {
-          "$ref": "#/$defs/deviceId",
-          "description": "Mapping to the Device.  Required."
+          "$ref": "#/$defs/deviceId"
         }
       },
       "required": [
@@ -1150,28 +1045,22 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "brandId": {
-          "$ref": "#/$defs/brandId",
-          "description": "The Brand (also known as Make) of the Device Model."
+          "$ref": "#/$defs/brandId"
         },
         "deviceSeries": {
-          "$ref": "#/$defs/deviceSeries",
-          "description": "The name of any formal Series in which the Device Model is included."
+          "$ref": "#/$defs/deviceSeries"
         }
       },
       "required": [
@@ -1200,12 +1089,10 @@
       "type": "object",
       "properties": {
         "documentRelationshipTypeCode": {
-          "$ref": "#/$defs/documentRelationshipTypeCode",
-          "description": "The code that identifies the enumeration item value from the Document Relationship Type Representation"
+          "$ref": "#/$defs/documentRelationshipTypeCode"
         },
         "originatingDocumentId": {
-          "$ref": "#/$defs/originatingDocumentId",
-          "description": "Foreign Key mapping to the originating Document to which the defined relationship applies.  Required."
+          "$ref": "#/$defs/originatingDocumentId"
         }
       },
       "required": [
@@ -1218,24 +1105,19 @@
       "type": "object",
       "properties": {
         "plans": {
-          "$ref": "#/$defs/plans",
-          "description": "All Plans in the data"
+          "$ref": "#/$defs/plans"
         },
         "recommendations": {
-          "$ref": "#/$defs/recommendations",
-          "description": "All Recommendations in the data"
+          "$ref": "#/$defs/recommendations"
         },
         "workOrders": {
-          "$ref": "#/$defs/workOrders",
-          "description": "All Work Orders in the data"
+          "$ref": "#/$defs/workOrders"
         },
         "workRecords": {
-          "$ref": "#/$defs/workRecords",
-          "description": "All Work Records in the data"
+          "$ref": "#/$defs/workRecords"
         },
         "referenceLayers": {
-          "$ref": "#/$defs/referenceLayers",
-          "description": "All Reference Layers in the data"
+          "$ref": "#/$defs/referenceLayers"
         }
       }
     },
@@ -1244,12 +1126,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -1262,12 +1142,10 @@
       "type": "object",
       "properties": {
         "items": {
-          "$ref": "#/$defs/items",
-          "description": "The list of choices.   Required."
+          "$ref": "#/$defs/items"
         },
         "default": {
-          "$ref": "#/$defs/default",
-          "description": "The item selected by default."
+          "$ref": "#/$defs/default"
         }
       },
       "required": [
@@ -1279,28 +1157,22 @@
       "type": "object",
       "properties": {
         "code": {
-          "$ref": "#/$defs/code",
-          "description": "Code for the item, taken from the list of valid codes for a given Enumerated Data Type Definition.   Required."
+          "$ref": "#/$defs/code"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "Name of item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "Optional description of item"
+          "$ref": "#/$defs/description"
         },
         "enumerationItemStatusCode": {
-          "$ref": "#/$defs/enumerationItemStatusCode",
-          "description": "The status of this Enumeration Item.  Required."
+          "$ref": "#/$defs/enumerationItemStatusCode"
         },
         "supersededByCode": {
-          "$ref": "#/$defs/supersededByCode",
-          "description": "Code identifying a different Enumeration Item that supersedes this item.  Required and relevant only when the status of the current item is SUPERSEDED."
+          "$ref": "#/$defs/supersededByCode"
         },
         "labels": {
-          "$ref": "#/$defs/labels",
-          "description": ""
+          "$ref": "#/$defs/labels"
         }
       },
       "required": [
@@ -1314,12 +1186,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -1332,28 +1202,22 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "growerId": {
-          "$ref": "#/$defs/growerId",
-          "description": "Reference Id of the Grower entity that is a parent to this Farm"
+          "$ref": "#/$defs/growerId"
         },
         "partyId": {
-          "$ref": "#/$defs/partyId",
-          "description": "Optional mapping to a Party specifically defining the Farm.  E.g., a large Grower has subsidiary entities for its individual Farms"
+          "$ref": "#/$defs/partyId"
         }
       },
       "required": [
@@ -1374,40 +1238,31 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "farmId": {
-          "$ref": "#/$defs/farmId",
-          "description": "Mapping to a Farm containing this field.   If the source data model does not use the farm concept and maps the field directly to a grower, the data producer must create a Farm with the Grower name to complete the data linkage."
+          "$ref": "#/$defs/farmId"
         },
         "arableArea": {
-          "$ref": "#/$defs/arableArea",
-          "description": "Total area of the Field that is cultivated, excluding areas such as waterways"
+          "$ref": "#/$defs/arableArea"
         },
         "activeBoundaryId": {
-          "$ref": "#/$defs/activeBoundaryId",
-          "description": "The Reference Id of the FieldBoundary currently active for this field"
+          "$ref": "#/$defs/activeBoundaryId"
         },
         "guidanceGroupIds": {
-          "$ref": "#/$defs/guidanceGroupIds",
-          "description": "Mappings to any Guidance Groups for this Field"
+          "$ref": "#/$defs/guidanceGroupIds"
         },
         "timeZone": {
-          "$ref": "#/$defs/timeZone",
-          "description": "Time zone identifier from the IANA/tz database, defining the local time zone at a location. May be used to interpret ADAPT's required UTC timestamps into a local times for that location.  Optional."
+          "$ref": "#/$defs/timeZone"
         }
       },
       "required": [
@@ -1428,40 +1283,31 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "fieldId": {
-          "$ref": "#/$defs/fieldId",
-          "description": "Mapping to the Field that is the logical parent of this Field Boundary"
+          "$ref": "#/$defs/fieldId"
         },
         "seasonIds": {
-          "$ref": "#/$defs/seasonIds",
-          "description": "Any specific Seasons to which this boundary applies."
+          "$ref": "#/$defs/seasonIds"
         },
         "boundary": {
-          "$ref": "#/$defs/boundary",
-          "description": "The geospatial definition of the boundary.  Required."
+          "$ref": "#/$defs/boundary"
         },
         "obstacles": {
-          "$ref": "#/$defs/obstacles",
-          "description": "Any Obstacles defined within this Field Boundary"
+          "$ref": "#/$defs/obstacles"
         },
         "headlands": {
-          "$ref": "#/$defs/headlands",
-          "description": "Any Headland geometries on the Field Boundary"
+          "$ref": "#/$defs/headlands"
         }
       },
       "required": [
@@ -1492,16 +1338,13 @@
       "type": "object",
       "properties": {
         "iSO3166-2Code": {
-          "$ref": "#/$defs/iSO3166-2Code",
-          "description": "ISO 3166-2 Code.   Required."
+          "$ref": "#/$defs/iSO3166-2Code"
         },
         "geoNamesId": {
-          "$ref": "#/$defs/geoNamesId",
-          "description": "Geopolitical Ontology Id from GeoNames.org to add further administrative/locational specificity beyond the ISO3166-2 Code.  Optional."
+          "$ref": "#/$defs/geoNamesId"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "Optional description"
+          "$ref": "#/$defs/description"
         }
       },
       "required": [
@@ -1529,16 +1372,13 @@
       "type": "object",
       "properties": {
         "deviceId": {
-          "$ref": "#/$defs/deviceId",
-          "description": "Id mapping to the Device definition that maps back to the Model, Brand and Manufacturer."
+          "$ref": "#/$defs/deviceId"
         },
         "baseStationPosition": {
-          "$ref": "#/$defs/baseStationPosition",
-          "description": "WKT of physical point defining the location of the base station."
+          "$ref": "#/$defs/baseStationPosition"
         },
         "surveyTime": {
-          "$ref": "#/$defs/surveyTime",
-          "description": "The amount of time the GNSS reference station spends collecting data to establish a precise position.  Uses \"ACTUAL\" DateContext Code"
+          "$ref": "#/$defs/surveyTime"
         }
       }
     },
@@ -1547,16 +1387,13 @@
       "type": "object",
       "properties": {
         "loggingRate": {
-          "$ref": "#/$defs/loggingRate",
-          "description": "The logging rate (or sampling rate) refers to the frequency at which the device records position data. Use 0 if the boundary was defined in a system that does not have a logging rate"
+          "$ref": "#/$defs/loggingRate"
         },
         "deviceId": {
-          "$ref": "#/$defs/deviceId",
-          "description": "Id mapping to the Device definition that maps back to the Model, Brand and Manufacturer."
+          "$ref": "#/$defs/deviceId"
         },
         "appliedOffsets": {
-          "$ref": "#/$defs/appliedOffsets",
-          "description": "For informational purposes, spatial offsets from a GNSS-positioned point that have been applied by the data producer. ADAPT requires all offsets to be applied in mapped data, and this property is to be used only for geospatial data quality assessments and data provenance.  In no circumstances will the data consumer need to apply these data to any geometry."
+          "$ref": "#/$defs/appliedOffsets"
         }
       },
       "required": [
@@ -1568,24 +1405,19 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "partyId": {
-          "$ref": "#/$defs/partyId",
-          "description": "Optional mapping to a Party for detailed individual/entity information."
+          "$ref": "#/$defs/partyId"
         }
       },
       "required": [
@@ -1606,32 +1438,25 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "guidanceGroupId": {
-          "$ref": "#/$defs/guidanceGroupId",
-          "description": "Mapping to the GuidanceGroup.   Required."
+          "$ref": "#/$defs/guidanceGroupId"
         },
         "guidanceShift": {
-          "$ref": "#/$defs/guidanceShift",
-          "description": "Optional Guidance Shift"
+          "$ref": "#/$defs/guidanceShift"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes defining the application of the Guidance Allocation"
+          "$ref": "#/$defs/timeScopes"
         }
       },
       "required": [
@@ -1653,28 +1478,22 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "guidancePatternIds": {
-          "$ref": "#/$defs/guidancePatternIds",
-          "description": "List of the Guidance Patterns in this Group.   Required."
+          "$ref": "#/$defs/guidancePatternIds"
         },
         "boundary": {
-          "$ref": "#/$defs/boundary",
-          "description": "Geometry defining the spatial extent of the Guidance Group"
+          "$ref": "#/$defs/boundary"
         }
       },
       "required": [
@@ -1704,68 +1523,52 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "guidancePatternTypeCode": {
-          "$ref": "#/$defs/guidancePatternTypeCode",
-          "description": "The code that identifies the enumeration item value from the Guidance Pattern Type Representation.  Required."
+          "$ref": "#/$defs/guidancePatternTypeCode"
         },
         "swathWidth": {
-          "$ref": "#/$defs/swathWidth",
-          "description": "Any implement width to which the Guidance Pattern is specifically intended.  Optional."
+          "$ref": "#/$defs/swathWidth"
         },
         "guidancePatternPropagationDirectionCode": {
-          "$ref": "#/$defs/guidancePatternPropagationDirectionCode",
-          "description": "The code that identifies the enumeration item value from the Guidance Pattern Propagation Direction Representation.  Optional."
+          "$ref": "#/$defs/guidancePatternPropagationDirectionCode"
         },
         "guidancePatternExtensionCode": {
-          "$ref": "#/$defs/guidancePatternExtensionCode",
-          "description": "The code that identifies the enumeration item value from the Guidance Pattern Extension Representation.  Optional."
+          "$ref": "#/$defs/guidancePatternExtensionCode"
         },
         "numberOfSwathsLeft": {
-          "$ref": "#/$defs/numberOfSwathsLeft",
-          "description": "Number of swaths to propagate the pattern to the left.  Optional."
+          "$ref": "#/$defs/numberOfSwathsLeft"
         },
         "numberOfSwathsRight": {
-          "$ref": "#/$defs/numberOfSwathsRight",
-          "description": "Number of swaths to propagate the pattern to the right.  Optional."
+          "$ref": "#/$defs/numberOfSwathsRight"
         },
         "boundary": {
-          "$ref": "#/$defs/boundary",
-          "description": "Any fixed spatial extent in which the Guidance Pattern is valid.  Optional."
+          "$ref": "#/$defs/boundary"
         },
         "aBCurveAttributes": {
-          "$ref": "#/$defs/aBCurveAttributes",
-          "description": "Definition of a ABCurve Guidance Pattern.  Required when GuidancePatternType is ABCurve ."
+          "$ref": "#/$defs/aBCurveAttributes"
         },
         "aBLineAttributes": {
-          "$ref": "#/$defs/aBLineAttributes",
-          "description": "Definition of a ABLine Guidance Pattern.  Required when GuidancePatternType is ABCurve ."
+          "$ref": "#/$defs/aBLineAttributes"
         },
         "aPlusAttributes": {
-          "$ref": "#/$defs/aPlusAttributes",
-          "description": "Definition of a APlus Guidance Pattern.  Required when GuidancePatternType is APlus."
+          "$ref": "#/$defs/aPlusAttributes"
         },
         "pivotAttributes": {
-          "$ref": "#/$defs/pivotAttributes",
-          "description": "Definition of a Pivot Guidance Pattern.  Required when GuidancePatternType is Pivot."
+          "$ref": "#/$defs/pivotAttributes"
         },
         "spiralAttributes": {
-          "$ref": "#/$defs/spiralAttributes",
-          "description": "Definition of a Spiral Guidance Pattern.  Required when GuidancePatternType is Spiral."
+          "$ref": "#/$defs/spiralAttributes"
         }
       },
       "required": [
@@ -1795,28 +1598,22 @@
       "type": "object",
       "properties": {
         "guidanceGroupId": {
-          "$ref": "#/$defs/guidanceGroupId",
-          "description": "Mapping to a Guidance Group"
+          "$ref": "#/$defs/guidanceGroupId"
         },
         "guidancePatternId": {
-          "$ref": "#/$defs/guidancePatternId",
-          "description": "Mapping to a Guidance Pattern"
+          "$ref": "#/$defs/guidancePatternId"
         },
         "eastShift": {
-          "$ref": "#/$defs/eastShift",
-          "description": "The shift East of a guidance pattern"
+          "$ref": "#/$defs/eastShift"
         },
         "northShift": {
-          "$ref": "#/$defs/northShift",
-          "description": "The North shift of a Guidance Pattern"
+          "$ref": "#/$defs/northShift"
         },
         "propagationOffset": {
-          "$ref": "#/$defs/propagationOffset",
-          "description": "Perpendicular offset of a guidance pattern by a fixed offset."
+          "$ref": "#/$defs/propagationOffset"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes governing the application of this Guidance Shift."
+          "$ref": "#/$defs/timeScopes"
         }
       }
     },
@@ -1825,16 +1622,13 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "Name of the headland.  Required."
+          "$ref": "#/$defs/name"
         },
         "boundary": {
-          "$ref": "#/$defs/boundary",
-          "description": "Polygon / Multi Polygon defining the Headland.   Required."
+          "$ref": "#/$defs/boundary"
         }
       },
       "required": [
@@ -1855,12 +1649,10 @@
       "type": "object",
       "properties": {
         "referenceId": {
-          "$ref": "#/$defs/referenceId",
-          "description": "A unique string that identifies an object within a single data instance. Required."
+          "$ref": "#/$defs/referenceId"
         },
         "uniqueIds": {
-          "$ref": "#/$defs/uniqueIds",
-          "description": "Optional persistent ids for this component."
+          "$ref": "#/$defs/uniqueIds"
         }
       },
       "required": [
@@ -1872,16 +1664,13 @@
       "type": "object",
       "properties": {
         "ingredientCode": {
-          "$ref": "#/$defs/ingredientCode",
-          "description": "For product components that are ingredients (i.e., no further subdivision of product component is possible), a meaningful code defining the ingredient such as a chemical formula or code from a defined vocabulary."
+          "$ref": "#/$defs/ingredientCode"
         },
         "ingredientCodeSource": {
-          "$ref": "#/$defs/ingredientCodeSource",
-          "description": "The vocabulary that defines the Ingredient Code."
+          "$ref": "#/$defs/ingredientCodeSource"
         },
         "isActiveIngredient": {
-          "$ref": "#/$defs/isActiveIngredient",
-          "description": "Where known, whether this ingredient is classified as active or inert."
+          "$ref": "#/$defs/isActiveIngredient"
         }
       },
       "required": [
@@ -1901,16 +1690,13 @@
       "type": "object",
       "properties": {
         "languageCode": {
-          "$ref": "#/$defs/languageCode",
-          "description": "The language code as defined by the code in ISO 639-1, with an optional identifier for the ISO 3166-1 Alpha 2 Code for the geography. E.g. \"pt\", \"pt-BR\"   Required."
+          "$ref": "#/$defs/languageCode"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The localized name.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "Long description.  Optional."
+          "$ref": "#/$defs/description"
         }
       },
       "required": [
@@ -1931,20 +1717,16 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         }
       },
       "required": [
@@ -1965,12 +1747,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -1991,24 +1771,19 @@
       "type": "object",
       "properties": {
         "numericDataTypeCode": {
-          "$ref": "#/$defs/numericDataTypeCode",
-          "description": "The code that identifies the enumeration item value from the Numeric Data Type Representation.   Required."
+          "$ref": "#/$defs/numericDataTypeCode"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "Adapt unit of measure to be used.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         },
         "default": {
-          "$ref": "#/$defs/default",
-          "description": "Default value. Optional."
+          "$ref": "#/$defs/default"
         },
         "minimum": {
-          "$ref": "#/$defs/minimum",
-          "description": "Minimum value.  Optional."
+          "$ref": "#/$defs/minimum"
         },
         "maximum": {
-          "$ref": "#/$defs/maximum",
-          "description": "Maximum Value.   Optional."
+          "$ref": "#/$defs/maximum"
         }
       },
       "required": [
@@ -2021,20 +1796,16 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "Name of the interior boundary attribute.   Optional."
+          "$ref": "#/$defs/name"
         },
         "boundary": {
-          "$ref": "#/$defs/boundary",
-          "description": "Spatial definition of the Obstacle.   Required."
+          "$ref": "#/$defs/boundary"
         },
         "isPassable": {
-          "$ref": "#/$defs/isPassable",
-          "description": "Whether the boundary may be crossed with a vehicle, e.g., a grass waterway (true) vs. a rock pile (false)"
+          "$ref": "#/$defs/isPassable"
         }
       },
       "required": [
@@ -2054,76 +1825,58 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "operationTypeCode": {
-          "$ref": "#/$defs/operationTypeCode",
-          "description": "The code that identifies the enumeration item value from the Operation Type Representation.  Required."
+          "$ref": "#/$defs/operationTypeCode"
         },
         "variables": {
-          "$ref": "#/$defs/variables",
-          "description": "Variables used within Spatial Records and/or Summary Values.   Usually required unless the Operation simply records general information without any rates or totals. E.g., that a certain field was planted with a particular product.\n\nVariables describe the data logged within a completed Operation, and the prescribed rates for a planned Operation."
+          "$ref": "#/$defs/variables"
         },
         "spatialRecordsFile": {
-          "$ref": "#/$defs/spatialRecordsFile",
-          "description": "A reference to the file/URL containing specific Spatial Records for this Operation, Prescription or Reference Layer. When the model is serialized to disk, this file must reside within the same directory as the ApplicationDataModel itself.    Vector data must be in GeoParquet format and raster data in GeoTiff format with columns/bands ordered as specified by the File Data Index on the variable definitions."
+          "$ref": "#/$defs/spatialRecordsFile"
         },
         "summaryValues": {
-          "$ref": "#/$defs/summaryValues",
-          "description": "Averages or Totals for specific Variables used either as manually-entered logged data or flat rate prescriptions.   Where a Summary Value maps to a Variable with a (spatial) File Data Index, the Summary Value can be interpreted to summarize the spatial data in that column."
+          "$ref": "#/$defs/summaryValues"
         },
         "deviceConfiguration": {
-          "$ref": "#/$defs/deviceConfiguration",
-          "description": "A mapping to a specific Device Configuration where the Device for the Operation is known."
+          "$ref": "#/$defs/deviceConfiguration"
         },
         "harvestLoadIdentifier": {
-          "$ref": "#/$defs/harvestLoadIdentifier",
-          "description": "On Work Record Operations, the textual identifier of a harvest load.  E.g., \"Load 1\".  Separate loads must be tracked as separate Operations.  Any load quantities may consequently be tracked as Summary Values."
+          "$ref": "#/$defs/harvestLoadIdentifier"
         },
         "prescribingOperationId": {
-          "$ref": "#/$defs/prescribingOperationId",
-          "description": "Mapping to other Operation defined within this dataset that prescribed this Operation.   The prescribing operation would generally be part of a Work Order, Recommendation or Plan."
+          "$ref": "#/$defs/prescribingOperationId"
         },
         "productIds": {
-          "$ref": "#/$defs/productIds",
-          "description": "List of mappings to Products used in the Operation."
+          "$ref": "#/$defs/productIds"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes on the Operation.   E.g., the Start and End time of the Operation."
+          "$ref": "#/$defs/timeScopes"
         },
         "partyRoles": {
-          "$ref": "#/$defs/partyRoles",
-          "description": "Any Parties/Roles associated to this Operation.  E.g., the equipment operator for the Operation."
+          "$ref": "#/$defs/partyRoles"
         },
         "guidanceAllocations": {
-          "$ref": "#/$defs/guidanceAllocations",
-          "description": "Any Guidance Allocations associated to this Operation"
+          "$ref": "#/$defs/guidanceAllocations"
         },
         "notes": {
-          "$ref": "#/$defs/notes",
-          "description": "Any Notes on the Operation"
+          "$ref": "#/$defs/notes"
         },
         "boundary": {
-          "$ref": "#/$defs/boundary",
-          "description": "The boundary of this Operation, often generated as the hull around collected coverage geometries (BoundaryCreationMethod: AUTO_OPERATION)."
+          "$ref": "#/$defs/boundary"
         },
         "referenceLayerIds": {
-          "$ref": "#/$defs/referenceLayerIds",
-          "description": "Mappings to any Reference Layers relating to this Operation"
+          "$ref": "#/$defs/referenceLayerIds"
         }
       },
       "required": [
@@ -2153,32 +1906,25 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "contactInfo": {
-          "$ref": "#/$defs/contactInfo",
-          "description": "Optional contact information."
+          "$ref": "#/$defs/contactInfo"
         },
         "partyTypeCode": {
-          "$ref": "#/$defs/partyTypeCode",
-          "description": "The code that identifies the enumeration item value from the Party Type Representation.  Required."
+          "$ref": "#/$defs/partyTypeCode"
         },
         "parentPartyId": {
-          "$ref": "#/$defs/parentPartyId",
-          "description": "Any other Party that represents the logical parent to this Party within a hierarchy."
+          "$ref": "#/$defs/parentPartyId"
         }
       },
       "required": [
@@ -2192,20 +1938,16 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes that limit the period in which this role applies."
+          "$ref": "#/$defs/timeScopes"
         },
         "roleCode": {
-          "$ref": "#/$defs/roleCode",
-          "description": "The code that identifies the enumeration item value from the Role Representation.    Required."
+          "$ref": "#/$defs/roleCode"
         },
         "partyId": {
-          "$ref": "#/$defs/partyId",
-          "description": "Mapping to the Party. Required."
+          "$ref": "#/$defs/partyId"
         }
       },
       "required": [
@@ -2226,24 +1968,19 @@
       "type": "object",
       "properties": {
         "centerPoint": {
-          "$ref": "#/$defs/centerPoint",
-          "description": "WKT for the center point of the pivot.  Required."
+          "$ref": "#/$defs/centerPoint"
         },
         "radius": {
-          "$ref": "#/$defs/radius",
-          "description": "Radius of the pivot.    Required."
+          "$ref": "#/$defs/radius"
         },
         "startPoint": {
-          "$ref": "#/$defs/startPoint",
-          "description": "WKT for a start point of the pivot.   Required for partial pivots."
+          "$ref": "#/$defs/startPoint"
         },
         "endPoint": {
-          "$ref": "#/$defs/endPoint",
-          "description": "WKT for an end point of the pivot.   Required for partial pivots."
+          "$ref": "#/$defs/endPoint"
         },
         "isClockwise": {
-          "$ref": "#/$defs/isClockwise",
-          "description": "Pivot direction. True for clockwise.  False for counter clockwise.   Required for Partial Pivots"
+          "$ref": "#/$defs/isClockwise"
         }
       },
       "required": [
@@ -2256,60 +1993,46 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "seasonId": {
-          "$ref": "#/$defs/seasonId",
-          "description": "Optional mapping to a Season"
+          "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes",
-          "description": "Any Notes on the Document"
+          "$ref": "#/$defs/notes"
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations",
-          "description": "Optional collection of correlations to other Documents within this data instance."
+          "$ref": "#/$defs/documentCorrelations"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes describing the Document"
+          "$ref": "#/$defs/timeScopes"
         },
         "version": {
-          "$ref": "#/$defs/version",
-          "description": "Optional version number."
+          "$ref": "#/$defs/version"
         },
         "cropIds": {
-          "$ref": "#/$defs/cropIds",
-          "description": "Mappings to any Crops in this document."
+          "$ref": "#/$defs/cropIds"
         },
         "estimatedArea": {
-          "$ref": "#/$defs/estimatedArea",
-          "description": "The estimated area planned/recommended.  Generally used in cases where a certain amount of a crop of is planned without spatial reference.  If this property is set, Field Ids and Crop Zone Ids may not be set."
+          "$ref": "#/$defs/estimatedArea"
         },
         "fieldIds": {
-          "$ref": "#/$defs/fieldIds",
-          "description": "Mappings to any Fields in this document."
+          "$ref": "#/$defs/fieldIds"
         },
         "cropZoneIds": {
-          "$ref": "#/$defs/cropZoneIds",
-          "description": "Mappings to any Crop Zones in this document."
+          "$ref": "#/$defs/cropZoneIds"
         },
         "operations": {
-          "$ref": "#/$defs/operations",
-          "description": "Operations that make up the Plan.  Required."
+          "$ref": "#/$defs/operations"
         }
       },
       "required": [
@@ -2331,60 +2054,46 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "productTypeCode": {
-          "$ref": "#/$defs/productTypeCode",
-          "description": "The code that identifies the enumeration item value from the Product Type Representation.  Required."
+          "$ref": "#/$defs/productTypeCode"
         },
         "productFormCode": {
-          "$ref": "#/$defs/productFormCode",
-          "description": "The code that identifies the enumeration item value from the Product Form Representation.   Required."
+          "$ref": "#/$defs/productFormCode"
         },
         "productStatusCode": {
-          "$ref": "#/$defs/productStatusCode",
-          "description": "The code that identifies the enumeration item value from the Product Status Representation.   Optional."
+          "$ref": "#/$defs/productStatusCode"
         },
         "manufacturerId": {
-          "$ref": "#/$defs/manufacturerId",
-          "description": "Where known, the id of the product manufacturer."
+          "$ref": "#/$defs/manufacturerId"
         },
         "brandId": {
-          "$ref": "#/$defs/brandId",
-          "description": "Where known, the id of the product brand."
+          "$ref": "#/$defs/brandId"
         },
         "density": {
-          "$ref": "#/$defs/density",
-          "description": "The density of the product (mass per volume)"
+          "$ref": "#/$defs/density"
         },
         "specificGravity": {
-          "$ref": "#/$defs/specificGravity",
-          "description": "The unitless specific gravity ratio of the product"
+          "$ref": "#/$defs/specificGravity"
         },
         "productComponents": {
-          "$ref": "#/$defs/productComponents",
-          "description": "Optional list of the components that make up this product."
+          "$ref": "#/$defs/productComponents"
         },
         "cropId": {
-          "$ref": "#/$defs/cropId",
-          "description": "For types Crop Variety and Harvested Product, a required mapping to the Crop. Not applicable for other product types."
+          "$ref": "#/$defs/cropId"
         },
         "traits": {
-          "$ref": "#/$defs/traits",
-          "description": "For Crop Variety products, list of traits."
+          "$ref": "#/$defs/traits"
         }
       },
       "required": [
@@ -2399,24 +2108,19 @@
       "type": "object",
       "properties": {
         "productId": {
-          "$ref": "#/$defs/productId",
-          "description": "Mapping to a Product in the Catalog that defines this Component.  Either Product Id or Ingredient Id is required."
+          "$ref": "#/$defs/productId"
         },
         "ingredientId": {
-          "$ref": "#/$defs/ingredientId",
-          "description": "A product component defined by a meaningful code and not further subdivided into components. Either Product Id or Ingredient Id is required."
+          "$ref": "#/$defs/ingredientId"
         },
         "amount": {
-          "$ref": "#/$defs/amount",
-          "description": "Amount of a product component within the parent product.  Valid amounts are in volume or mass per volume or mass.  E.g.s, 3 floz1gal-1, 0.26 lb1lb-1, 1oz1gal-1. For ingredients, amounts may be expressed as percentages."
+          "$ref": "#/$defs/amount"
         },
         "isCarrier": {
-          "$ref": "#/$defs/isCarrier",
-          "description": "For product components in mixes,  true if this component represents the primary (generally liquid) contents of a mix"
+          "$ref": "#/$defs/isCarrier"
         },
         "mixOrder": {
-          "$ref": "#/$defs/mixOrder",
-          "description": "For product components in mixes, the 1-based index which defines the order in which it was added.  Duplicate numbers are possible, representing a situation where two or more components are added simultaneously."
+          "$ref": "#/$defs/mixOrder"
         }
       },
       "required": [
@@ -2452,12 +2156,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -2470,12 +2172,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -2488,12 +2188,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -2506,60 +2204,46 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "seasonId": {
-          "$ref": "#/$defs/seasonId",
-          "description": "Optional mapping to a Season"
+          "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes",
-          "description": "Any Notes on the Document"
+          "$ref": "#/$defs/notes"
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations",
-          "description": "Optional collection of correlations to other Documents within this data instance."
+          "$ref": "#/$defs/documentCorrelations"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes describing the Document"
+          "$ref": "#/$defs/timeScopes"
         },
         "version": {
-          "$ref": "#/$defs/version",
-          "description": "Optional version number."
+          "$ref": "#/$defs/version"
         },
         "cropIds": {
-          "$ref": "#/$defs/cropIds",
-          "description": "Mappings to any Crops in this document."
+          "$ref": "#/$defs/cropIds"
         },
         "estimatedArea": {
-          "$ref": "#/$defs/estimatedArea",
-          "description": "The estimated area planned/recommended.  Generally used in cases where a certain amount of a crop of is planned without spatial reference.  If this property is set, Field Ids and Crop Zone Ids may not be set."
+          "$ref": "#/$defs/estimatedArea"
         },
         "fieldIds": {
-          "$ref": "#/$defs/fieldIds",
-          "description": "Mappings to any Fields in this document."
+          "$ref": "#/$defs/fieldIds"
         },
         "cropZoneIds": {
-          "$ref": "#/$defs/cropZoneIds",
-          "description": "Mappings to any Crop Zones in this document."
+          "$ref": "#/$defs/cropZoneIds"
         },
         "operations": {
-          "$ref": "#/$defs/operations",
-          "description": "Operations that make up the Recommendation. Required."
+          "$ref": "#/$defs/operations"
         }
       },
       "required": [
@@ -2581,44 +2265,34 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "layerTypeCode": {
-          "$ref": "#/$defs/layerTypeCode",
-          "description": "The code that identifies the enumeration item value from the Layer Type Representation.  Required."
+          "$ref": "#/$defs/layerTypeCode"
         },
         "variables": {
-          "$ref": "#/$defs/variables",
-          "description": "The variables defined within the Reference Layer"
+          "$ref": "#/$defs/variables"
         },
         "spatialRecordsFile": {
-          "$ref": "#/$defs/spatialRecordsFile",
-          "description": "GeoParquet or GeoTiff file containing the layer.  Required."
+          "$ref": "#/$defs/spatialRecordsFile"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes governing this Reference Layer"
+          "$ref": "#/$defs/timeScopes"
         },
         "fieldIds": {
-          "$ref": "#/$defs/fieldIds",
-          "description": "Mappings to any Fields"
+          "$ref": "#/$defs/fieldIds"
         },
         "cropZoneIds": {
-          "$ref": "#/$defs/cropZoneIds",
-          "description": "Mappings to any Crop Zones"
+          "$ref": "#/$defs/cropZoneIds"
         }
       },
       "required": [
@@ -2650,12 +2324,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -2668,20 +2340,16 @@
       "type": "object",
       "properties": {
         "catalog": {
-          "$ref": "#/$defs/catalog",
-          "description": "Container for data types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications."
+          "$ref": "#/$defs/catalog"
         },
         "documents": {
-          "$ref": "#/$defs/documents",
-          "description": "Container for transactional, frequently changing data.   Documents will necessarily reference master data defined in the Catalog."
+          "$ref": "#/$defs/documents"
         },
         "dataTypeDefinitionVersion": {
-          "$ref": "#/$defs/dataTypeDefinitionVersion",
-          "description": "Version of the Standard Data Type Definitions used.  If omitted, the current version is assumed."
+          "$ref": "#/$defs/dataTypeDefinitionVersion"
         },
         "unitSystemVersion": {
-          "$ref": "#/$defs/unitSystemVersion",
-          "description": "Version identifier describing the ADAPT Unit System used throughout the model.   If omitted, the current version is assumed."
+          "$ref": "#/$defs/unitSystemVersion"
         }
       },
       "required": [
@@ -2701,28 +2369,22 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "start": {
-          "$ref": "#/$defs/start",
-          "description": "Start date of the Crop Season."
+          "$ref": "#/$defs/start"
         },
         "end": {
-          "$ref": "#/$defs/end",
-          "description": "End date of the crop season."
+          "$ref": "#/$defs/end"
         }
       },
       "required": [
@@ -2751,8 +2413,7 @@
       "type": "object",
       "properties": {
         "lineStrings": {
-          "$ref": "#/$defs/lineStrings",
-          "description": "One or more line strings that compose the Spiral"
+          "$ref": "#/$defs/lineStrings"
         }
       },
       "required": [
@@ -2764,12 +2425,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -2782,12 +2441,10 @@
       "type": "object",
       "properties": {
         "variableId": {
-          "$ref": "#/$defs/variableId",
-          "description": "Mapping to a Variable within this Operation that defines the type of data recorded in this object.  Required."
+          "$ref": "#/$defs/variableId"
         },
         "valueText": {
-          "$ref": "#/$defs/valueText",
-          "description": "The actual value of the Summary Value represented as text.   The data type of the associated Variable will determine into what type it may be parsed.   Required."
+          "$ref": "#/$defs/valueText"
         }
       },
       "required": [
@@ -2808,20 +2465,16 @@
       "type": "object",
       "properties": {
         "duration": {
-          "$ref": "#/$defs/duration",
-          "description": "Duration of the event in seconds.  Included separately from End Date/Time for cases where only the duration is relevant."
+          "$ref": "#/$defs/duration"
         },
         "start": {
-          "$ref": "#/$defs/start",
-          "description": "The date and time (UTC) at the start of an event."
+          "$ref": "#/$defs/start"
         },
         "end": {
-          "$ref": "#/$defs/end",
-          "description": "The date and time (UTC) at the end of an event."
+          "$ref": "#/$defs/end"
         },
         "dateContextCode": {
-          "$ref": "#/$defs/dateContextCode",
-          "description": "Code matching the relevant item in the Date Context Representation.  Required."
+          "$ref": "#/$defs/dateContextCode"
         }
       },
       "required": [
@@ -2833,12 +2486,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -2851,12 +2502,10 @@
       "type": "object",
       "properties": {
         "valueText": {
-          "$ref": "#/$defs/valueText",
-          "description": "The value of this contact item.  E.g., phone number."
+          "$ref": "#/$defs/valueText"
         },
         "telecommunicationContactTypeCode": {
-          "$ref": "#/$defs/telecommunicationContactTypeCode",
-          "description": "The code that identifies the enumeration item value from the Telecommunication Contact Type data type definition.  Required."
+          "$ref": "#/$defs/telecommunicationContactTypeCode"
         }
       },
       "required": [
@@ -2877,8 +2526,7 @@
       "type": "object",
       "properties": {
         "validationRegularExpression": {
-          "$ref": "#/$defs/validationRegularExpression",
-          "description": "Optional regular expression to validate textual values"
+          "$ref": "#/$defs/validationRegularExpression"
         }
       }
     },
@@ -2887,20 +2535,16 @@
       "type": "object",
       "properties": {
         "duration": {
-          "$ref": "#/$defs/duration",
-          "description": "Duration of the event in seconds.  Included separately from End Date/Time for cases where only the duration is relevant."
+          "$ref": "#/$defs/duration"
         },
         "start": {
-          "$ref": "#/$defs/start",
-          "description": "The date and time (UTC) at the start of an event."
+          "$ref": "#/$defs/start"
         },
         "end": {
-          "$ref": "#/$defs/end",
-          "description": "The date and time (UTC) at the end of an event."
+          "$ref": "#/$defs/end"
         },
         "dateContextCode": {
-          "$ref": "#/$defs/dateContextCode",
-          "description": "Code matching the relevant item in the Date Context Representation.  Required."
+          "$ref": "#/$defs/dateContextCode"
         }
       },
       "required": [
@@ -2920,28 +2564,22 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "manufacturerId": {
-          "$ref": "#/$defs/manufacturerId",
-          "description": "Mapping to the manufacturer, where known."
+          "$ref": "#/$defs/manufacturerId"
         },
         "traitCode": {
-          "$ref": "#/$defs/traitCode",
-          "description": "Manufacturer code that identifies this trait.  Required."
+          "$ref": "#/$defs/traitCode"
         }
       },
       "required": [
@@ -2963,20 +2601,16 @@
       "type": "object",
       "properties": {
         "idSource": {
-          "$ref": "#/$defs/idSource",
-          "description": "Source of the id, where known."
+          "$ref": "#/$defs/idSource"
         },
         "idText": {
-          "$ref": "#/$defs/idText",
-          "description": "The actual ID value.  Required."
+          "$ref": "#/$defs/idText"
         },
         "idTypeCode": {
-          "$ref": "#/$defs/idTypeCode",
-          "description": "The code that identifies the enumeration item value from the Id Type data type definition.  Required."
+          "$ref": "#/$defs/idTypeCode"
         },
         "idSourceTypeCode": {
-          "$ref": "#/$defs/idSourceTypeCode",
-          "description": "Type if the Id Source, if present."
+          "$ref": "#/$defs/idSourceTypeCode"
         }
       },
       "required": [
@@ -2997,44 +2631,34 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "definitionCode": {
-          "$ref": "#/$defs/definitionCode",
-          "description": "Code identifying a Data Type Definition, either in the standard list or within the Custom Data Type \nDefinitions in this data instance."
+          "$ref": "#/$defs/definitionCode"
         },
         "fileDataIndex": {
-          "$ref": "#/$defs/fileDataIndex",
-          "description": "1-based column index in a corresponding GeoParquet file, or the band index in a corresponding GeoTiff file.   Required when data is reported on Spatial Records."
+          "$ref": "#/$defs/fileDataIndex"
         },
         "productId": {
-          "$ref": "#/$defs/productId",
-          "description": "An optional product against which this variable is recorded.  A Variable may linked to a maximum of 1 product.  If a value refers to multiple products, it must be separated into multiple Variables or the Product Id must be omitted."
+          "$ref": "#/$defs/productId"
         },
         "defaultRate": {
-          "$ref": "#/$defs/defaultRate",
-          "description": "For prescribed variables, the default rate."
+          "$ref": "#/$defs/defaultRate"
         },
         "outOfFieldRate": {
-          "$ref": "#/$defs/outOfFieldRate",
-          "description": "For prescribed variables, the rate to be used when the applicator is outside the defined field boundary."
+          "$ref": "#/$defs/outOfFieldRate"
         },
         "lossOfGNSSRate": {
-          "$ref": "#/$defs/lossOfGNSSRate",
-          "description": "For prescribed variables, the rate to be used when the equipment loses the GNSS signal."
+          "$ref": "#/$defs/lossOfGNSSRate"
         }
       },
       "required": [
@@ -3056,52 +2680,40 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "seasonId": {
-          "$ref": "#/$defs/seasonId",
-          "description": "Optional mapping to a Season"
+          "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes",
-          "description": "Any Notes on the Document"
+          "$ref": "#/$defs/notes"
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations",
-          "description": "Optional collection of correlations to other Documents within this data instance."
+          "$ref": "#/$defs/documentCorrelations"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes describing the Document"
+          "$ref": "#/$defs/timeScopes"
         },
         "version": {
-          "$ref": "#/$defs/version",
-          "description": "Optional version number."
+          "$ref": "#/$defs/version"
         },
         "fieldId": {
-          "$ref": "#/$defs/fieldId",
-          "description": "Mapping to a Field.    Required."
+          "$ref": "#/$defs/fieldId"
         },
         "cropZoneId": {
-          "$ref": "#/$defs/cropZoneId",
-          "description": "Optional mapping to a Crop Zone."
+          "$ref": "#/$defs/cropZoneId"
         },
         "operations": {
-          "$ref": "#/$defs/operations",
-          "description": "The prescribed Operations that comprise this Work Order.  Required."
+          "$ref": "#/$defs/operations"
         }
       },
       "required": [
@@ -3124,52 +2736,40 @@
       "type": "object",
       "properties": {
         "id": {
-          "$ref": "#/$defs/id",
-          "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers"
+          "$ref": "#/$defs/id"
         },
         "name": {
-          "$ref": "#/$defs/name",
-          "description": "The name of this item.  Required."
+          "$ref": "#/$defs/name"
         },
         "description": {
-          "$ref": "#/$defs/description",
-          "description": "A string that describes an object, likely containing more contextual information than a Name.  Optional."
+          "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems",
-          "description": "List of supplemental information for this data element"
+          "$ref": "#/$defs/contextItems"
         },
         "seasonId": {
-          "$ref": "#/$defs/seasonId",
-          "description": "Optional mapping to a Season"
+          "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes",
-          "description": "Any Notes on the Document"
+          "$ref": "#/$defs/notes"
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations",
-          "description": "Optional collection of correlations to other Documents within this data instance."
+          "$ref": "#/$defs/documentCorrelations"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes",
-          "description": "Any Time Scopes describing the Document"
+          "$ref": "#/$defs/timeScopes"
         },
         "version": {
-          "$ref": "#/$defs/version",
-          "description": "Optional version number."
+          "$ref": "#/$defs/version"
         },
         "fieldId": {
-          "$ref": "#/$defs/fieldId",
-          "description": "Mapping to a Field.    Required."
+          "$ref": "#/$defs/fieldId"
         },
         "cropZoneId": {
-          "$ref": "#/$defs/cropZoneId",
-          "description": "Optional mapping to a Crop Zone."
+          "$ref": "#/$defs/cropZoneId"
         },
         "operations": {
-          "$ref": "#/$defs/operations",
-          "description": "The completed Operations that comprise this Word Record. Required.\n\nE.g.s., a tractor pulling a row planter with seeding, liquid fertilizer and granular insecticide application capabilities would have its data grouped into 4 constituent Operations: Application - SowingAndPlanting, Application - Fertilizing, Application - Crop Protection, and Vehicle Data Collection.\n\nManually entered information can also be logged as Summary Values."
+          "$ref": "#/$defs/operations"
         }
       },
       "required": [
@@ -3192,12 +2792,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -3210,12 +2808,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
@@ -3228,12 +2824,10 @@
       "type": "object",
       "properties": {
         "numericValue": {
-          "$ref": "#/$defs/numericValue",
-          "description": "The actual value of the Measurement"
+          "$ref": "#/$defs/numericValue"
         },
         "unitOfMeasureCode": {
-          "$ref": "#/$defs/unitOfMeasureCode",
-          "description": "The unit of measure for the given value.  Required."
+          "$ref": "#/$defs/unitOfMeasureCode"
         }
       },
       "required": [
