@@ -140,6 +140,7 @@
     },
     "end": {
       "type": "string",
+      "format": "date-time",
       "description": "The date and time (UTC) at the end of an event."
     },
     "endPoint": {
@@ -160,6 +161,7 @@
     },
     "fileDataIndex": {
       "type": "integer",
+      "minimum": 1,
       "description": "The 1-based column or band index for a specific variable within an external file."
     },
     "geoNamesId": {
@@ -304,6 +306,7 @@
     },
     "mixOrder": {
       "type": "integer",
+      "minimum": 1,
       "description": "In what order was this component added to the mix? (1 = First).\nCan have duplicate numbers, representing a situation where two or more components are added simultaneously."
     },
     "name": {
@@ -420,6 +423,7 @@
     },
     "start": {
       "type": "string",
+      "format": "date-time",
       "description": "The date and time (UTC) at the start of an event."
     },
     "startPoint": {
@@ -645,10 +649,20 @@
           "$ref": "#/$defs/gNSSMobileBaseStationMetadata"
         },
         "gNSSDataQualityMetrics": {
-          "$ref": "#/$defs/gNSSDataQualityMetrics"
+          "description": "Collection of metrics supplied to document the quality of a GNSS dataset.  Comprised of Data Types scoped at the GNSS Data Quality Metrics component.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/gNSSDataQualityMetric"
+          },
+          "minItems": 0
         },
         "partyRoles": {
-          "$ref": "#/$defs/partyRoles"
+          "description": "Definition of parties involved in the boundary creation.   PartyRole code COLLECTOR is intended to define the party that drove or \"collected\" the data for the boundary.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/partyRole"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -680,14 +694,6 @@
         "name"
       ]
     },
-    "brands": {
-      "description": "A list of Brands",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/brand"
-      },
-      "minItems": 1
-    },
     "catalog": {
       "description": "Container for data types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications.",
       "type": "object",
@@ -704,49 +710,124 @@
           "minItems": 0
         },
         "crops": {
-          "$ref": "#/$defs/crops"
+          "description": "All Crops in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/crop"
+          },
+          "minItems": 0
         },
         "cropZones": {
-          "$ref": "#/$defs/cropZones"
+          "description": "All Crop Zones in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cropZone"
+          },
+          "minItems": 0
         },
         "customDataTypeDefinitions": {
-          "$ref": "#/$defs/customDataTypeDefinitions"
+          "description": "Any custom Data Type Definitions defined by the producer for this data.  By default, this list is empty and all definitions are sourced from the ADAPT Standard Data Type Definitions.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/customDataTypeDefinition"
+          },
+          "minItems": 0
         },
         "deviceModels": {
-          "$ref": "#/$defs/deviceModels"
+          "description": "All Device Models in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/deviceModel"
+          },
+          "minItems": 0
         },
         "devices": {
-          "$ref": "#/$defs/devices"
+          "description": "All Devices in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/device"
+          },
+          "minItems": 0
         },
         "farms": {
-          "$ref": "#/$defs/farms"
+          "description": "All Farms in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/farm"
+          },
+          "minItems": 0
         },
         "fieldBoundaries": {
-          "$ref": "#/$defs/fieldBoundaries"
+          "description": "All Field Boundaries in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fieldBoundary"
+          },
+          "minItems": 0
         },
         "fields": {
-          "$ref": "#/$defs/fields"
+          "description": "All Fields in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/field"
+          },
+          "minItems": 0
         },
         "growers": {
-          "$ref": "#/$defs/growers"
+          "description": "All Growers in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/grower"
+          },
+          "minItems": 0
         },
         "guidanceGroups": {
-          "$ref": "#/$defs/guidanceGroups"
+          "description": "All Guidance Groups in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guidanceGroup"
+          },
+          "minItems": 0
         },
         "guidancePatterns": {
-          "$ref": "#/$defs/guidancePatterns"
+          "description": "All Guidance Patterns in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guidancePattern"
+          },
+          "minItems": 0
         },
         "manufacturers": {
-          "$ref": "#/$defs/manufacturers"
+          "description": "All Manufacturers in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/manufacturer"
+          },
+          "minItems": 0
         },
         "parties": {
-          "$ref": "#/$defs/parties"
+          "description": "All Parties in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/party"
+          },
+          "minItems": 0
         },
         "products": {
-          "$ref": "#/$defs/products"
+          "description": "All Products in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/product"
+          },
+          "minItems": 0
         },
         "seasons": {
-          "$ref": "#/$defs/seasons"
+          "description": "All Seasons in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/season"
+          },
+          "minItems": 0
         }
       }
     },
@@ -776,7 +857,12 @@
           "$ref": "#/$defs/valueText"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes governing the Context Item",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "contextItems": {
           "$ref": "#/$defs/contextItems"
@@ -825,14 +911,6 @@
         "name"
       ]
     },
-    "cropIds": {
-      "description": "Ids mapping to the Reference Id of a Crop",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/cropId"
-      },
-      "minItems": 1
-    },
     "cropZone": {
       "description": "A more detailed representation of/within a Field, defining a crop, its growing season and usually a separate boundary.   Where Crop Zone is used, Field is also required.",
       "type": "object",
@@ -850,7 +928,12 @@
           "$ref": "#/$defs/contextItems"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes describing the Crop Zone.   Season should be reported separately via Season Ids.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "fieldId": {
           "$ref": "#/$defs/fieldId"
@@ -859,7 +942,12 @@
           "$ref": "#/$defs/cropId"
         },
         "seasonIds": {
-          "$ref": "#/$defs/seasonIds"
+          "description": "One or more seasons to which this Cropzone relates.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/seasonId"
+          },
+          "minItems": 1
         },
         "arableArea": {
           "$ref": "#/$defs/arableArea"
@@ -868,10 +956,20 @@
           "$ref": "#/$defs/boundary"
         },
         "notes": {
-          "$ref": "#/$defs/notes"
+          "description": "Any Notes on the Crop Zone",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          },
+          "minItems": 0
         },
         "guidanceGroupIds": {
-          "$ref": "#/$defs/guidanceGroupIds"
+          "description": "Mappings to any Guidance Groups for this Crop Zone",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guidanceGroupId"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -882,40 +980,8 @@
         "seasonIds"
       ]
     },
-    "cropZoneIds": {
-      "description": "Ids mapping to the Reference Id of a Crop Zone",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/cropZoneId"
-      },
-      "minItems": 1
-    },
-    "cropZones": {
-      "description": "A list of Crop Zones",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/cropZone"
-      },
-      "minItems": 1
-    },
-    "crops": {
-      "description": "A list of Crops",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/crop"
-      },
-      "minItems": 1
-    },
-    "customDataTypeDefinitions": {
-      "description": "A list of Custom Data Type Definitions",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/dataTypeDefinition"
-      },
-      "minItems": 1
-    },
-    "dataTypeDefinition": {
-      "description": "The definition of a type of data, as may exist either in the published list of standard types or to types defined within an individual data instance.",
+    "customDataTypeDefinition": {
+      "description": "A user-defined Data Type Definition per ADAPT model instance.",
       "type": "object",
       "properties": {
         "definitionCode": {
@@ -963,22 +1029,6 @@
         "name",
         "dataDefinitionBaseTypeCode",
         "dataDefinitionStatusCode"
-      ]
-    },
-    "dataValue": {
-      "description": "A value paired with a Data Type Definition code to define what it represents.",
-      "type": "object",
-      "properties": {
-        "definitionCode": {
-          "$ref": "#/$defs/definitionCode"
-        },
-        "valueText": {
-          "$ref": "#/$defs/valueText"
-        }
-      },
-      "required": [
-        "definitionCode",
-        "valueText"
       ]
     },
     "density": {
@@ -1068,24 +1118,8 @@
         "name"
       ]
     },
-    "deviceModels": {
-      "description": "A list of Device Models",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/deviceModel"
-      },
-      "minItems": 1
-    },
-    "devices": {
-      "description": "A list of Devices",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/device"
-      },
-      "minItems": 1
-    },
-    "documentCorrelations": {
-      "description": "Collection of Document Correlation components.",
+    "documentCorrelation": {
+      "description": "An object defining the relationship between two document objects.",
       "type": "object",
       "properties": {
         "documentRelationshipTypeCode": {
@@ -1225,14 +1259,6 @@
         "name"
       ]
     },
-    "farms": {
-      "description": "A collection of Farms",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/farm"
-      },
-      "minItems": 1
-    },
     "field": {
       "description": "A named, farmer-accepted physical space where production agriculture takes place.  Used to partition and identify data.",
       "type": "object",
@@ -1259,7 +1285,12 @@
           "$ref": "#/$defs/activeBoundaryId"
         },
         "guidanceGroupIds": {
-          "$ref": "#/$defs/guidanceGroupIds"
+          "description": "Mappings to any Guidance Groups for this Field",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guidanceGroupId"
+          },
+          "minItems": 0
         },
         "timeZone": {
           "$ref": "#/$defs/timeZone"
@@ -1269,14 +1300,6 @@
         "id",
         "name"
       ]
-    },
-    "fieldBoundaries": {
-      "description": "A list of Field Boundaries",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/fieldBoundary"
-      },
-      "minItems": 1
     },
     "fieldBoundary": {
       "description": "A geometry that identifies the geospatial coordinates of a field. The boundary can be used to define the area for a particular operation, a particular crop or crops, or for legal purposes. A field can have different boundaries that may vary in geometry based on their specific use, but it is always either a polygon or multi-polygon.",
@@ -1298,7 +1321,12 @@
           "$ref": "#/$defs/fieldId"
         },
         "seasonIds": {
-          "$ref": "#/$defs/seasonIds"
+          "description": "Any specific Seasons to which this boundary applies.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/seasonId"
+          },
+          "minItems": 0
         },
         "boundary": {
           "$ref": "#/$defs/boundary"
@@ -1316,22 +1344,6 @@
         "fieldId",
         "boundary"
       ]
-    },
-    "fieldIds": {
-      "description": "Ids mapping to the Reference Id of a Field",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/fieldId"
-      },
-      "minItems": 1
-    },
-    "fields": {
-      "description": "A Collection of Fields",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/field"
-      },
-      "minItems": 1
     },
     "geoPoliticalContext": {
       "description": "The Country/Region to which a concept applies",
@@ -1359,13 +1371,21 @@
       },
       "minItems": 1
     },
-    "gNSSDataQualityMetrics": {
-      "description": "Collection of metrics supplied to document the quality of a GNSS dataset.",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/dataValue"
+    "gNSSDataQualityMetric": {
+      "description": "Metric supplied to document the quality of a GNSS dataset.",
+      "type": "object",
+      "properties": {
+        "definitionCode": {
+          "$ref": "#/$defs/definitionCode"
+        },
+        "valueText": {
+          "$ref": "#/$defs/valueText"
+        }
       },
-      "minItems": 1
+      "required": [
+        "definitionCode",
+        "valueText"
+      ]
     },
     "gNSSMobileBaseStationMetadata": {
       "description": "Information about the GNSS Base Station used in the collection of spatial data",
@@ -1425,14 +1445,6 @@
         "name"
       ]
     },
-    "growers": {
-      "description": "A collection of Growers",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/grower"
-      },
-      "minItems": 1
-    },
     "guidanceAllocation": {
       "description": "A instance of specific Guidance Pattern data as applied to a planned or actual field operation.",
       "type": "object",
@@ -1456,7 +1468,12 @@
           "$ref": "#/$defs/guidanceShift"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes defining the application of the Guidance Allocation",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -1464,14 +1481,6 @@
         "name",
         "guidanceGroupId"
       ]
-    },
-    "guidanceAllocations": {
-      "description": "List of Guidance Allocations",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/guidanceAllocation"
-      },
-      "minItems": 1
     },
     "guidanceGroup": {
       "description": "A container for guidance patterns to be used together, e.g., a headland pattern and a main field pattern",
@@ -1490,7 +1499,12 @@
           "$ref": "#/$defs/contextItems"
         },
         "guidancePatternIds": {
-          "$ref": "#/$defs/guidancePatternIds"
+          "description": "List of the Guidance Patterns in this Group.   Required.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guidancePatternId"
+          },
+          "minItems": 1
         },
         "boundary": {
           "$ref": "#/$defs/boundary"
@@ -1501,22 +1515,6 @@
         "name",
         "guidancePatternIds"
       ]
-    },
-    "guidanceGroupIds": {
-      "description": "Mappings to Guidance Groups",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/guidanceGroupId"
-      },
-      "minItems": 1
-    },
-    "guidanceGroups": {
-      "description": "A list of Guidance Groups",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/guidanceGroup"
-      },
-      "minItems": 1
     },
     "guidancePattern": {
       "description": "A geospatial definition used to guide a vehicle in a field",
@@ -1577,22 +1575,6 @@
         "guidancePatternTypeCode"
       ]
     },
-    "guidancePatternIds": {
-      "description": "Ids mapping to the Reference Id of a Guidance Pattern",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/guidancePatternId"
-      },
-      "minItems": 1
-    },
-    "guidancePatterns": {
-      "description": "A list of Guidance Patterns",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/guidancePattern"
-      },
-      "minItems": 1
-    },
     "guidanceShift": {
       "description": "Shift information added to Guidance Patterns during a specific field operation, mapped to that LoggedData via the Guidance Allocation component",
       "type": "object",
@@ -1613,7 +1595,12 @@
           "$ref": "#/$defs/propagationOffset"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes governing the application of this Guidance Shift.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         }
       }
     },
@@ -1652,7 +1639,12 @@
           "$ref": "#/$defs/referenceId"
         },
         "uniqueIds": {
-          "$ref": "#/$defs/uniqueIds"
+          "description": "Optional persistent ids for this component.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/uniqueId"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -1734,14 +1726,6 @@
         "name"
       ]
     },
-    "manufacturers": {
-      "description": "A list of Manufacturers",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/manufacturer"
-      },
-      "minItems": 1
-    },
     "northShift": {
       "description": "The North shift of a Guidance Pattern",
       "type": "object",
@@ -1757,14 +1741,6 @@
         "numericValue",
         "unitOfMeasureCode"
       ]
-    },
-    "notes": {
-      "description": "One or more Notes",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/note"
-      },
-      "minItems": 1
     },
     "numericDataTypeDefinitionAttributes": {
       "description": "Attributes for Numeric Data Types",
@@ -1840,13 +1816,23 @@
           "$ref": "#/$defs/operationTypeCode"
         },
         "variables": {
-          "$ref": "#/$defs/variables"
+          "description": "Variables used within Spatial Records and/or Summary Values.   Usually required unless the Operation simply records general information without any rates or totals. E.g., that a certain field was planted with a particular product.\n\nVariables describe the data logged within a completed Operation, and the prescribed rates for a planned Operation.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/variable"
+          },
+          "minItems": 0
         },
         "spatialRecordsFile": {
           "$ref": "#/$defs/spatialRecordsFile"
         },
         "summaryValues": {
-          "$ref": "#/$defs/summaryValues"
+          "description": "Averages or Totals for specific Variables used either as manually-entered logged data or flat rate prescriptions.   Where a Summary Value maps to a Variable with a (spatial) File Data Index, the Summary Value can be interpreted to summarize the spatial data in that column.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/summaryValue"
+          },
+          "minItems": 0
         },
         "deviceConfiguration": {
           "$ref": "#/$defs/deviceConfiguration"
@@ -1858,25 +1844,55 @@
           "$ref": "#/$defs/prescribingOperationId"
         },
         "productIds": {
-          "$ref": "#/$defs/productIds"
+          "description": "List of mappings to Products used in the Operation.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/productId"
+          },
+          "minItems": 0
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes on the Operation.   E.g., the Start and End time of the Operation.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "partyRoles": {
-          "$ref": "#/$defs/partyRoles"
+          "description": "Any Parties/Roles associated to this Operation.  E.g., the equipment operator for the Operation.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/partyRole"
+          },
+          "minItems": 0
         },
         "guidanceAllocations": {
-          "$ref": "#/$defs/guidanceAllocations"
+          "description": "Any Guidance Allocations associated to this Operation",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/guidanceAllocation"
+          },
+          "minItems": 0
         },
         "notes": {
-          "$ref": "#/$defs/notes"
+          "description": "Any Notes on the Operation",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          },
+          "minItems": 0
         },
         "boundary": {
           "$ref": "#/$defs/boundary"
         },
         "referenceLayerIds": {
-          "$ref": "#/$defs/referenceLayerIds"
+          "description": "Mappings to any Reference Layers relating to this Operation",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/referenceLayerId"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -1890,14 +1906,6 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/operation"
-      },
-      "minItems": 1
-    },
-    "parties": {
-      "description": "A list of Parties",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/party"
       },
       "minItems": 1
     },
@@ -1941,7 +1949,12 @@
           "$ref": "#/$defs/contextItems"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes that limit the period in which this role applies.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "roleCode": {
           "$ref": "#/$defs/roleCode"
@@ -1954,14 +1967,6 @@
         "roleCode",
         "partyId"
       ]
-    },
-    "partyRoles": {
-      "description": "List of Party Roles",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/partyRole"
-      },
-      "minItems": 1
     },
     "pivotAttributes": {
       "description": "Relevant Attributes for the Pivot Guidance Pattern.   One of the three pivot definitions is required.",
@@ -2008,28 +2013,58 @@
           "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes"
+          "description": "Any Notes on the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          },
+          "minItems": 0
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations"
+          "description": "Optional collection of correlations to other Documents within this data instance.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/documentCorrelation"
+          },
+          "minItems": 0
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes describing the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "version": {
           "$ref": "#/$defs/version"
         },
         "cropIds": {
-          "$ref": "#/$defs/cropIds"
+          "description": "Mappings to any Crops in this document.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cropId"
+          },
+          "minItems": 0
         },
         "estimatedArea": {
           "$ref": "#/$defs/estimatedArea"
         },
         "fieldIds": {
-          "$ref": "#/$defs/fieldIds"
+          "description": "Mappings to any Fields in this document.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fieldId"
+          },
+          "minItems": 0
         },
         "cropZoneIds": {
-          "$ref": "#/$defs/cropZoneIds"
+          "description": "Mappings to any Crop Zones in this document.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cropZoneId"
+          },
+          "minItems": 0
         },
         "operations": {
           "$ref": "#/$defs/operations"
@@ -2135,22 +2170,6 @@
       },
       "minItems": 1
     },
-    "productIds": {
-      "description": "Ids mapping to the Reference Id of a Product",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/productId"
-      },
-      "minItems": 1
-    },
-    "products": {
-      "description": "A list of Products",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/product"
-      },
-      "minItems": 1
-    },
     "propagationOffset": {
       "description": "Perpendicular offset of a guidance pattern by a fixed offset.",
       "type": "object",
@@ -2219,28 +2238,58 @@
           "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes"
+          "description": "Any Notes on the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          },
+          "minItems": 0
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations"
+          "description": "Optional collection of correlations to other Documents within this data instance.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/documentCorrelation"
+          },
+          "minItems": 0
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes describing the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "version": {
           "$ref": "#/$defs/version"
         },
         "cropIds": {
-          "$ref": "#/$defs/cropIds"
+          "description": "Mappings to any Crops in this document.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cropId"
+          },
+          "minItems": 0
         },
         "estimatedArea": {
           "$ref": "#/$defs/estimatedArea"
         },
         "fieldIds": {
-          "$ref": "#/$defs/fieldIds"
+          "description": "Mappings to any Fields in this document.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fieldId"
+          },
+          "minItems": 0
         },
         "cropZoneIds": {
-          "$ref": "#/$defs/cropZoneIds"
+          "description": "Mappings to any Crop Zones in this document.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cropZoneId"
+          },
+          "minItems": 0
         },
         "operations": {
           "$ref": "#/$defs/operations"
@@ -2280,19 +2329,39 @@
           "$ref": "#/$defs/layerTypeCode"
         },
         "variables": {
-          "$ref": "#/$defs/variables"
+          "description": "The variables defined within the Reference Layer",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/variable"
+          },
+          "minItems": 1
         },
         "spatialRecordsFile": {
           "$ref": "#/$defs/spatialRecordsFile"
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes governing this Reference Layer",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "fieldIds": {
-          "$ref": "#/$defs/fieldIds"
+          "description": "Mappings to any Fields",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/fieldId"
+          },
+          "minItems": 0
         },
         "cropZoneIds": {
-          "$ref": "#/$defs/cropZoneIds"
+          "description": "Mappings to any Crop Zones",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cropZoneId"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -2302,14 +2371,6 @@
         "variables",
         "spatialRecordsFile"
       ]
-    },
-    "referenceLayerIds": {
-      "description": "Ids mapping to the Reference Id of a Reference Layer",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/referenceLayerId"
-      },
-      "minItems": 1
     },
     "referenceLayers": {
       "description": "List of Reference Layers",
@@ -2392,22 +2453,6 @@
         "name"
       ]
     },
-    "seasonIds": {
-      "description": "Mappings to Seasons",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/seasonId"
-      },
-      "minItems": 1
-    },
-    "seasons": {
-      "description": "A list of Seasons",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/season"
-      },
-      "minItems": 1
-    },
     "spiralAttributes": {
       "description": "Relevant attributes for the Spiral Guidance Pattern type",
       "type": "object",
@@ -2451,14 +2496,6 @@
         "variableId",
         "valueText"
       ]
-    },
-    "summaryValues": {
-      "description": "One or more Summary Value records",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/summaryValue"
-      },
-      "minItems": 1
     },
     "surveyTime": {
       "description": "The amount of time a GNSS reference station spends collecting data to establish a precise position.",
@@ -2551,14 +2588,6 @@
         "dateContextCode"
       ]
     },
-    "timeScopes": {
-      "description": "Collection of Time Scopes",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/timeScope"
-      },
-      "minItems": 1
-    },
     "trait": {
       "description": "Genetic attribute of a seed variety",
       "type": "object",
@@ -2618,14 +2647,6 @@
         "idTypeCode"
       ]
     },
-    "uniqueIds": {
-      "description": "One or more Unique Ids",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/uniqueId"
-      },
-      "minItems": 1
-    },
     "variable": {
       "description": "An individual type of measurement during a field operation that will be populated at multiple points in the field.",
       "type": "object",
@@ -2667,14 +2688,6 @@
         "definitionCode"
       ]
     },
-    "variables": {
-      "description": "One or more Logged Variables",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/variable"
-      },
-      "minItems": 1
-    },
     "workOrder": {
       "description": "Document summarizing the final collection of agronomic instructions (Operations) to be acted upon once operational decisions are taken. A work order documents operational decisions made.  A common example would be a list of fixed or variable rate prescriptions.\n\nThe Operations represent agronomic instruction(s) for a single Field or Crop Zone at a single time.  Where a Crop is not known/relevant, the Work Order must reference a Field.  Where a Crop is known, the Work Order must reference a CropZone.  Example WorkItems: a CropZone should be planted and fertilized on a particular date/date range, utilize a prescribed flat rate (Summary Value) or rates (Spatial Records File).  Prescriptions are represented as individual Operations.",
       "type": "object",
@@ -2695,13 +2708,28 @@
           "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes"
+          "description": "Any Notes on the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          },
+          "minItems": 0
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations"
+          "description": "Optional collection of correlations to other Documents within this data instance.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/documentCorrelation"
+          },
+          "minItems": 0
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes describing the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "version": {
           "$ref": "#/$defs/version"
@@ -2751,13 +2779,28 @@
           "$ref": "#/$defs/seasonId"
         },
         "notes": {
-          "$ref": "#/$defs/notes"
+          "description": "Any Notes on the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/note"
+          },
+          "minItems": 0
         },
         "documentCorrelations": {
-          "$ref": "#/$defs/documentCorrelations"
+          "description": "Optional collection of correlations to other Documents within this data instance.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/documentCorrelation"
+          },
+          "minItems": 0
         },
         "timeScopes": {
-          "$ref": "#/$defs/timeScopes"
+          "description": "Any Time Scopes describing the Document",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/timeScope"
+          },
+          "minItems": 0
         },
         "version": {
           "$ref": "#/$defs/version"
