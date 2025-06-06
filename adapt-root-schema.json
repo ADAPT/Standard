@@ -401,9 +401,9 @@
       "type": "string",
       "description": "The code that identifies the enumeration item value from the Role data type definition"
     },
-    "scopeCode": {
+    "scope": {
       "type": "string",
-      "description": "The code that identifies the enumeration item value from the Scope data type definition"
+      "description": "Name of an ADAPT Standard component to which a Data Type Definition may be applied."
     },
     "seasonId": {
       "type": "string",
@@ -529,7 +529,12 @@
       "type": "object",
       "properties": {
         "addressLines": {
-          "$ref": "#/$defs/addressLines"
+          "description": "Address lines that precede the City.   Street address, PO Box, etc.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/addressLine"
+          },
+          "minItems": 0
         },
         "city": {
           "$ref": "#/$defs/city"
@@ -553,22 +558,6 @@
       "required": [
         "addressContactTypeCode"
       ]
-    },
-    "addressContactMethods": {
-      "description": "One or more Addresses.",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/addressContactMethod"
-      },
-      "minItems": 1
-    },
-    "addressLines": {
-      "description": "One or more address lines",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/addressLine"
-      },
-      "minItems": 1
     },
     "amount": {
       "description": "Amount of a product component within the parent product.  Valid amounts are in volume or mass per volume or mass.  E.g.s, 3 floz1gal-1, 0.26 lb1lb-1, 1oz1gal-1.   For ingredients, amounts may be expressed as percentages.",
@@ -849,10 +838,20 @@
           "minItems": 0
         },
         "addressContactMethods": {
-          "$ref": "#/$defs/addressContactMethods"
+          "description": "Any Addresses as part of this Contact Info",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/addressContactMethod"
+          },
+          "minItems": 0
         },
         "telecommunicationContactMethods": {
-          "$ref": "#/$defs/telecommunicationContactMethods"
+          "description": "Any telephone numbers/email addresses as part of this Contact Info",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/telecommunicationContactMethod"
+          },
+          "minItems": 0
         }
       }
     },
@@ -1020,13 +1019,28 @@
           "$ref": "#/$defs/supersededByCode"
         },
         "scopes": {
-          "$ref": "#/$defs/scopes"
+          "description": "The names of ADAPT Standard components to which this Data Type Definition may be applied, either as a Context Item or to a defined property such as a Variable.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/scope"
+          },
+          "minItems": 0
         },
         "labels": {
-          "$ref": "#/$defs/labels"
+          "description": "Names for this Data Type Definition in other languages.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/label"
+          },
+          "minItems": 0
         },
         "geoPoliticalContexts": {
-          "$ref": "#/$defs/geoPoliticalContexts"
+          "description": "Any specific Geo Political Contexts to which the Data Type Definition applies",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/geoPoliticalContext"
+          },
+          "minItems": 0
         },
         "keywords": {
           "$ref": "#/$defs/keywords"
@@ -1261,9 +1275,6 @@
         },
         "supersededByCode": {
           "$ref": "#/$defs/supersededByCode"
-        },
-        "labels": {
-          "$ref": "#/$defs/labels"
         }
       },
       "required": [
@@ -1434,14 +1445,6 @@
       "required": [
         "iSO3166-2Code"
       ]
-    },
-    "geoPoliticalContexts": {
-      "description": "A list of Geo Political Contexts",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/geoPoliticalContext"
-      },
-      "minItems": 1
     },
     "gNSSDataQualityMetric": {
       "description": "Metric supplied to document the quality of a GNSS dataset.",
@@ -1792,14 +1795,6 @@
         "languageCode",
         "name"
       ]
-    },
-    "labels": {
-      "description": "A list of Labels",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/label"
-      },
-      "minItems": 1
     },
     "manufacturer": {
       "description": "The entity who manufactured a given market good.",
@@ -2243,13 +2238,23 @@
           "$ref": "#/$defs/specificGravity"
         },
         "productComponents": {
-          "$ref": "#/$defs/productComponents"
+          "description": "Optional list of the components that make up this product.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/productComponent"
+          },
+          "minItems": 0
         },
         "cropId": {
           "$ref": "#/$defs/cropId"
         },
         "traits": {
-          "$ref": "#/$defs/traits"
+          "description": "For Crop Variety products, list of traits. Optional.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trait"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -2282,14 +2287,6 @@
       "required": [
         "amount"
       ]
-    },
-    "productComponents": {
-      "description": "A list of Product Components",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/productComponent"
-      },
-      "minItems": 1
     },
     "propagationOffset": {
       "description": "Perpendicular offset of a guidance pattern by a fixed offset.",
@@ -2537,14 +2534,6 @@
         "catalog"
       ]
     },
-    "scopes": {
-      "description": "A list of Scopes",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/scopeCode"
-      },
-      "minItems": 1
-    },
     "season": {
       "description": "The span of time for which field operations contribute to a particular growing season.   For many areas, this is approximately a year in length.  E.g., In the northern hemisphere, Season \"2022\" may extend from the first operations following harvest in the fall of 2021 to the last harvest activities in the fall of 2022.  As such, seasons may overlap in months where harvest operations in the prior season are ongoing as field prep and fertilizer operations are starting for the new season.",
       "type": "object",
@@ -2675,14 +2664,6 @@
         "telecommunicationContactTypeCode"
       ]
     },
-    "telecommunicationContactMethods": {
-      "description": "Telephone numbers and email addresses.",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/telecommunicationContactMethod"
-      },
-      "minItems": 1
-    },
     "textDataTypeDefinitionAttributes": {
       "description": "Data Type Definition attributes specific to the text type",
       "type": "object",
@@ -2746,14 +2727,6 @@
         "name",
         "traitCode"
       ]
-    },
-    "traits": {
-      "description": "A collection of traits",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/trait"
-      },
-      "minItems": 1
     },
     "uniqueId": {
       "description": "A persistent identifier for an entity as defined by a specific source.",
