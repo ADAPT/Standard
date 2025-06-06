@@ -683,7 +683,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "manufacturerId": {
           "$ref": "#/$defs/manufacturerId"
@@ -836,7 +841,12 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "addressContactMethods": {
           "$ref": "#/$defs/addressContactMethods"
@@ -865,20 +875,17 @@
           "minItems": 0
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "Nested Context Items used as the value for this Context item. Either this property or Value Text is required.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         }
       },
       "required": [
         "definitionCode"
       ]
-    },
-    "contextItems": {
-      "description": "List of supplemental information with which a data element is tagged.",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/contextItem"
-      },
-      "minItems": 1
     },
     "crop": {
       "description": "A plant or animal type cultivated for agricultural produce.",
@@ -894,7 +901,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "parentId": {
           "$ref": "#/$defs/parentId"
@@ -925,7 +937,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "timeScopes": {
           "description": "Any Time Scopes describing the Crop Zone.   Season should be reported separately via Season Ids.",
@@ -1061,7 +1078,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "deviceModelId": {
           "$ref": "#/$defs/deviceModelId"
@@ -1080,7 +1102,12 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "deviceId": {
           "$ref": "#/$defs/deviceId"
@@ -1104,7 +1131,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "brandId": {
           "$ref": "#/$defs/brandId"
@@ -1139,19 +1171,44 @@
       "type": "object",
       "properties": {
         "plans": {
-          "$ref": "#/$defs/plans"
+          "description": "All Plans in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/plan"
+          },
+          "minItems": 0
         },
         "recommendations": {
-          "$ref": "#/$defs/recommendations"
+          "description": "All Recommendations in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/recommendation"
+          },
+          "minItems": 0
         },
         "workOrders": {
-          "$ref": "#/$defs/workOrders"
+          "description": "All Work Orders in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/workOrder"
+          },
+          "minItems": 0
         },
         "workRecords": {
-          "$ref": "#/$defs/workRecords"
+          "description": "All Work Records in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/workRecord"
+          },
+          "minItems": 0
         },
         "referenceLayers": {
-          "$ref": "#/$defs/referenceLayers"
+          "description": "All Reference Layers in the data",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/referenceLayer"
+          },
+          "minItems": 0
         }
       }
     },
@@ -1245,7 +1302,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "growerId": {
           "$ref": "#/$defs/growerId"
@@ -1273,7 +1335,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "farmId": {
           "$ref": "#/$defs/farmId"
@@ -1315,7 +1382,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "fieldId": {
           "$ref": "#/$defs/fieldId"
@@ -1434,7 +1506,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "partyId": {
           "$ref": "#/$defs/partyId"
@@ -1459,7 +1536,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "guidanceGroupId": {
           "$ref": "#/$defs/guidanceGroupId"
@@ -1496,7 +1578,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "guidancePatternIds": {
           "description": "List of the Guidance Patterns in this Group.   Required.",
@@ -1530,7 +1617,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "guidancePatternTypeCode": {
           "$ref": "#/$defs/guidancePatternTypeCode"
@@ -1609,7 +1701,12 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "name": {
           "$ref": "#/$defs/name"
@@ -1718,7 +1815,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         }
       },
       "required": [
@@ -1772,7 +1874,12 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "name": {
           "$ref": "#/$defs/name"
@@ -1810,7 +1917,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "operationTypeCode": {
           "$ref": "#/$defs/operationTypeCode"
@@ -1901,14 +2013,6 @@
         "operationTypeCode"
       ]
     },
-    "operations": {
-      "description": "Collections of records for a single OperationType on a single Field at one time.",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/operation"
-      },
-      "minItems": 1
-    },
     "party": {
       "description": "A business entity or individual",
       "type": "object",
@@ -1923,7 +2027,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "contactInfo": {
           "$ref": "#/$defs/contactInfo"
@@ -1946,7 +2055,12 @@
       "type": "object",
       "properties": {
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "timeScopes": {
           "description": "Any Time Scopes that limit the period in which this role applies.",
@@ -2007,7 +2121,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId"
@@ -2067,7 +2186,12 @@
           "minItems": 0
         },
         "operations": {
-          "$ref": "#/$defs/operations"
+          "description": "Operations that make up the Plan.  Required.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/operation"
+          },
+          "minItems": 1
         }
       },
       "required": [
@@ -2075,14 +2199,6 @@
         "name",
         "operations"
       ]
-    },
-    "plans": {
-      "description": "Documents collecting operational intent for a growing season",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/plan"
-      },
-      "minItems": 1
     },
     "product": {
       "description": "Agricultural input or produce",
@@ -2098,7 +2214,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "productTypeCode": {
           "$ref": "#/$defs/productTypeCode"
@@ -2232,7 +2353,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId"
@@ -2292,7 +2418,12 @@
           "minItems": 0
         },
         "operations": {
-          "$ref": "#/$defs/operations"
+          "description": "Operations that make up the Recommendation. Required.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/operation"
+          },
+          "minItems": 1
         }
       },
       "required": [
@@ -2300,14 +2431,6 @@
         "name",
         "operations"
       ]
-    },
-    "recommendations": {
-      "description": "Documents summarizing guidance to a Grower from an advisor.",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/recommendation"
-      },
-      "minItems": 1
     },
     "referenceLayer": {
       "description": "Preformatted geospatial layer to be referenced within the model",
@@ -2323,7 +2446,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "layerTypeCode": {
           "$ref": "#/$defs/layerTypeCode"
@@ -2371,14 +2499,6 @@
         "variables",
         "spatialRecordsFile"
       ]
-    },
-    "referenceLayers": {
-      "description": "List of Reference Layers",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/referenceLayer"
-      },
-      "minItems": 1
     },
     "referenceWeight": {
       "description": "Reference weight for the crop.",
@@ -2439,7 +2559,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "start": {
           "$ref": "#/$defs/start"
@@ -2602,7 +2727,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "manufacturerId": {
           "$ref": "#/$defs/manufacturerId"
@@ -2661,7 +2791,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "definitionCode": {
           "$ref": "#/$defs/definitionCode"
@@ -2702,7 +2837,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId"
@@ -2741,7 +2881,12 @@
           "$ref": "#/$defs/cropZoneId"
         },
         "operations": {
-          "$ref": "#/$defs/operations"
+          "description": "The prescribed Operations that comprise this Work Order.  Required.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/operation"
+          },
+          "minItems": 1
         }
       },
       "required": [
@@ -2750,14 +2895,6 @@
         "fieldId",
         "operations"
       ]
-    },
-    "workOrders": {
-      "description": "Documents summarizing the final agronomic instructions to be acted upon",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/workOrder"
-      },
-      "minItems": 1
     },
     "workRecord": {
       "description": "A record of completed work, contemporaneous in nature and scoped to a single Field or Crop Zone.     At least one Operation.   E.g.s., \n-The harvest of a single Crop Zone completed by two combines over several days.   Each combine would record separate Operations.\n-The single-pass seeding/starter fertilizer/insecticide application of a corn Crop Zone by one row planter.   The Work Record would contain three Operation objects for each type of application.\n-A manual record of total harvested values, without knowledge of the harvesting equipment.   One Operation would record one or more Summary Values.",
@@ -2773,7 +2910,12 @@
           "$ref": "#/$defs/description"
         },
         "contextItems": {
-          "$ref": "#/$defs/contextItems"
+          "description": "List of supplemental information for this data element",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contextItem"
+          },
+          "minItems": 0
         },
         "seasonId": {
           "$ref": "#/$defs/seasonId"
@@ -2812,7 +2954,12 @@
           "$ref": "#/$defs/cropZoneId"
         },
         "operations": {
-          "$ref": "#/$defs/operations"
+          "description": "The completed Operations that comprise this Word Record. Required.\n\nE.g.s., a tractor pulling a row planter with seeding, liquid fertilizer and granular insecticide application capabilities would have its data grouped into 4 constituent Operations: Application - SowingAndPlanting, Application - Fertilizing, Application - Crop Protection, and Vehicle Data Collection.\n\nManually entered information can also be logged as Summary Values.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/operation"
+          },
+          "minItems": 1
         }
       },
       "required": [
@@ -2821,14 +2968,6 @@
         "fieldId",
         "operations"
       ]
-    },
-    "workRecords": {
-      "description": "Records of completed work, contemporaneous in nature and scoped to a single Field or Crop Zone",
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/workRecord"
-      },
-      "minItems": 1
     },
     "xOffset": {
       "description": "Offset in the X (inline) direction.  Positive values are forward, negative values are backward.",
