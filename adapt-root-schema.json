@@ -285,8 +285,8 @@
       "description": "One or more Line Strings in Well Known Text as a Line String or Multi Line String in WGS84 coordinates"
     },
     "loggingRate": {
-      "type": "integer",
-      "description": "The logging rate (or sampling rate) refers to the frequency at which the device records position data. Use 0 if the boundary was defined in a system that does not have a logging rate"
+      "type": "number",
+      "description": "The logging rate (or sampling rate) refers to the frequency in Hertz at which the device records position data. Use 0 if the boundary was defined in a system that does not have a logging rate"
     },
     "lossOfGNSSRate": {
       "type": "number",
