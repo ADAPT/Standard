@@ -1983,7 +1983,7 @@
       },
       "name": "AddressContactType",
       "scopes": [
-        "Contact Info"
+        "ContactInfo"
       ]
     },
     {
@@ -2016,7 +2016,7 @@
       },
       "name": "TelecommunicationContactType",
       "scopes": [
-        "Contact Info"
+        "ContactInfo"
       ]
     },
     {
@@ -2090,7 +2090,7 @@
       },
       "name": "LayerType",
       "scopes": [
-        "Reference Layer"
+        "ReferenceLayer"
       ]
     },
     {
@@ -2234,9 +2234,7 @@
       },
       "name": "ProductStatus",
       "scopes": [
-        "Product",
-        "Packaged Product",
-        "Container Model"
+        "Product"
       ]
     },
     {
@@ -2341,7 +2339,7 @@
       },
       "name": "GuidancePatternType",
       "scopes": [
-        "Guidance Pattern"
+        "GuidancePattern"
       ]
     },
     {
@@ -2375,7 +2373,7 @@
       },
       "name": "GuidancePatternExtension",
       "scopes": [
-        "Guidance Pattern"
+        "GuidancePattern"
       ]
     },
     {
@@ -2409,7 +2407,7 @@
       },
       "name": "GuidancePatternPropagationDirection",
       "scopes": [
-        "Guidance Pattern:"
+        "GuidancePattern"
       ]
     },
     {
@@ -2443,7 +2441,7 @@
       },
       "name": "DataDefinitionBaseType",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
       ]
     },
     {
@@ -2469,7 +2467,7 @@
       },
       "name": "NumericDataType",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
       ]
     },
     {
@@ -2648,7 +2646,7 @@
       },
       "name": "Scope",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
       ]
     },
     {
@@ -2831,7 +2829,7 @@
       },
       "name": "DataDefinitionStatus",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
       ]
     },
     {
@@ -3031,7 +3029,7 @@
       },
       "name": "BoundaryCreationMethod",
       "scopes": [
-        "Boundary Properties"
+        "BoundaryProperties"
       ]
     },
     {
@@ -3063,7 +3061,7 @@
       },
       "name": "GNSSBaseSurveyType",
       "scopes": [
-        "Base Station Metadata"
+        "GNSSMobileBaseStationMetadata"
       ]
     },
     {
@@ -3089,7 +3087,7 @@
       },
       "name": "GNSSBaseStationType",
       "scopes": [
-        "Base Station Metadata"
+        "GNSSMobileBaseStationMetadata"
       ]
     },
     {
