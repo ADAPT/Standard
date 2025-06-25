@@ -10,6 +10,9 @@
     "documents": {
       "$ref": "#/$defs/documents"
     },
+    "rootSchemaVersion": {
+      "$ref": "#/$defs/rootSchemaVersion"
+    },
     "dataTypeDefinitionVersion": {
       "$ref": "#/$defs/dataTypeDefinitionVersion"
     },
@@ -95,7 +98,7 @@
       "description": "The code that identifies the enumeration item value from the Data Definition Status data type definition"
     },
     "dataTypeDefinitionVersion": {
-      "type": "number",
+      "type": "string",
       "description": "Version of a Data Type Definition.  Uses Semantic Versioning to identify updates to the entirety of the standard Data Types Definition list."
     },
     "dateContextCode": {
@@ -171,6 +174,15 @@
     "geometry": {
       "type": "string",
       "description": "The geometry of an object in Well Known Text in WGS84 coordinates."
+    },
+    "geoParquetColumnName": {
+      "type": "string",
+      "description": "Name of the column in the GeoParquet file.  Required for vector geospatial data."
+    },
+    "geoTIFFBandIndex": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Band Index for this data.    Required for raster geospatial data."
     },
     "gNSSBaseStationTypeCode": {
       "type": "string",
@@ -401,6 +413,10 @@
       "type": "string",
       "description": "The code that identifies the enumeration item value from the Role data type definition"
     },
+    "rootSchemaVersion": {
+      "type": "string",
+      "description": "The version of the ADAPT root schema."
+    },
     "scope": {
       "type": "string",
       "description": "Name of an ADAPT Standard component to which a Data Type Definition may be applied."
@@ -451,7 +467,7 @@
       "description": "A code defining a Unit of Measure in the Adapt Unit Of Measure system"
     },
     "unitSystemVersion": {
-      "type": "number",
+      "type": "string",
       "description": "Version of a Unit System.  Uses Semantic Versioning to identify updates to the entirety of the unit list."
     },
     "validationRegularExpression": {
@@ -2523,6 +2539,9 @@
         "documents": {
           "$ref": "#/$defs/documents"
         },
+        "rootSchemaVersion": {
+          "$ref": "#/$defs/rootSchemaVersion"
+        },
         "dataTypeDefinitionVersion": {
           "$ref": "#/$defs/dataTypeDefinitionVersion"
         },
@@ -2531,7 +2550,8 @@
         }
       },
       "required": [
-        "catalog"
+        "catalog",
+        "rootSchemaVersion"
       ]
     },
     "season": {
@@ -2774,8 +2794,11 @@
         "definitionCode": {
           "$ref": "#/$defs/definitionCode"
         },
-        "fileDataIndex": {
-          "$ref": "#/$defs/fileDataIndex"
+        "geoParquetColumnName": {
+          "$ref": "#/$defs/geoParquetColumnName"
+        },
+        "geoTIFFBandIndex": {
+          "$ref": "#/$defs/geoTIFFBandIndex"
         },
         "productId": {
           "$ref": "#/$defs/productId"
