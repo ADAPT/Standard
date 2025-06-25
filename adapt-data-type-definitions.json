@@ -861,7 +861,7 @@
       "name": "Spray Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -874,7 +874,7 @@
       "name": "Spray Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -887,7 +887,7 @@
       "name": "Spray Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -900,7 +900,7 @@
       "name": "Tillage Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -913,7 +913,7 @@
       "name": "Tillage Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -926,7 +926,7 @@
       "name": "Tillage Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -940,7 +940,7 @@
       "name": "Row Cleaner Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -954,7 +954,7 @@
       "name": "Row Cleaner Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -968,7 +968,7 @@
       "name": "Row Cleaner Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -1206,7 +1206,7 @@
       "name": "Atmospheric Pressure",
       "numericDataTypeDefinitionAttributes": {
         "numericDataTypeCode": "Double",
-        "unitOfMeasureCode": "pa"
+        "unitOfMeasureCode": "Pa"
       },
       "scopes": [
         "Variable"
@@ -1224,6 +1224,402 @@
       },
       "scopes": [
         "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSDistanceFromBase",
+      "description": "The horizontal distance between the GNSS receiver (often referred to as the rover) and the reference station (base station) providing correction data",
+      "name": "Distance from Base Station",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "Speed",
+      "description": "Speed at which a Device is traveling",
+      "name": "Device Speed",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m1sec-1"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSReceiverSatelliteCount",
+      "description": "The number of GNSS satellites that the receiver is able to track and use to calculate its position at a given time.",
+      "name": "Receiver Satellite Count",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Integer",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSBaseStationSatelliteCount",
+      "description": "The number of GNSS satellites that the base station is able to track and use to calculate correction for at a given time.",
+      "name": "Base Station Satellite Count",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Integer",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSHDOP",
+      "description": "Horizontal Dilution of Precision is a measure of the accuracy of a GNSS receiver's horizontal position (latitude and longitude) based on the geometry of the satellites in view. ",
+      "name": "Horizontal Dilution of Precision",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSVDOP",
+      "description": "Vertical Dilution of Precision is a measure of the accuracy of a GNSS receiver's vertical position (altitude) based on the geometry of the satellites in view. ",
+      "name": "Vertical Dilution of Precision",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSAgeOfCorrection",
+      "description": "The time elapsed since the last correction signal was received by the GNSS receiver from a base station or correction network.",
+      "name": "Age of Correction",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "sec"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSSignalStrength",
+      "description": "The power or intensity of the GNSS signals being received from the satellites.",
+      "name": "Signal Strength",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "dBm"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSSemiMajorErrorElipse",
+      "description": "The larger axis of an error ellipse that represents the uncertainty or potential error in the calculated position.",
+      "name": "Semi Major Error Elipse",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSSemiMinorErrorElipse",
+      "description": "The shorter axis of the error ellipse, which represents the uncertainty or potential error in the calculated position along the direction of least uncertainty. ",
+      "name": "Semi Minor Error Elipse",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSOrientationErrorElipse",
+      "description": "The orientation or alignment of the error ellipse that represents the uncertainty in the receiver's position. ",
+      "name": "Orientation Error Ellipse",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "arcdeg"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSLatitudeError",
+      "description": "The positional error or uncertainty in the calculated latitude of the receiver's location.",
+      "name": "Latitude Error",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSLongitudeError",
+      "description": "The positional error or uncertainty in the calculated longitude of the receiver's location.",
+      "name": "Longitude Error",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSAltitudeError",
+      "description": "The positional error or uncertainty in the calculated altitude (height) of the receiver's location.",
+      "name": "Altitude Error",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "m"
+      },
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSStandardDeviationAverageAltitude",
+      "description": "Standard deviation value for the processed data for altitude created by averaging the standard deviation of each point then the standard deviation of the standard deviations",
+      "name": "Standard Deviation Average Altitude",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSStandardDeviationAverageLatitude",
+      "description": "Standard deviation value for the processed data for latitude created by averaging the standard deviation of each point then the standard deviation of the standard deviations",
+      "name": "Standard Deviation Average Latitude",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSStandardDeviationAverageLongitude",
+      "description": "Standard deviation value for the processed data for longitude created by averaging the standard deviation of each point then the standard deviation of the standard deviations",
+      "name": "Standard Deviation Average Longitude",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSStandardDeviationMaximumAltitude",
+      "description": "The maximum value of the standard deviations for altitude calculated from a set of GNSS measurements or data points. It represents the greatest amount of variation or error observed in a set of measurements, indicating the highest level of uncertainty or dispersion in the data.",
+      "name": "Standard Deviation Maximum Altitude",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSStandardDeviationMaximumLatitude",
+      "description": "The maximum value of the standard deviations for latitude calculated from a set of GNSS measurements or data points. It represents the greatest amount of variation or error observed in a set of measurements, indicating the highest level of uncertainty or dispersion in the data.",
+      "name": "Standard Deviation Maximum Latitude",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSStandardDeviationMaximumLongitude",
+      "description": "The maximum value of the standard deviations for longitude calculated from a set of GNSS measurements or data points. It represents the greatest amount of variation or error observed in a set of measurements, indicating the highest level of uncertainty or dispersion in the data.",
+      "name": "Standard Deviation Maximum Longitude",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSMaximumHDOP",
+      "description": "The maximum Horizontal Dilution of Precision from a set of GNSS measurements or data points.",
+      "name": "Maximum Horizontal Dilution of Precision",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSMaximumVDOP",
+      "description": "The maximum Vertical Dilution of Precision from a set of GNSS measurements or data points.",
+      "name": "Maximum Vertical Dilution of Precision",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSMaximumAgeOfCorrection",
+      "description": "The maximum Age Of Correction from a set of GNSS measurements or data points.",
+      "name": "Maximum Age of Correction",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "sec"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "NUMERIC",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "MinimumGNSSQualityIndicatorCode",
+      "description": "The code from the GNSSQualityIndicator Data Type Definition representing the lowest level of quality present in a given dataset.",
+      "name": "Minimum GNSS Quality Indicator Code",
+      "numericDataTypeDefinitionAttributes": {
+        "numericDataTypeCode": "Double",
+        "unitOfMeasureCode": "count"
+      },
+      "scopes": [
+        "GNSS Data Quality Metrics"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSRollCompensation",
+      "description": "Whether roll compensation is used. Roll compensation is the adjustment made to the GNSS position data to account for the roll (tilt left/right), pitch (tilt front/back) and yaw (rotation relative to vehicle's vertical axis) of the vehicle or equipment that the receiver is mounted on.",
+      "name": "GNSS Roll Compensation",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSFallbackStatus",
+      "description": "Whether the state of the GNSS receiver is switched to a backup or less accurate positioning method due to issues with the primary satellite signals or correction data.",
+      "name": "GNSS Fallback Status",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "CropVarietyIsGeneticallyEnhanced",
+      "description": "Whether a crop variety is genetically enhanced",
+      "name": "Crop Variety Is Genetically Enhhanced",
+      "scopes": [
+        "Product"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "HasCarbamate",
+      "description": "Whether a crop protection product has carbamate active ingredient(s)",
+      "name": "Has Carbamate",
+      "scopes": [
+        "Product"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "HasOrganophosphate",
+      "description": "Whether a crop protection product has organophosphate active ingredient(s)",
+      "name": "Has Organophosphate",
+      "scopes": [
+        "Product"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "BOOLEAN",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "HasBiological",
+      "description": "Whether a crop protection product has biological active ingredient(s)",
+      "name": "Has Biological",
+      "scopes": [
+        "Product"
       ]
     },
     {
@@ -1514,6 +1910,12 @@
             "code": "TRANSPORTER",
             "enumerationItemStatusCode": "VALID",
             "name": "Transporter"
+          },
+          {
+            "code": "COLLECTOR",
+            "description": "Party that collects samples or observations from fields, drives a field boundary for geospatial data retrieval, etc.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Collector"
           }
         ]
       },
@@ -1535,13 +1937,19 @@
           },
           {
             "code": "BUSINESS",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Business"
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Business",
+            "supersededByCode": "ORGANIZATION"
           },
           {
             "code": "INDIVIDUAL",
             "enumerationItemStatusCode": "VALID",
             "name": "Individual"
+          },
+          {
+            "code": "ORGANIZATION",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Organization"
           }
         ]
       },
@@ -1575,7 +1983,7 @@
       },
       "name": "AddressContactType",
       "scopes": [
-        "Contact Info"
+        "ContactInfo"
       ]
     },
     {
@@ -1608,7 +2016,7 @@
       },
       "name": "TelecommunicationContactType",
       "scopes": [
-        "Contact Info"
+        "ContactInfo"
       ]
     },
     {
@@ -1671,12 +2079,18 @@
             "description": "General obstacles outside of the context of specific fields. For field-specific obstacles, use FieldBoundary.Obstacles.",
             "enumerationItemStatusCode": "VALID",
             "name": "Obstacles"
+          },
+          {
+            "code": "HIGH_FIDELITY_GEOMETRY_SOURCE",
+            "description": "Defines a point layer attributed by detailed GNSS data on each point.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "High Fidelity Geometry Source"
           }
         ]
       },
       "name": "LayerType",
       "scopes": [
-        "Reference Layer"
+        "ReferenceLayer"
       ]
     },
     {
@@ -1820,9 +2234,7 @@
       },
       "name": "ProductStatus",
       "scopes": [
-        "Product",
-        "Packaged Product",
-        "Container Model"
+        "Product"
       ]
     },
     {
@@ -1894,95 +2306,6 @@
     {
       "dataDefinitionBaseTypeCode": "ENUMERATION",
       "dataDefinitionStatusCode": "VALID",
-      "definitionCode": "CropNutritionIngredient",
-      "description": "Defines base nutrients in fertilizers",
-      "enumeratedDataTypeDefinitionAttributes": {
-        "items": [
-          {
-            "code": "NITROGEN",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Nitrogen"
-          },
-          {
-            "code": "PHOSPHORUS",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Phosphorus"
-          },
-          {
-            "code": "POTASSIUM",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Potassium"
-          },
-          {
-            "code": "CALCIUM",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Calcium"
-          },
-          {
-            "code": "MAGNESIUM",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Magnesium"
-          },
-          {
-            "code": "SULPHUR",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Sulphur"
-          },
-          {
-            "code": "BORON",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Boron"
-          },
-          {
-            "code": "CHLORINE",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Chlorine"
-          },
-          {
-            "code": "COPPER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Copper"
-          },
-          {
-            "code": "IRON",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Iron"
-          },
-          {
-            "code": "MANGANESE",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Manganese"
-          },
-          {
-            "code": "MOLYBDENUM",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Molybdenum"
-          },
-          {
-            "code": "ZINC",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Zinc"
-          },
-          {
-            "code": "FULVIC_ACID",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Fulvic Acid"
-          },
-          {
-            "code": "HUMIC_ACID",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Humic Acid"
-          }
-        ]
-      },
-      "name": "CropNutritionIngredient",
-      "scopes": [
-        "Ingredient"
-      ]
-    },
-    {
-      "dataDefinitionBaseTypeCode": "ENUMERATION",
-      "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GuidancePatternType",
       "description": "Classification of a Guidance Pattern",
       "enumeratedDataTypeDefinitionAttributes": {
@@ -2016,7 +2339,7 @@
       },
       "name": "GuidancePatternType",
       "scopes": [
-        "Guidance Pattern"
+        "GuidancePattern"
       ]
     },
     {
@@ -2050,7 +2373,7 @@
       },
       "name": "GuidancePatternExtension",
       "scopes": [
-        "Guidance Pattern"
+        "GuidancePattern"
       ]
     },
     {
@@ -2084,7 +2407,7 @@
       },
       "name": "GuidancePatternPropagationDirection",
       "scopes": [
-        "Guidance Pattern:"
+        "GuidancePattern"
       ]
     },
     {
@@ -2118,7 +2441,7 @@
       },
       "name": "DataDefinitionBaseType",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
       ]
     },
     {
@@ -2144,7 +2467,7 @@
       },
       "name": "NumericDataType",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
       ]
     },
     {
@@ -2323,7 +2646,7 @@
       },
       "name": "Scope",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
       ]
     },
     {
@@ -2353,8 +2676,21 @@
           {
             "code": "APPLICATION_SOWING_AND_PLANTING",
             "description": "Introducing the seeds or other plant material into a field.",
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Application Sowing And Planting",
+            "supersededByCode": "APPLICATION_SOWING_AND_PLANTING_SEEDS"
+          },
+          {
+            "code": "APPLICATION_SOWING_AND_PLANTING_SEEDS",
+            "description": "Introducing seeds into a field.",
             "enumerationItemStatusCode": "VALID",
-            "name": "Application Sowing And Planting"
+            "name": "Application Sowing And Planting Seeds"
+          },
+          {
+            "code": "APPLICATION_TRANSPLANTING",
+            "description": "Introducing plants/seedlings into a field.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Application Transplanting"
           },
           {
             "code": "APPLICATION_CROP_PROTECTION",
@@ -2379,6 +2715,12 @@
             "description": "Ground engaging operation to size and incorporate residue or alter the soil structure for future cultivation.",
             "enumerationItemStatusCode": "VALID",
             "name": "Field Preparation Tillage"
+          },
+          {
+            "code": "FIELD_PREPARATION_LAND_LEVELING",
+            "description": "Leveling the land surface of an upland (vs. paddy) field",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Field Preparation Land Leveling"
           },
           {
             "code": "HARVEST_PRE_HARVEST",
@@ -2409,6 +2751,36 @@
             "description": "The activity of collecting data from the tractor or other vehicle, often alongside another Operation Type or in transport between Fields.   Examples include fuel level and oil pressure.",
             "enumerationItemStatusCode": "VALID",
             "name": "Vehicle Data Collection General"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_PUDDLING",
+            "description": "Pulverization, leveling, water retention, and weeding by crushing\nthe clods in flooded paddy fields",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Puddling"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_DITCHING",
+            "description": "Digging drainage trenches in paddy fields",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Ditching"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_DRAINAGE",
+            "description": "Process of removing surface or subsurface water from a soil profile or area.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Drainage"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_LAND_LEVELING",
+            "description": "Leveling the land surface of a paddy field",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Land Leveling"
+          },
+          {
+            "code": "PADDY_MANAGEMENT_LEVEE_COATING",
+            "description": "Compacting ridges (bunds) and plastering it with mud in paddy fields to\nminimize water loss",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Paddy Management Levee Coating"
           }
         ]
       },
@@ -2457,7 +2829,265 @@
       },
       "name": "DataDefinitionStatus",
       "scopes": [
-        "Data Type Definition"
+        "DataTypeDefinition"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSQualityIndicator",
+      "description": "Enumeration from NMEA 0183 v4.11 describing the what type of correction source is being used",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "0",
+            "description": "Fix not valid",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Fix not valid"
+          },
+          {
+            "code": "1",
+            "description": "10 meter accuracy",
+            "enumerationItemStatusCode": "VALID",
+            "name": "GNSS fix"
+          },
+          {
+            "code": "2",
+            "description": "Sub-meter accuracy",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Differential GNSS fix (DGNSS), SBAS"
+          },
+          {
+            "code": "3",
+            "description": "Not used",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Not Applicable"
+          },
+          {
+            "code": "4",
+            "description": "Centimeter accuracy",
+            "enumerationItemStatusCode": "VALID",
+            "name": "RTK Fixed"
+          },
+          {
+            "code": "5",
+            "description": "Decimeter accuracy",
+            "enumerationItemStatusCode": "VALID",
+            "name": "RTK Float"
+          },
+          {
+            "code": "6",
+            "description": "Accuracy varies",
+            "enumerationItemStatusCode": "VALID",
+            "name": "INS Dead Reckoning"
+          }
+        ]
+      },
+      "name": "GNSSQualityIndicator",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "NMEA0183TalkerID",
+      "description": "Enumeration from NMEA 0183 v4.11 describing which  satellite constellations are being used",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "0",
+            "description": "GPS Only",
+            "enumerationItemStatusCode": "VALID",
+            "name": "GPS Only"
+          },
+          {
+            "code": "1",
+            "description": "GLONASS Only",
+            "enumerationItemStatusCode": "VALID",
+            "name": "GLONASS Only"
+          },
+          {
+            "code": "2",
+            "description": "GALILEO",
+            "enumerationItemStatusCode": "VALID",
+            "name": "GALILEO"
+          },
+          {
+            "code": "3",
+            "description": "BAIDOU",
+            "enumerationItemStatusCode": "VALID",
+            "name": "BAIDOU"
+          },
+          {
+            "code": "4",
+            "description": "NAVIC",
+            "enumerationItemStatusCode": "VALID",
+            "name": "NAVIC"
+          },
+          {
+            "code": "5",
+            "description": "Combined",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Combined"
+          }
+        ]
+      },
+      "name": "NMEA0183TalkerID",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSPositionFix",
+      "description": "Defines the process by which the receiver calculates its position based on the signals it receives from multiple satellites.",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "0",
+            "description": "A position fix that provides only latitude and longitude (horizontal position).",
+            "enumerationItemStatusCode": "VALID",
+            "name": "2DFIX"
+          },
+          {
+            "code": "1",
+            "description": "A position fix that provides latitude, longitude, and altitude (vertical position).",
+            "enumerationItemStatusCode": "VALID",
+            "name": "3DFIX"
+          },
+          {
+            "code": "2",
+            "description": "A high-accuracy fix derived from correction data generated from a base station, often used in real-time kinematic systems for centimeter-level accuracy.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "RTKFIX"
+          },
+          {
+            "code": "3",
+            "description": "Precise Point Positioning is a high-accuracy fix derived from a single GNSS receiver that uses models or and algorithms to make corrections.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "PPPFIX"
+          }
+        ]
+      },
+      "name": "GNSSPositionFix",
+      "scopes": [
+        "Variable"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "BoundaryCreationMethod",
+      "description": "Defines the method used to create the boundary",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "UNKNOWN",
+            "description": "Creation method is unknown",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Unknown"
+          },
+          {
+            "code": "MANUAL",
+            "description": "Hand drawn in a computer system (FMIS) based on imagery or other information.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Manual"
+          },
+          {
+            "code": "DRIVEN",
+            "description": "Record a series of points that define the boundary by driving a machine (e.g. tractor) equipped with a GNSS receiver around the perimeter of the field.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Driven"
+          },
+          {
+            "code": "SURVEYED",
+            "description": "Defined by a professional surveyor",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Surveyed"
+          },
+          {
+            "code": "AUTO_OPERATION",
+            "description": "Automatically generated in a software tool based on an as-applied/coverage map from a field operation",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Auto Operation"
+          },
+          {
+            "code": "AUTO_IMAGERY",
+            "description": "Automatically generated in a software tool based imagery",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Auto Imagery"
+          },
+          {
+            "code": "ADMINISTRATIVE",
+            "description": "Boundary is provided by some third party authority (generally governmental) and actual creation method is unknown",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Administrative"
+          }
+        ]
+      },
+      "name": "BoundaryCreationMethod",
+      "scopes": [
+        "BoundaryProperties"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSBaseSurveyType",
+      "description": "Defines the type of survey used in placing the base station",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "MOBILE_BASE",
+            "description": "A base station that is not on a fixed mounting point, often setup on a tripod by a machine operator near the field",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Mobile Base"
+          },
+          {
+            "code": "PROFESSIONAL",
+            "description": "A base station placed on a permanent mounting point that was positioned by a professional surveyor",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Professional"
+          },
+          {
+            "code": "VIRTUAL",
+            "description": "A virtual base station that is part of a correction network but does not physically exist",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Virtual"
+          }
+        ]
+      },
+      "name": "GNSSBaseSurveyType",
+      "scopes": [
+        "GNSSMobileBaseStationMetadata"
+      ]
+    },
+    {
+      "dataDefinitionBaseTypeCode": "ENUMERATION",
+      "dataDefinitionStatusCode": "VALID",
+      "definitionCode": "GNSSBaseStationType",
+      "description": "Defines the type of base station",
+      "enumeratedDataTypeDefinitionAttributes": {
+        "items": [
+          {
+            "code": "PHYSICAL",
+            "description": "A physical base station",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Physical"
+          },
+          {
+            "code": "VIRTUAL",
+            "description": "A virtual base station",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Virtual"
+          }
+        ]
+      },
+      "name": "GNSSBaseStationType",
+      "scopes": [
+        "GNSSMobileBaseStationMetadata"
       ]
     },
     {
@@ -2494,5 +3124,5 @@
       ]
     }
   ],
-  "version": "1.0.0"
+  "version": "2.0.0"
 }

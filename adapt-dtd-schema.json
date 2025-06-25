@@ -1,0 +1,308 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://adaptstandard.org/standard-data-type-definitions/2.0.0",
+  "type": "object",
+  "description": "Top level entity for the artifact controlling the ADAPT Standard list of Data Type Definitions.",
+  "properties": {
+    "version": {
+      "$ref": "#/$defs/version"
+    },
+    "dataTypeDefinitions": {
+      "description": "The list of standard Data Type Definitions",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dataTypeDefinition"
+      },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "code": {
+      "type": "string",
+      "description": "A code is a character string of letters, numbers, special characters (except escape sequences); and symbols. It represents a definitive value,\na method, or a property description in an abbreviated or language-independent form that is part of a finite list of allowed values."
+    },
+    "dataDefinitionBaseTypeCode": {
+      "type": "string",
+      "description": "The code that identifies the enumeration item value from the Data Definition Base Type data type definition"
+    },
+    "dataDefinitionStatusCode": {
+      "type": "string",
+      "description": "The code that identifies the enumeration item value from the Data Definition Status data type definition"
+    },
+    "default": {
+      "type": "number",
+      "description": "A numeric default."
+    },
+    "definitionCode": {
+      "type": "string",
+      "description": "Code identifying a Data Type Definition, either in the standard Adapt list or within the Custom Data Type \nDefinitions in this Adapt instance."
+    },
+    "description": {
+      "type": "string",
+      "description": "A string that describes an object, likely containing more contextual information than a Name."
+    },
+    "enumerationItemStatusCode": {
+      "type": "string",
+      "description": "The code that identifies the enumeration item value from the Data Definition Status data type definition"
+    },
+    "geoNamesId": {
+      "type": "string",
+      "description": "Geopolitical Ontology Id from GeoNames.org"
+    },
+    "iSO3166-2Code": {
+      "type": "string",
+      "description": "Code for a geographic region, as defined by ISO 3166-2.   I.e., a two-digit code for the country, followed by a code for the subdivision.  E.g., US-CA for California."
+    },
+    "keywords": {
+      "type": "string",
+      "description": "Textual strings used for identification in searches"
+    },
+    "languageCode": {
+      "type": "string",
+      "description": "A language as defined by the code in ISO 639-1, with an optional identifier for the ISO 3166-1 Alpha 2 Code for the geography.   E.g. \"pt\", \"pt-BR\""
+    },
+    "maximum": {
+      "type": "number",
+      "description": "A numeric maximum"
+    },
+    "minimum": {
+      "type": "number",
+      "description": "A numeric minimum"
+    },
+    "name": {
+      "type": "string",
+      "description": "A short textual string by which an item is known."
+    },
+    "numericDataTypeCode": {
+      "type": "string",
+      "description": "The code that identifies the enumeration item value from the Numeric Data Type data type definition"
+    },
+    "scope": {
+      "type": "string",
+      "description": "Name of an ADAPT Standard component to which a Data Type Definition may be applied."
+    },
+    "supersededByCode": {
+      "type": "string",
+      "description": "Code identifying a different Data Type Definition or Enumeration Item that supersedes this item.  Required and relevant only when the status of the current item is SUPERSEDED."
+    },
+    "unitOfMeasureCode": {
+      "type": "string",
+      "description": "A code defining a Unit of Measure in the Adapt Unit Of Measure system"
+    },
+    "validationRegularExpression": {
+      "type": "string",
+      "description": "Regular Expression to be used for validation."
+    },
+    "version": {
+      "type": "string",
+      "description": "A version number"
+    },
+    "dataTypeDefinition": {
+      "description": "The definition of a type of data, as may exist either in the published list of standard types or to types defined within an individual data instance.",
+      "type": "object",
+      "properties": {
+        "definitionCode": {
+          "$ref": "#/$defs/definitionCode"
+        },
+        "name": {
+          "$ref": "#/$defs/name"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        },
+        "dataDefinitionBaseTypeCode": {
+          "$ref": "#/$defs/dataDefinitionBaseTypeCode"
+        },
+        "dataDefinitionStatusCode": {
+          "$ref": "#/$defs/dataDefinitionStatusCode"
+        },
+        "supersededByCode": {
+          "$ref": "#/$defs/supersededByCode"
+        },
+        "scopes": {
+          "description": "The names of ADAPT Standard components to which this Data Type Definition may be applied, either as a Context Item or to a defined property such as a Variable.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/scope"
+          },
+          "minItems": 0
+        },
+        "labels": {
+          "description": "Names for this Data Type Definition in other languages.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/label"
+          },
+          "minItems": 0
+        },
+        "geoPoliticalContexts": {
+          "description": "Any specific Geo Political Contexts to which the Data Type Definition applies",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/geoPoliticalContext"
+          },
+          "minItems": 0
+        },
+        "keywords": {
+          "$ref": "#/$defs/keywords"
+        },
+        "numericDataTypeDefinitionAttributes": {
+          "$ref": "#/$defs/numericDataTypeDefinitionAttributes"
+        },
+        "enumeratedDataTypeDefinitionAttributes": {
+          "$ref": "#/$defs/enumeratedDataTypeDefinitionAttributes"
+        },
+        "textDataTypeDefinitionAttributes": {
+          "$ref": "#/$defs/textDataTypeDefinitionAttributes"
+        }
+      },
+      "required": [
+        "definitionCode",
+        "name",
+        "dataDefinitionBaseTypeCode",
+        "dataDefinitionStatusCode"
+      ]
+    },
+    "enumeratedDataTypeDefinitionAttributes": {
+      "description": "Data Type Definition attributes specific to enumerated types",
+      "type": "object",
+      "properties": {
+        "items": {
+          "$ref": "#/$defs/items"
+        },
+        "default": {
+          "$ref": "#/$defs/default"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "enumerationItem": {
+      "description": "An enumeration item within an enumeration",
+      "type": "object",
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/code"
+        },
+        "name": {
+          "$ref": "#/$defs/name"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        },
+        "enumerationItemStatusCode": {
+          "$ref": "#/$defs/enumerationItemStatusCode"
+        },
+        "supersededByCode": {
+          "$ref": "#/$defs/supersededByCode"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "enumerationItemStatusCode"
+      ]
+    },
+    "geoPoliticalContext": {
+      "description": "The Country/Region to which a concept applies",
+      "type": "object",
+      "properties": {
+        "iSO3166-2Code": {
+          "$ref": "#/$defs/iSO3166-2Code"
+        },
+        "geoNamesId": {
+          "$ref": "#/$defs/geoNamesId"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        }
+      },
+      "required": [
+        "iSO3166-2Code"
+      ]
+    },
+    "items": {
+      "description": "List of enumerated items within an enumeration.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/enumerationItem"
+      },
+      "minItems": 2
+    },
+    "label": {
+      "description": "A version of text represented in a specific language.",
+      "type": "object",
+      "properties": {
+        "languageCode": {
+          "$ref": "#/$defs/languageCode"
+        },
+        "name": {
+          "$ref": "#/$defs/name"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        }
+      },
+      "required": [
+        "languageCode",
+        "name"
+      ]
+    },
+    "numericDataTypeDefinitionAttributes": {
+      "description": "Attributes for Numeric Data Types",
+      "type": "object",
+      "properties": {
+        "numericDataTypeCode": {
+          "$ref": "#/$defs/numericDataTypeCode"
+        },
+        "unitOfMeasureCode": {
+          "$ref": "#/$defs/unitOfMeasureCode"
+        },
+        "default": {
+          "$ref": "#/$defs/default"
+        },
+        "minimum": {
+          "$ref": "#/$defs/minimum"
+        },
+        "maximum": {
+          "$ref": "#/$defs/maximum"
+        }
+      },
+      "required": [
+        "numericDataTypeCode",
+        "unitOfMeasureCode"
+      ]
+    },
+    "standardDataTypeDefinitions": {
+      "description": "Top level entity for the artifact controlling the ADAPT Standard list of Data Type Definitions.",
+      "type": "object",
+      "properties": {
+        "version": {
+          "$ref": "#/$defs/version"
+        },
+        "dataTypeDefinitions": {
+          "description": "The list of standard Data Type Definitions",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dataTypeDefinition"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "version",
+        "dataTypeDefinitions"
+      ]
+    },
+    "textDataTypeDefinitionAttributes": {
+      "description": "Data Type Definition attributes specific to the text type",
+      "type": "object",
+      "properties": {
+        "validationRegularExpression": {
+          "$ref": "#/$defs/validationRegularExpression"
+        }
+      }
+    }
+  }
+}

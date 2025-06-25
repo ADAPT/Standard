@@ -292,6 +292,10 @@
         {
           "key": "unitless",
           "value": "unitless"
+        },
+        {
+          "key": "dBm",
+          "value": "decibel-milliwatts"
         }
       ]
     },
