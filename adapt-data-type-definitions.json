@@ -3094,6 +3094,7 @@
       "dataDefinitionBaseTypeCode": "TEXT",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "Timestamp",
+      "description": "ISO-8601 format in UTC time (Z).   Data producer is responsible for converting any local times to UTC. ",
       "name": "Timestamp",
       "scopes": [
         "Variable"
@@ -3103,6 +3104,7 @@
       "dataDefinitionBaseTypeCode": "TEXT",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "US-EPA-RegistrationNumber",
+      "description": "The chemical registration number for the United States Environmental Protection Agency",
       "geoPoliticalContexts": [
         {
           "iSO3166-2Code": "ISO 3166-2:US"
@@ -3117,6 +3119,7 @@
       "dataDefinitionBaseTypeCode": "TEXT",
       "dataDefinitionStatusCode": "VALID",
       "definitionCode": "GS1-GLN",
+      "description": "The GS1 Global Location Number for a farm or other facility",
       "name": "GS1-GLN",
       "scopes": [
         "Farm",
@@ -3124,5 +3127,5 @@
       ]
     }
   ],
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
