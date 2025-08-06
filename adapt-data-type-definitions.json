@@ -7,11 +7,11 @@
       "description": "Seed rate, plant rate, etc. per area",
       "name": "Applied Count Per Area (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -21,11 +21,11 @@
       "description": "Seed rate, plant rate, etc. per area",
       "name": "Applied Count Per Area (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -35,11 +35,11 @@
       "description": "Seed rate, plant rate, etc. per area",
       "name": "Applied Count Per Area (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -49,11 +49,11 @@
       "description": "Liquid applications expressed per area",
       "name": "Applied Volume Per Area (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -63,11 +63,11 @@
       "description": "Liquid applications expressed per area",
       "name": "Applied Volume Per Area (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -77,11 +77,11 @@
       "description": "Liquid applications expressed per area",
       "name": "Applied Volume Per Area (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -91,11 +91,11 @@
       "description": "Granular and bulk seed applications expressed per area",
       "name": "Applied Mass Per Area (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -105,11 +105,11 @@
       "description": "Granular and bulk seed applications expressed per area",
       "name": "Applied Mass Per Area (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -119,11 +119,11 @@
       "description": "Granular and bulk seed applications expressed per area",
       "name": "Applied Mass Per Area (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -133,11 +133,11 @@
       "description": "Total Count of Application.  E.g., total seeds.",
       "name": "Applied Total Count",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Integer",
+        "numericDataTypeCode": "INTEGER",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -147,11 +147,11 @@
       "description": "Total Mass of Application",
       "name": "Applied Total Mass",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -161,11 +161,11 @@
       "description": "Total Volume of Application",
       "name": "Applied Total Volume",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -175,11 +175,11 @@
       "description": "Raw harvest mass per area",
       "name": "Yield Wet Mass Per Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -189,11 +189,11 @@
       "description": "Raw harvest mass total",
       "name": "Yield Total Wet Mass",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -203,11 +203,11 @@
       "description": "Harvest mass per area adjusted to a standard moisture percentage",
       "name": "Yield Dry Mass Per Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -217,11 +217,11 @@
       "description": "Total harvest mass adjusted to a standard moisture percentage",
       "name": "Yield Total Dry Mass",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -231,11 +231,11 @@
       "description": "Count of harvested bales per area",
       "name": "Yield Bale Count Per Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -245,11 +245,11 @@
       "description": "Total count of bales harvested",
       "name": "Yield Total Bale Count",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Integer",
+        "numericDataTypeCode": "INTEGER",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -259,11 +259,11 @@
       "description": "Harvest volume per area.  For crops sold at a standard moisture percentage, defined in that percentage(dry value).",
       "name": "Yield Dry Volume Per Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -273,11 +273,11 @@
       "description": "Raw harvest volume per Area",
       "name": "Yield Wet Volume Per Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1ha-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -287,11 +287,11 @@
       "description": "Total harvest volume, adjusted to a standard moisture percentage",
       "name": "Yield Total Dry Volume",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -301,11 +301,11 @@
       "description": "Total raw harvest volume",
       "name": "Yield Total Wet Volume",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -315,11 +315,11 @@
       "description": "Seed rate, plant rate, etc. per time",
       "name": "Applied Count Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -329,11 +329,11 @@
       "description": "Liquid applications expressed per time",
       "name": "Applied Volume Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -343,11 +343,11 @@
       "description": "Granular and bulk seed applications expressed per time",
       "name": "Applied Mass Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -357,11 +357,11 @@
       "description": "Raw harvest mass per time",
       "name": "Yield Wet Mass Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -371,11 +371,11 @@
       "description": "Harvest mass per time adjusted to a standard moisture percentage",
       "name": "Yield Dry Mass Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "kg1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -385,11 +385,11 @@
       "description": "Count of harvested bales per time",
       "name": "Yield Bale Count Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -399,11 +399,11 @@
       "description": "Harvest volume per time. For crops sold at a standard moisture percentage, defined in that percentage(dry value).",
       "name": "Yield Dry Volume Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -413,11 +413,11 @@
       "description": "Raw harvest volume per time.",
       "name": "Yield Wet Volume Per Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "l1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -427,11 +427,11 @@
       "description": "Sample moisture reading",
       "name": "Commodity Moisture",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -441,11 +441,11 @@
       "description": "Reported height of harvest",
       "name": "Harvest Height",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -455,11 +455,11 @@
       "description": "Height above ground of application",
       "name": "Application Height (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -469,11 +469,11 @@
       "description": "Height above ground of application",
       "name": "Application Height (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -483,11 +483,11 @@
       "description": "Height above ground of application",
       "name": "Application Height (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -497,11 +497,11 @@
       "description": "Depth below ground of seeding",
       "name": "Seeding Depth (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -511,11 +511,11 @@
       "description": "Depth below ground of seeding",
       "name": "Seeding Depth (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -525,11 +525,11 @@
       "description": "Depth below ground of seeding",
       "name": "Seeding Depth (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -539,11 +539,11 @@
       "description": "Depth below ground of tillage",
       "name": "Tillage Depth (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -553,11 +553,11 @@
       "description": "Depth below ground of tillage",
       "name": "Tillage Depth (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -567,11 +567,11 @@
       "description": "Depth below ground of tillage",
       "name": "Tillage Depth (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -581,11 +581,11 @@
       "description": "Depth below ground of application",
       "name": "Application Depth (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -595,11 +595,11 @@
       "description": "Depth below ground of application",
       "name": "Application Depth (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -609,11 +609,11 @@
       "description": "Depth below ground of application",
       "name": "Application Depth (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -623,11 +623,11 @@
       "description": "A report of elapsed time",
       "name": "Elapsed Time",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "sec"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -637,11 +637,11 @@
       "description": "The distance traveled by the device ",
       "name": "Distance Traveled",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -651,11 +651,11 @@
       "description": "A reported device heading",
       "name": "Device Heading",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "arcdeg"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -665,11 +665,11 @@
       "description": "Reported elevation at ground level",
       "name": "Ground Elevation",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -679,11 +679,11 @@
       "description": "Target space between seeds",
       "name": "Seed Spacing (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -693,11 +693,11 @@
       "description": "Actual space between seeds",
       "name": "Seed Spacing (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -707,11 +707,11 @@
       "description": "Control space between seeds",
       "name": "Seed Spacing (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -721,11 +721,11 @@
       "description": "Actual average percentage of seeds varying from defined SeedSpacing",
       "name": "Seed Spacing Variation",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -735,11 +735,11 @@
       "description": "Singulation percentage",
       "name": "Seed Singulation",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -749,11 +749,11 @@
       "description": "Skips percentage",
       "name": "Seed Skips",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -763,11 +763,11 @@
       "description": "Doubles/Multiples percentage",
       "name": "Seed Multiples",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -777,11 +777,11 @@
       "description": "Reported Implement Ride Quality",
       "name": "Ride Quality",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -791,11 +791,11 @@
       "description": "Reported Implement Ground Contact",
       "name": "Ground Contact",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -805,11 +805,11 @@
       "description": "Force acting on a planter row unit factoring its weight, additional downforce applied and the upward force of the soil.",
       "name": "Downforce Margin",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "N"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -819,11 +819,11 @@
       "description": "Downforce applied by a planter (actual)",
       "name": "Downforce Applied (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "N"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -833,11 +833,11 @@
       "description": "Downforce applied by a planter (target)",
       "name": "Downforce Applied (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "N"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -847,11 +847,11 @@
       "description": "Downforce applied by a planter (control)",
       "name": "Downforce Applied (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "N"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -860,11 +860,11 @@
       "definitionCode": "SprayPressureActual",
       "name": "Spray Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -873,11 +873,11 @@
       "definitionCode": "SprayPressureTarget",
       "name": "Spray Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -886,11 +886,11 @@
       "definitionCode": "SprayPressureControl",
       "name": "Spray Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -899,11 +899,11 @@
       "definitionCode": "TillagePressureActual",
       "name": "Tillage Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -912,11 +912,11 @@
       "definitionCode": "TillagePressureTarget",
       "name": "Tillage Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -925,11 +925,11 @@
       "definitionCode": "TillagePressureControl",
       "name": "Tillage Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -939,11 +939,11 @@
       "description": "Row Cleaner pressure on a planter",
       "name": "Row Cleaner Pressure (Actual)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -953,11 +953,11 @@
       "description": "Row Cleaner pressure on a planter",
       "name": "Row Cleaner Pressure (Target)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -967,11 +967,11 @@
       "description": "Row Cleaner pressure on a planter",
       "name": "Row Cleaner Pressure (Control)",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -981,11 +981,11 @@
       "description": "Percentage of time something is on, e.g. nozzles on a pulse width modulation sprayer",
       "name": "Duty Cycle",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -995,11 +995,11 @@
       "description": "Measured temperature of the soil",
       "name": "Soil Temperature",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "C"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1009,11 +1009,11 @@
       "description": "Measured moisture of soil",
       "name": "Soil Moisture",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1023,11 +1023,11 @@
       "description": "Amount of organic matter in soil",
       "name": "Soil Organic Matter",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1037,11 +1037,11 @@
       "description": "Reported Cation Exchange Capacity of Soil",
       "name": "Soil Cation Exchange Capacity",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "mEq1hg-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1051,11 +1051,11 @@
       "description": "Amount of residue/trash in a plating furrow",
       "name": "Furrow Residue",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1065,11 +1065,11 @@
       "description": "Uniformity of planting furrow",
       "name": "Furrow Uniformity",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1079,11 +1079,11 @@
       "description": "The area used to bill for a service conducted on a field",
       "name": "Billable Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "ha"
       },
       "scopes": [
-        "Field"
+        "FIELD"
       ]
     },
     {
@@ -1093,11 +1093,11 @@
       "description": "Area recorded by a field computer that is the as-applied area including some overlap due to machine limitations and is an attribute of a work record that is operation specific and not an attribute of the boundary",
       "name": "Applied Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "ha"
       },
       "scopes": [
-        "Work Record, Operation"
+        "WORK_RECORD, OPERATION"
       ]
     },
     {
@@ -1107,11 +1107,11 @@
       "description": "The area included for reporting purposes such as insurance, green house gas, or governmental",
       "name": "Reported Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "ha"
       },
       "scopes": [
-        "Field"
+        "FIELD"
       ]
     },
     {
@@ -1121,11 +1121,11 @@
       "description": "Area calculated using a boundary or perimeter of area covered in a field operation also called GIS area",
       "name": "Calculated Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "ha"
       },
       "scopes": [
-        "Operation"
+        "OPERATION"
       ]
     },
     {
@@ -1135,11 +1135,11 @@
       "description": "Total area of a field that is cultivated, excluding areas such as waterways",
       "name": "Arable Area",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "ha"
       },
       "scopes": [
-        "Farm, Field, CropZone"
+        "FARM, FIELD, CROP_ZONE"
       ]
     },
     {
@@ -1149,11 +1149,11 @@
       "description": "The measured air temperature",
       "name": "Air Temperature",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "C"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1163,11 +1163,11 @@
       "description": "The measured wind speed",
       "name": "Wind Speed",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1177,11 +1177,11 @@
       "description": "The measured wind direction from North",
       "name": "Wind Direction",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "arcdeg"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1191,11 +1191,11 @@
       "description": "The measured relative humidity of the air",
       "name": "Relative Humidity",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "prcnt"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1205,11 +1205,11 @@
       "description": "The measured atmospheric pressure",
       "name": "Atmospheric Pressure",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "Pa"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1219,11 +1219,11 @@
       "description": "A reported device width",
       "name": "Width",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1233,11 +1233,11 @@
       "description": "The horizontal distance between the GNSS receiver (often referred to as the rover) and the reference station (base station) providing correction data",
       "name": "Distance from Base Station",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1247,11 +1247,11 @@
       "description": "Speed at which a Device is traveling",
       "name": "Device Speed",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m1sec-1"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1261,11 +1261,11 @@
       "description": "The number of GNSS satellites that the receiver is able to track and use to calculate its position at a given time.",
       "name": "Receiver Satellite Count",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Integer",
+        "numericDataTypeCode": "INTEGER",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1275,11 +1275,11 @@
       "description": "The number of GNSS satellites that the base station is able to track and use to calculate correction for at a given time.",
       "name": "Base Station Satellite Count",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Integer",
+        "numericDataTypeCode": "INTEGER",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1289,11 +1289,11 @@
       "description": "Horizontal Dilution of Precision is a measure of the accuracy of a GNSS receiver's horizontal position (latitude and longitude) based on the geometry of the satellites in view. ",
       "name": "Horizontal Dilution of Precision",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1303,11 +1303,11 @@
       "description": "Vertical Dilution of Precision is a measure of the accuracy of a GNSS receiver's vertical position (altitude) based on the geometry of the satellites in view. ",
       "name": "Vertical Dilution of Precision",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1317,11 +1317,11 @@
       "description": "The time elapsed since the last correction signal was received by the GNSS receiver from a base station or correction network.",
       "name": "Age of Correction",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "sec"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1331,11 +1331,11 @@
       "description": "The power or intensity of the GNSS signals being received from the satellites.",
       "name": "Signal Strength",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "dBm"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1345,11 +1345,11 @@
       "description": "The larger axis of an error ellipse that represents the uncertainty or potential error in the calculated position.",
       "name": "Semi Major Error Elipse",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1359,11 +1359,11 @@
       "description": "The shorter axis of the error ellipse, which represents the uncertainty or potential error in the calculated position along the direction of least uncertainty. ",
       "name": "Semi Minor Error Elipse",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1373,11 +1373,11 @@
       "description": "The orientation or alignment of the error ellipse that represents the uncertainty in the receiver's position. ",
       "name": "Orientation Error Ellipse",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "arcdeg"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1387,11 +1387,11 @@
       "description": "The positional error or uncertainty in the calculated latitude of the receiver's location.",
       "name": "Latitude Error",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1401,11 +1401,11 @@
       "description": "The positional error or uncertainty in the calculated longitude of the receiver's location.",
       "name": "Longitude Error",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1415,11 +1415,11 @@
       "description": "The positional error or uncertainty in the calculated altitude (height) of the receiver's location.",
       "name": "Altitude Error",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "m"
       },
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1429,11 +1429,11 @@
       "description": "Standard deviation value for the processed data for altitude created by averaging the standard deviation of each point then the standard deviation of the standard deviations",
       "name": "Standard Deviation Average Altitude",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1443,11 +1443,11 @@
       "description": "Standard deviation value for the processed data for latitude created by averaging the standard deviation of each point then the standard deviation of the standard deviations",
       "name": "Standard Deviation Average Latitude",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1457,11 +1457,11 @@
       "description": "Standard deviation value for the processed data for longitude created by averaging the standard deviation of each point then the standard deviation of the standard deviations",
       "name": "Standard Deviation Average Longitude",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1471,11 +1471,11 @@
       "description": "The maximum value of the standard deviations for altitude calculated from a set of GNSS measurements or data points. It represents the greatest amount of variation or error observed in a set of measurements, indicating the highest level of uncertainty or dispersion in the data.",
       "name": "Standard Deviation Maximum Altitude",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1485,11 +1485,11 @@
       "description": "The maximum value of the standard deviations for latitude calculated from a set of GNSS measurements or data points. It represents the greatest amount of variation or error observed in a set of measurements, indicating the highest level of uncertainty or dispersion in the data.",
       "name": "Standard Deviation Maximum Latitude",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1499,11 +1499,11 @@
       "description": "The maximum value of the standard deviations for longitude calculated from a set of GNSS measurements or data points. It represents the greatest amount of variation or error observed in a set of measurements, indicating the highest level of uncertainty or dispersion in the data.",
       "name": "Standard Deviation Maximum Longitude",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1513,11 +1513,11 @@
       "description": "The maximum Horizontal Dilution of Precision from a set of GNSS measurements or data points.",
       "name": "Maximum Horizontal Dilution of Precision",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1527,11 +1527,11 @@
       "description": "The maximum Vertical Dilution of Precision from a set of GNSS measurements or data points.",
       "name": "Maximum Vertical Dilution of Precision",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1541,11 +1541,11 @@
       "description": "The maximum Age Of Correction from a set of GNSS measurements or data points.",
       "name": "Maximum Age of Correction",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "sec"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1555,11 +1555,11 @@
       "description": "The code from the GNSSQualityIndicator Data Type Definition representing the lowest level of quality present in a given dataset.",
       "name": "Minimum GNSS Quality Indicator Code",
       "numericDataTypeDefinitionAttributes": {
-        "numericDataTypeCode": "Double",
+        "numericDataTypeCode": "DOUBLE",
         "unitOfMeasureCode": "count"
       },
       "scopes": [
-        "GNSS Data Quality Metrics"
+        "GNSS_DATA_QUALITY_METRICS"
       ]
     },
     {
@@ -1569,7 +1569,7 @@
       "description": "Whether roll compensation is used. Roll compensation is the adjustment made to the GNSS position data to account for the roll (tilt left/right), pitch (tilt front/back) and yaw (rotation relative to vehicle's vertical axis) of the vehicle or equipment that the receiver is mounted on.",
       "name": "GNSS Roll Compensation",
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1579,7 +1579,7 @@
       "description": "Whether the state of the GNSS receiver is switched to a backup or less accurate positioning method due to issues with the primary satellite signals or correction data.",
       "name": "GNSS Fallback Status",
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -1589,7 +1589,7 @@
       "description": "Whether a crop variety is genetically enhanced",
       "name": "Crop Variety Is Genetically Enhhanced",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -1599,7 +1599,7 @@
       "description": "Whether a crop protection product has carbamate active ingredient(s)",
       "name": "Has Carbamate",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -1609,7 +1609,7 @@
       "description": "Whether a crop protection product has organophosphate active ingredient(s)",
       "name": "Has Organophosphate",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -1619,7 +1619,7 @@
       "description": "Whether a crop protection product has biological active ingredient(s)",
       "name": "Has Biological",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -1658,7 +1658,7 @@
       },
       "name": "IdType",
       "scopes": [
-        "Unique Id"
+        "UNIQUE_ID"
       ]
     },
     {
@@ -1682,7 +1682,7 @@
       },
       "name": "IdSourceType",
       "scopes": [
-        "Unique Id"
+        "UNIQUE_ID"
       ]
     },
     {
@@ -1791,7 +1791,7 @@
       },
       "name": "DateContext",
       "scopes": [
-        "TimeScope"
+        "TIME_SCOPE"
       ]
     },
     {
@@ -1921,7 +1921,7 @@
       },
       "name": "Role",
       "scopes": [
-        "PartyRole"
+        "PARTY_ROLE"
       ]
     },
     {
@@ -1955,7 +1955,7 @@
       },
       "name": "PartyType",
       "scopes": [
-        "Party"
+        "PARTY"
       ]
     },
     {
@@ -1983,7 +1983,7 @@
       },
       "name": "AddressContactType",
       "scopes": [
-        "ContactInfo"
+        "CONTACT_INFO"
       ]
     },
     {
@@ -2016,7 +2016,7 @@
       },
       "name": "TelecommunicationContactType",
       "scopes": [
-        "ContactInfo"
+        "CONTACT_INFO"
       ]
     },
     {
@@ -2090,7 +2090,7 @@
       },
       "name": "LayerType",
       "scopes": [
-        "ReferenceLayer"
+        "REFERENCE_LAYER"
       ]
     },
     {
@@ -2210,7 +2210,7 @@
       },
       "name": "ProductType",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -2234,7 +2234,7 @@
       },
       "name": "ProductStatus",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -2268,7 +2268,7 @@
       },
       "name": "ProductForm",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -2300,7 +2300,7 @@
       },
       "name": "DocumentRelationshipType",
       "scopes": [
-        "DocumentCorrelation"
+        "DOCUMENT_CORRELATION"
       ]
     },
     {
@@ -2339,7 +2339,7 @@
       },
       "name": "GuidancePatternType",
       "scopes": [
-        "GuidancePattern"
+        "GUIDANCE_PATTERN"
       ]
     },
     {
@@ -2373,7 +2373,7 @@
       },
       "name": "GuidancePatternExtension",
       "scopes": [
-        "GuidancePattern"
+        "GUIDANCE_PATTERN"
       ]
     },
     {
@@ -2407,7 +2407,7 @@
       },
       "name": "GuidancePatternPropagationDirection",
       "scopes": [
-        "GuidancePattern"
+        "GUIDANCE_PATTERN"
       ]
     },
     {
@@ -2441,7 +2441,7 @@
       },
       "name": "DataDefinitionBaseType",
       "scopes": [
-        "DataTypeDefinition"
+        "DATA_TYPE_DEFINITION"
       ]
     },
     {
@@ -2467,7 +2467,7 @@
       },
       "name": "NumericDataType",
       "scopes": [
-        "DataTypeDefinition"
+        "DATA_TYPE_DEFINITION"
       ]
     },
     {
@@ -2503,6 +2503,11 @@
             "name": "Crop Zone"
           },
           {
+            "code": "DATA_TYPE_DEFINITION",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Data Type Definition"
+          },
+          {
             "code": "DEVICE",
             "enumerationItemStatusCode": "VALID",
             "name": "Device"
@@ -2518,6 +2523,11 @@
             "name": "Device Model"
           },
           {
+            "code": "DOCUMENT_CORRELATION",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Document Correlation"
+          },
+          {
             "code": "FARM",
             "enumerationItemStatusCode": "VALID",
             "name": "Farm"
@@ -2531,6 +2541,16 @@
             "code": "FIELD_BOUNDARY",
             "enumerationItemStatusCode": "VALID",
             "name": "Field Boundary"
+          },
+          {
+            "code": "GNSS_DATA_QUALITY_METRICS",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Gnss Data Quality Metrics"
+          },
+          {
+            "code": "GNSS_MOBILE_BASE_STATION_METADATA",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Gnss Mobile Base Station Metadata"
           },
           {
             "code": "GROWER",
@@ -2558,14 +2578,9 @@
             "name": "Headland"
           },
           {
-            "code": "INGREDIENT",
+            "code": "INGREDIENT_ID",
             "enumerationItemStatusCode": "VALID",
-            "name": "Ingredient"
-          },
-          {
-            "code": "LOAD",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Load"
+            "name": "Ingredient Id"
           },
           {
             "code": "MANUFACTURER",
@@ -2623,9 +2638,19 @@
             "name": "Summary Value"
           },
           {
+            "code": "TIME_SCOPE",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Time Scope"
+          },
+          {
             "code": "TRAIT",
             "enumerationItemStatusCode": "VALID",
             "name": "Trait"
+          },
+          {
+            "code": "UNIQUE_ID",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Unique Id"
           },
           {
             "code": "VARIABLE",
@@ -2646,7 +2671,7 @@
       },
       "name": "Scope",
       "scopes": [
-        "DataTypeDefinition"
+        "DATA_TYPE_DEFINITION"
       ]
     },
     {
@@ -2786,7 +2811,7 @@
       },
       "name": "OperationType",
       "scopes": [
-        "Operation"
+        "OPERATION"
       ]
     },
     {
@@ -2829,7 +2854,7 @@
       },
       "name": "DataDefinitionStatus",
       "scopes": [
-        "DataTypeDefinition"
+        "DATA_TYPE_DEFINITION"
       ]
     },
     {
@@ -2885,7 +2910,7 @@
       },
       "name": "GNSSQualityIndicator",
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -2935,7 +2960,7 @@
       },
       "name": "NMEA0183TalkerID",
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -2973,7 +2998,7 @@
       },
       "name": "GNSSPositionFix",
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -3029,7 +3054,7 @@
       },
       "name": "BoundaryCreationMethod",
       "scopes": [
-        "BoundaryProperties"
+        "BOUNDARY"
       ]
     },
     {
@@ -3061,7 +3086,7 @@
       },
       "name": "GNSSBaseSurveyType",
       "scopes": [
-        "GNSSMobileBaseStationMetadata"
+        "GNSS_MOBILE_BASE_STATION_METADATA"
       ]
     },
     {
@@ -3087,7 +3112,7 @@
       },
       "name": "GNSSBaseStationType",
       "scopes": [
-        "GNSSMobileBaseStationMetadata"
+        "GNSS_MOBILE_BASE_STATION_METADATA"
       ]
     },
     {
@@ -3097,7 +3122,7 @@
       "description": "ISO-8601 format in UTC time (Z).   Data producer is responsible for converting any local times to UTC. ",
       "name": "Timestamp",
       "scopes": [
-        "Variable"
+        "VARIABLE"
       ]
     },
     {
@@ -3112,7 +3137,7 @@
       ],
       "name": "US-EPA-RegistrationNumber",
       "scopes": [
-        "Product"
+        "PRODUCT"
       ]
     },
     {
@@ -3122,10 +3147,10 @@
       "description": "The GS1 Global Location Number for a farm or other facility",
       "name": "GS1-GLN",
       "scopes": [
-        "Farm",
-        "Field"
+        "FARM",
+        "FIELD"
       ]
     }
   ],
-  "version": "2.0.1"
+  "version": "2.0.2"
 }
