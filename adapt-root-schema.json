@@ -88,10 +88,6 @@
       "type": "string",
       "description": "Code identifying the Creation Method from the BoundaryCreationMethod enumerated Data Type Definition"
     },
-    "boundaryGeometry": {
-      "type": "string",
-      "description": "Polygon or Multi Polygon WKT representing the enclosing area of an object in WGS84 coordinates"
-    },
     "brandId": {
       "type": "string",
       "description": "An id mapping to the Reference Id of a Brand"
@@ -200,11 +196,6 @@
     "fieldId": {
       "type": "string",
       "description": "An id mapping to the Reference Id of a Field"
-    },
-    "fileDataIndex": {
-      "type": "integer",
-      "minimum": 1,
-      "description": "The 1-based column or band index for a specific variable within an external file."
     },
     "geoNamesId": {
       "type": "string",
@@ -3850,36 +3841,6 @@
     },
     "propagationOffset": {
       "description": "Perpendicular offset of a guidance pattern by a fixed offset.",
-      "type": "object",
-      "properties": {
-        "numericValue": {
-          "allOf": [
-            {
-              "$ref": "#/$defs/numericValue"
-            },
-            {
-              "description": "The actual value of the Measurement"
-            }
-          ]
-        },
-        "unitOfMeasureCode": {
-          "allOf": [
-            {
-              "$ref": "#/$defs/unitOfMeasureCode"
-            },
-            {
-              "description": "The unit of measure for the given value.  Required."
-            }
-          ]
-        }
-      },
-      "required": [
-        "numericValue",
-        "unitOfMeasureCode"
-      ]
-    },
-    "quantity": {
-      "description": "Quantity may be set in any appropriate Representation.\nE.g.s, vrProvidedAmountMass, vrProvidedAmountVolume, vrProductContent, vrSolutionRateLiquid, vrActiveIngredientMassPerMass, etc.",
       "type": "object",
       "properties": {
         "numericValue": {
