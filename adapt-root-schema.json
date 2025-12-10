@@ -3,6 +3,7 @@
   "$id": "https://adaptstandard.org/root/2.0.2",
   "type": "object",
   "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
+  "additionalProperties": false,
   "properties": {
     "catalog": {
       "allOf": [
@@ -519,6 +520,7 @@
     "aPlusAttributes": {
       "description": "Relevant attributes for APlus Guidance Patterns",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "a": {
           "allOf": [
@@ -549,6 +551,7 @@
     "aBCurveAttributes": {
       "description": "Relevant attributes for an ABCurve Guidance Pattern",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numberOfSegments": {
           "allOf": [
@@ -589,6 +592,7 @@
     "aBLineAttributes": {
       "description": "Relevant attributes for the ABLine guidance pattern",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "a": {
           "allOf": [
@@ -629,6 +633,7 @@
     "addressContactMethod": {
       "description": "An address for someone or something.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "addressLines": {
           "description": "Address lines that precede the City.   Street address, PO Box, etc.",
@@ -706,6 +711,7 @@
     "amount": {
       "description": "Amount of a product component within the parent product.  Valid amounts are in volume or mass per volume or mass.  E.g.s, 3 floz1gal-1, 0.26 lb1lb-1, 1oz1gal-1.   For ingredients, amounts may be expressed as percentages.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -736,6 +742,7 @@
     "appliedOffsets": {
       "description": "For informational purposes, spatial offsets from a source point such as a GNSS receiver that have been applied by the data producer. ADAPT requires all offsets to be applied in mapped data, and this property is to be used only for geospatial data quality assessments and data provenance.  In no circumstances will the data consumer need to apply these data to any geometry.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "xOffset": {
           "allOf": [
@@ -772,6 +779,7 @@
     "arableArea": {
       "description": "Total area of the Field that is cultivated, excluding areas such as waterways",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -802,6 +810,7 @@
     "boundary": {
       "description": "An unattributed geospatial definition of an enclosed region, optionally including source metadata.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "geometry": {
           "allOf": [
@@ -917,6 +926,7 @@
     "brand": {
       "description": "A trade name under which a Manufacturer markets a good. Also known as Make in vehicles/equipment.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -975,6 +985,7 @@
     "catalog": {
       "description": "Container for data types that are fixed, infrequently changing, or otherwise prerequisite to transactional data.  Master or Reference data, often called Setup or Coding data in agricultural applications.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "description": {
           "allOf": [
@@ -1119,6 +1130,7 @@
     "contactInfo": {
       "description": "Contact Information for an individual/business entity",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "contextItems": {
           "description": "List of supplemental information for this data element",
@@ -1149,6 +1161,7 @@
     "contextItem": {
       "description": "Additional information with which a data element is tagged.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "definitionCode": {
           "allOf": [
@@ -1194,6 +1207,7 @@
     "crop": {
       "description": "A plant or animal type cultivated for agricultural produce.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -1272,6 +1286,7 @@
     "cropZone": {
       "description": "A more detailed representation of/within a Field, defining a crop, its growing season and usually a separate boundary.   Where Crop Zone is used, Field is also required.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -1395,6 +1410,7 @@
     "customDataTypeDefinition": {
       "description": "A user-defined Data Type Definition per ADAPT model instance.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "definitionCode": {
           "allOf": [
@@ -1531,6 +1547,7 @@
     "density": {
       "description": "The density of the product (mass per volume)",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -1561,6 +1578,7 @@
     "device": {
       "description": "Equipment that logs data",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -1629,6 +1647,7 @@
     "deviceConfiguration": {
       "description": "Temporary configuration information for a Device within transactional Documents information.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "contextItems": {
           "description": "List of supplemental information for this data element",
@@ -1656,6 +1675,7 @@
     "deviceModel": {
       "description": "A prototypical model of equipment to be instantiated in one or more Devices.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -1724,6 +1744,7 @@
     "documentCorrelation": {
       "description": "An object defining the relationship between two document objects.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "documentRelationshipTypeCode": {
           "allOf": [
@@ -1754,6 +1775,7 @@
     "documents": {
       "description": "Container for transactional, frequently changing data.   Documents will necessarily reference master data defined in the Catalog.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "plans": {
           "description": "All Plans in the data",
@@ -1800,6 +1822,7 @@
     "eastShift": {
       "description": "The shift East of a guidance pattern",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -1830,6 +1853,7 @@
     "enumeratedDataTypeDefinitionAttributes": {
       "description": "Data Type Definition attributes specific to enumerated types",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "items": {
           "allOf": [
@@ -1859,6 +1883,7 @@
     "enumerationItem": {
       "description": "An enumeration item within an enumeration",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "code": {
           "allOf": [
@@ -1920,6 +1945,7 @@
     "estimatedArea": {
       "description": "Numeric value for Estimated Area.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -1950,6 +1976,7 @@
     "farm": {
       "description": "A collection of fields grouped together as a common organizational unit, often reflecting shared location or historical ownership.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2018,6 +2045,7 @@
     "field": {
       "description": "A named, farmer-accepted physical space where production agriculture takes place.  Used to partition and identify data.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2114,6 +2142,7 @@
     "fieldBoundary": {
       "description": "A geometry that identifies the geospatial coordinates of a field. The boundary can be used to define the area for a particular operation, a particular crop or crops, or for legal purposes. A field can have different boundaries that may vary in geometry based on their specific use, but it is always either a polygon or multi-polygon.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2212,6 +2241,7 @@
     "geoPoliticalContext": {
       "description": "The Country/Region to which a concept applies",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "iSO3166-2Code": {
           "allOf": [
@@ -2251,6 +2281,7 @@
     "gNSSDataQualityMetric": {
       "description": "Metric supplied to document the quality of a GNSS dataset.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "definitionCode": {
           "allOf": [
@@ -2281,6 +2312,7 @@
     "gNSSMobileBaseStationMetadata": {
       "description": "Information about the GNSS Base Station used in the collection of spatial data",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "deviceId": {
           "allOf": [
@@ -2317,6 +2349,7 @@
     "gNSSReceiverMetadata": {
       "description": "Information about the GNSS receiver used to record spatial data.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "loggingRate": {
           "allOf": [
@@ -2356,6 +2389,7 @@
     "grower": {
       "description": "An individual/business entity engaged in agricultural production.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2414,6 +2448,7 @@
     "guidanceAllocation": {
       "description": "A instance of specific Guidance Pattern data as applied to a planned or actual field operation.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2491,6 +2526,7 @@
     "guidanceGroup": {
       "description": "A container for guidance patterns to be used together, e.g., a headland pattern and a main field pattern",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2558,6 +2594,7 @@
     "guidancePattern": {
       "description": "A geospatial definition used to guide a vehicle in a field",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2727,6 +2764,7 @@
     "guidanceShift": {
       "description": "Shift information added to Guidance Patterns during a specific field operation, mapped to that LoggedData via the Guidance Allocation component",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "guidanceGroupId": {
           "allOf": [
@@ -2791,6 +2829,7 @@
     "headland": {
       "description": "Ground near the ends of a field that is cultivated differently than the main body of the field",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "contextItems": {
           "description": "List of supplemental information for this data element",
@@ -2837,6 +2876,7 @@
     "id": {
       "description": "Identification entity that defines both an integer instance id (as a primary key) and a collection of persistent identifiers",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "referenceId": {
           "allOf": [
@@ -2864,6 +2904,7 @@
     "ingredientId": {
       "description": "A product component defined by a meaningful code and not further subdivided into components.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "ingredientCode": {
           "allOf": [
@@ -2911,6 +2952,7 @@
     "label": {
       "description": "A version of text represented in a specific language.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "languageCode": {
           "allOf": [
@@ -2951,6 +2993,7 @@
     "manufacturer": {
       "description": "The entity who manufactured a given market good.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -2999,6 +3042,7 @@
     "northShift": {
       "description": "The North shift of a Guidance Pattern",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -3029,6 +3073,7 @@
     "numericDataTypeDefinitionAttributes": {
       "description": "Attributes for Numeric Data Types",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericDataTypeCode": {
           "allOf": [
@@ -3089,6 +3134,7 @@
     "obstacle": {
       "description": "A spatial object that directly affects the execution of a field operation, such as a waterway, rockpile, or grove of trees.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "contextItems": {
           "description": "List of supplemental information for this data element",
@@ -3144,6 +3190,7 @@
     "operation": {
       "description": "Records for a single OperationType on a single Field at one time.  If Device Configuration is specified (implements are known), data from each separate Device must be in a separate Operation.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -3317,6 +3364,7 @@
     "party": {
       "description": "A business entity or individual",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -3396,6 +3444,7 @@
     "partyRole": {
       "description": "The function assumed by an individual or business entity for a specific time and purpose.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "contextItems": {
           "description": "List of supplemental information for this data element",
@@ -3442,6 +3491,7 @@
     "pivotAttributes": {
       "description": "Relevant Attributes for the Pivot Guidance Pattern.   One of the three pivot definitions is required.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "centerPoint": {
           "allOf": [
@@ -3502,6 +3552,7 @@
     "plan": {
       "description": "Document collecting operational intent for a growing season. A plan may define a collection of intended Crop Zones, defining a crop for each field/partial field and may further define dates and intended operations (WorkItems).  Alternatively, a Plan may simply define a number of acres of a given crop to be planted across the operation. Multiple mutually exclusive plans may exist for a single season to allow for runtime flexibility. A plan documents management intent.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -3637,6 +3688,7 @@
     "product": {
       "description": "Agricultural input or produce",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -3783,6 +3835,7 @@
     "productComponent": {
       "description": "Details on an individual component that comprises part of a Product.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "productId": {
           "allOf": [
@@ -3842,6 +3895,7 @@
     "propagationOffset": {
       "description": "Perpendicular offset of a guidance pattern by a fixed offset.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -3872,6 +3926,7 @@
     "radius": {
       "description": "The radius of a center pivot",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -3902,6 +3957,7 @@
     "recommendation": {
       "description": "Document summarizing guidance to a Grower from an advisor.  An example might be recommendations for amounts of specific crops to plant from a financial or market advisor, specific varieties or crop protection chemicals to use from an agronomic advisor, etc.\n\nE.g.s, if an advisor recommends a Grower plant a specific variety on 3 fields, the Recommendation.FieldIds would map to those fields, and there would be one Operation of type Application - Sowing and Planting simply referring to the product id of the recommended variety.\n\nIf an advisor is recommending the Grower apply a certain crop protection chemical for all fields with a certain crop, the Recommendation.CropIds would map to a single crop, and there would be one Operation of type Application - Crop Protection, mapping to the product id of the specified chemical, optionally containing a Time Scopes object to specify the recommended date range.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -4037,6 +4093,7 @@
     "referenceLayer": {
       "description": "Preformatted geospatial layer to be referenced within the model",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -4140,6 +4197,7 @@
     "referenceWeight": {
       "description": "Reference weight for the crop.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -4170,6 +4228,7 @@
     "root": {
       "description": "When ADAPT data is consolidated into a single dataset (usually as physical files), the Root component acts as the top level entity that contains all available data.  It is serialized as \"adapt.json.\"  Note that it is also possible to use json representations of individual ADAPT components in a distributed service architecture without the container entities (Root, Catalog, Documents, etc.)",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "catalog": {
           "allOf": [
@@ -4230,6 +4289,7 @@
     "season": {
       "description": "The span of time for which field operations contribute to a particular growing season.   For many areas, this is approximately a year in length.  E.g., In the northern hemisphere, Season \"2022\" may extend from the first operations following harvest in the fall of 2021 to the last harvest activities in the fall of 2022.  As such, seasons may overlap in months where harvest operations in the prior season are ongoing as field prep and fertilizer operations are starting for the new season.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -4298,6 +4358,7 @@
     "spiralAttributes": {
       "description": "Relevant attributes for the Spiral Guidance Pattern type",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "lineStrings": {
           "allOf": [
@@ -4317,6 +4378,7 @@
     "standardPayableMoisture": {
       "description": "The targeted moisture value at which the commodity is sold",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -4347,6 +4409,7 @@
     "summaryValue": {
       "description": "A recorded value of a specific type, representing an average or total either calculated by a system or manually-entered by a user.   E.g.s., total amount of fuel used within an operation on a field,",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "variableId": {
           "allOf": [
@@ -4377,6 +4440,7 @@
     "surveyTime": {
       "description": "The amount of time a GNSS reference station spends collecting data to establish a precise position.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "duration": {
           "allOf": [
@@ -4426,6 +4490,7 @@
     "swathWidth": {
       "description": "A defined width of a point or pass on a field, based on the implement's active width.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -4456,6 +4521,7 @@
     "telecommunicationContactMethod": {
       "description": "A telephone number or email address",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "valueText": {
           "allOf": [
@@ -4486,6 +4552,7 @@
     "textDataTypeDefinitionAttributes": {
       "description": "Data Type Definition attributes specific to the text type",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "validationRegularExpression": {
           "allOf": [
@@ -4502,6 +4569,7 @@
     "timeScope": {
       "description": "A period of time, optionally containing a defined start or end,  locational context, or simply duration.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "duration": {
           "allOf": [
@@ -4551,6 +4619,7 @@
     "trait": {
       "description": "Genetic attribute of a seed variety",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -4620,6 +4689,7 @@
     "uniqueId": {
       "description": "A persistent identifier for an entity as defined by a specific source.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "idSource": {
           "allOf": [
@@ -4670,6 +4740,7 @@
     "variable": {
       "description": "An individual type of measurement during a field operation that will be populated at multiple points in the field.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -4789,6 +4860,7 @@
     "workOrder": {
       "description": "Document summarizing the final collection of agronomic instructions (Operations) to be acted upon once operational decisions are taken. A work order documents operational decisions made.  A common example would be a list of fixed or variable rate prescriptions.\n\nThe Operations represent agronomic instruction(s) for a single Field or Crop Zone at a single time.  Where a Crop is not known/relevant, the Work Order must reference a Field.  Where a Crop is known, the Work Order must reference a CropZone.  Example WorkItems: a CropZone should be planted and fertilized on a particular date/date range, utilize a prescribed flat rate (Summary Value) or rates (Spatial Records File).  Prescriptions are represented as individual Operations.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -4911,6 +4983,7 @@
     "workRecord": {
       "description": "A record of completed work, contemporaneous in nature and scoped to a single Field or Crop Zone.     At least one Operation.   E.g.s., \n-The harvest of a single Crop Zone completed by two combines over several days.   Each combine would record separate Operations.\n-The single-pass seeding/starter fertilizer/insecticide application of a corn Crop Zone by one row planter.   The Work Record would contain three Operation objects for each type of application.\n-A manual record of total harvested values, without knowledge of the harvesting equipment.   One Operation would record one or more Summary Values.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "id": {
           "allOf": [
@@ -5033,6 +5106,7 @@
     "xOffset": {
       "description": "Offset in the X (inline) direction.  Positive values are forward, negative values are backward.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -5063,6 +5137,7 @@
     "yOffset": {
       "description": "Offset in the Y (lateral) direction.  Positive values are right, negative values are left.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
@@ -5093,6 +5168,7 @@
     "zOffset": {
       "description": "Offset in the Z (Vertical) direction.  Positive values are upward.",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "numericValue": {
           "allOf": [
