@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aggateway.org/schemas/adapt/units/legacy-code-qudt-mapping.json",
+  "title": "ADAPT Legacy Unit Code to QUDT Mapping",
+  "description": "Mapping of ADAPT legacy unit of measure codes to QUDT (Quantities, Units, Dimensions and Types) standard. ADAPT unit of measure codes are being retired in ADAPT Standard 3.0 in favor of QUDT. This mapping covers only those units represented in ADAPT's defined numeric data type definitions.",
+  "version": "3.0.0",
+  "effectiveDate": "2026-01-01",
+  "deprecationNotice": "ADAPT legacy unit codes are deprecated as of ADAPT Standard 3.0. All new implementations must use QUDT codes. Legacy codes are maintained here for backward compatibility and migration purposes only.",
+  "mappings": [
+    {
+      "adaptLegacyCode": "C",
+      "qudtCode": "DEG_C",
+      "qudtUri": "http://qudt.org/vocab/unit/DEG_C",
+      "qudtLabel": "Degree Celsius",
+      "description": "Temperature in degrees Celsius"
+    },
+    {
+      "adaptLegacyCode": "N",
+      "qudtCode": "N",
+      "qudtUri": "http://qudt.org/vocab/unit/N",
+      "qudtLabel": "Newton",
+      "description": "Force in newtons"
+    },
+    {
+      "adaptLegacyCode": "Pa",
+      "qudtCode": "PA",
+      "qudtUri": "http://qudt.org/vocab/unit/PA",
+      "qudtLabel": "Pascal",
+      "description": "Pressure in pascals"
+    },
+    {
+      "adaptLegacyCode": "arcdeg",
+      "qudtCode": "DEG",
+      "qudtUri": "http://qudt.org/vocab/unit/DEG",
+      "qudtLabel": "Degree",
+      "description": "Angle in degrees"
+    },
+    {
+      "adaptLegacyCode": "count",
+      "qudtCode": "NUM",
+      "qudtUri": "http://qudt.org/vocab/unit/NUM",
+      "qudtLabel": "Number",
+      "description": "Dimensionless count or number"
+    },
+    {
+      "adaptLegacyCode": "count1ha-1",
+      "qudtCode": "NUM-PER-HA",
+      "qudtUri": "http://qudt.org/vocab/unit/NUM-PER-HA",
+      "qudtLabel": "Number Per Hectare",
+      "description": "Count per hectare (e.g., seed rate, plant rate)"
+    },
+    {
+      "adaptLegacyCode": "count1sec-1",
+      "qudtCode": "NUM-PER-SEC",
+      "qudtUri": "http://qudt.org/vocab/unit/NUM-PER-SEC",
+      "qudtLabel": "Number Per Second",
+      "description": "Count per second (e.g., seed rate per time)"
+    },
+    {
+      "adaptLegacyCode": "dBm",
+      "qudtCode": "DeciB_M",
+      "qudtUri": "http://qudt.org/vocab/unit/DeciB_M",
+      "qudtLabel": "Decibel Milliwatt",
+      "description": "Signal strength in decibel-milliwatts"
+    },
+    {
+      "adaptLegacyCode": "ha",
+      "qudtCode": "HA",
+      "qudtUri": "http://qudt.org/vocab/unit/HA",
+      "qudtLabel": "Hectare",
+      "description": "Area in hectares"
+    },
+    {
+      "adaptLegacyCode": "kg",
+      "qudtCode": "KiloGM",
+      "qudtUri": "http://qudt.org/vocab/unit/KiloGM",
+      "qudtLabel": "Kilogram",
+      "description": "Mass in kilograms"
+    },
+    {
+      "adaptLegacyCode": "kg1ha-1",
+      "qudtCode": "KiloGM-PER-HA",
+      "qudtUri": "http://qudt.org/vocab/unit/KiloGM-PER-HA",
+      "qudtLabel": "Kilogram Per Hectare",
+      "description": "Mass per area (e.g., yield, application rate)"
+    },
+    {
+      "adaptLegacyCode": "kg1sec-1",
+      "qudtCode": "KiloGM-PER-SEC",
+      "qudtUri": "http://qudt.org/vocab/unit/KiloGM-PER-SEC",
+      "qudtLabel": "Kilogram Per Second",
+      "description": "Mass flow rate in kilograms per second"
+    },
+    {
+      "adaptLegacyCode": "l",
+      "qudtCode": "L",
+      "qudtUri": "http://qudt.org/vocab/unit/L",
+      "qudtLabel": "Liter",
+      "description": "Volume in liters"
+    },
+    {
+      "adaptLegacyCode": "l1ha-1",
+      "qudtCode": "L-PER-HA",
+      "qudtUri": "http://qudt.org/vocab/unit/L-PER-HA",
+      "qudtLabel": "Liter Per Hectare",
+      "description": "Volume per area (e.g., liquid application rate)"
+    },
+    {
+      "adaptLegacyCode": "l1sec-1",
+      "qudtCode": "L-PER-SEC",
+      "qudtUri": "http://qudt.org/vocab/unit/L-PER-SEC",
+      "qudtLabel": "Liter Per Second",
+      "description": "Volume flow rate in liters per second"
+    },
+    {
+      "adaptLegacyCode": "m",
+      "qudtCode": "M",
+      "qudtUri": "http://qudt.org/vocab/unit/M",
+      "qudtLabel": "Meter",
+      "description": "Length in meters"
+    },
+    {
+      "adaptLegacyCode": "m1sec-1",
+      "qudtCode": "M-PER-SEC",
+      "qudtUri": "http://qudt.org/vocab/unit/M-PER-SEC",
+      "qudtLabel": "Meter Per Second",
+      "description": "Velocity in meters per second"
+    },
+    {
+      "adaptLegacyCode": "mEq1hg-1",
+      "qudtCode": "MilliEQ-PER-HectoGM",
+      "qudtUri": "http://qudt.org/vocab/unit/MilliEQ-PER-HectoGM",
+      "qudtLabel": "Milliequivalent Per Hectogram",
+      "description": "Cation exchange capacity in milliequivalents per hectogram"
+    },
+    {
+      "adaptLegacyCode": "prcnt",
+      "qudtCode": "PERCENT",
+      "qudtUri": "http://qudt.org/vocab/unit/PERCENT",
+      "qudtLabel": "Percent",
+      "description": "Percentage"
+    },
+    {
+      "adaptLegacyCode": "sec",
+      "qudtCode": "SEC",
+      "qudtUri": "http://qudt.org/vocab/unit/SEC",
+      "qudtLabel": "Second",
+      "description": "Time in seconds"
+    }
+  ],
+  "notes": [
+    "QUDT (Quantities, Units, Dimensions and Types) is a well-established ontology for units of measure.",
+    "QUDT URIs provide machine-readable, semantically precise unit definitions that enable better data interoperability.",
+    "Legacy ADAPT codes used a custom notation (e.g., '1ha-1' for 'per hectare') which is replaced by QUDT's standard notation.",
+    "Only the unit codes used in ADAPT's defined numeric data type definitions are included in this mapping."
+  ],
+  "references": {
+    "qudt": "http://www.qudt.org/",
+    "qudtVocab": "http://qudt.org/vocab/unit/",
+    "adaptStandard": "https://github.com/ADAPT/Standard"
+  }
+}
