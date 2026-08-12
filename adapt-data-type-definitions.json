@@ -1694,98 +1694,129 @@
         "items": [
           {
             "code": "APPROVAL",
+            "description": "A time stamp, used to specify the date/time in which a document (e.g. a Work Order) is approved.",
             "enumerationItemStatusCode": "VALID",
             "name": "Approval"
           },
           {
             "code": "PROPOSED",
+            "description": "A time stamp, used to specify the date/time for a field operation (or part thereof) as proposed (e.g. in a Recommendation).",
             "enumerationItemStatusCode": "VALID",
             "name": "Proposed"
           },
           {
             "code": "ACTUAL",
+            "description": "A time stamp, used to specify the date/time in which a field operation (or part thereof) actually happened, as represented in a Work Record.",
             "enumerationItemStatusCode": "VALID",
             "name": "Actual"
           },
           {
             "code": "REQUESTED",
+            "description": "A time stamp, used to specify the date/time for a field operation (or part thereof) as requested (e.g. in a Work Order).",
             "enumerationItemStatusCode": "VALID",
             "name": "Requested"
           },
           {
             "code": "EXPIRATION",
+            "description": "A time stamp, used to specify the date/time after which a time-sensitive document (e.g. a Recommendation or Work Order for a field operation) will no longer be valid (i.e. will expire).",
             "enumerationItemStatusCode": "VALID",
             "name": "Expiration"
           },
           {
             "code": "CREATION",
+            "description": "A time stamp, used to specify the date/time in which a document (or part thereof) was created.",
             "enumerationItemStatusCode": "VALID",
             "name": "Creation"
           },
           {
             "code": "MODIFICATION",
+            "description": "A time stamp, used to specify the date/time in which a document (or part thereof) was modified.",
             "enumerationItemStatusCode": "VALID",
             "name": "Modification"
           },
           {
             "code": "VALIDITY",
+            "description": "A time interval, used to specify the time during which a document such as a Recommendation is valid.",
             "enumerationItemStatusCode": "VALID",
             "name": "Validity"
           },
           {
             "code": "REQUESTED_SHIPPING",
+            "description": "A time stamp, used to specify the date/time when a given load / amount of product should be shipped.",
             "enumerationItemStatusCode": "VALID",
             "name": "Requested Shipping"
           },
           {
             "code": "CALIBRATION",
+            "description": "A time stamp or (optionally) interval, used to specify the date/time when a given device was calibrated.",
             "enumerationItemStatusCode": "VALID",
             "name": "Calibration"
           },
           {
             "code": "LOAD",
+            "description": "A time stamp or (optionally) interval, used to specify the date/time when a given load/amount of product was loaded onto a vehicle or container.",
             "enumerationItemStatusCode": "VALID",
             "name": "Load"
           },
           {
             "code": "UNLOAD",
+            "description": "A time stamp or (optionally) interval, used to specify the date/time when a given load / amount of product was unloaded from a vehicle or container.",
             "enumerationItemStatusCode": "VALID",
             "name": "Unload"
           },
           {
             "code": "SUSPEND",
+            "description": "A time stamp used to specify when an operation was suspended.",
             "enumerationItemStatusCode": "VALID",
             "name": "Suspend"
           },
           {
             "code": "RESUME",
+            "description": "A time stamp used to specify when a suspended operation was resumed.",
             "enumerationItemStatusCode": "VALID",
             "name": "Resume"
           },
           {
             "code": "UNSPECIFIED",
+            "description": "A time stamp with an unspecified meaning.",
             "enumerationItemStatusCode": "VALID",
             "name": "Unspecified"
           },
           {
             "code": "INSTALLATION",
+            "description": "A time stamp, used to specify the date/time in which a piece of equipment was installed.",
             "enumerationItemStatusCode": "VALID",
             "name": "Installation"
           },
           {
             "code": "MAINTENANCE",
+            "description": "A time stamp, used to specify the date/time in which maintenance was performed on a piece of equipment.",
             "enumerationItemStatusCode": "VALID",
             "name": "Maintenance"
           },
           {
-            "code": "PHENOMENON_TIME",
+            "code": "PHENOMENON",
+            "description": "A time stamp or (optionally) interval, used to specify when a phenomenon under observation occurred.",
             "enumerationItemStatusCode": "VALID",
-            "name": "Phenomenon Time"
+            "name": "Phenomenon"
+          },
+          {
+            "code": "PHENOMENON_TIME",
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Phenomenon Time",
+            "supersededByCode": "PHENOMENON"
+          },
+          {
+            "code": "RESULT",
+            "description": "A time stamp used to specify when the result of an observation became available.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Result"
           },
           {
             "code": "RESULT_TIME",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Result Time"
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Result Time",
+            "supersededByCode": "RESULT"
           }
         ]
       },
@@ -1807,115 +1838,142 @@
             "name": "Unknown"
           },
           {
+            "code": "ASSET_SUPPLIER",
+            "description": "A person or organization that supplies or maintains mobile assets (e.g. tractors, sprayers, mobile irrigation systems) or stationary assets (e.g. grain bins, scales, stationary irrigation systems) used in crop or food production.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Asset Supplier"
+          },
+          {
             "code": "AUTHORIZER",
+            "description": "Someone who authorizes the execution of a field operation.",
             "enumerationItemStatusCode": "VALID",
             "name": "Authorizer"
-          },
-          {
-            "code": "CROP_ADVISOR",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Crop Advisor"
-          },
-          {
-            "code": "CUSTOMER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Customer"
-          },
-          {
-            "code": "CUSTOM_SERVICE_PROVIDER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Custom Service Provider"
-          },
-          {
-            "code": "DATA_SERVICES_PROVIDER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Data Services Provider"
-          },
-          {
-            "code": "END_USER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "End User"
-          },
-          {
-            "code": "FARM_MANAGER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Farm Manager"
-          },
-          {
-            "code": "FINANCIER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Financier"
-          },
-          {
-            "code": "STATIONARY_ASSET_SUPPLIER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Stationary Asset Supplier"
-          },
-          {
-            "code": "GOVERNMENT_AGENCY",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Government Agency"
-          },
-          {
-            "code": "GROWER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Grower"
-          },
-          {
-            "code": "INPUT_SUPPLIER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Input Supplier"
-          },
-          {
-            "code": "INSURANCE_AGENT",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Insurance Agent"
-          },
-          {
-            "code": "IRRIGATION_MANAGER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Irrigation Manager"
-          },
-          {
-            "code": "LABORER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Laborer"
-          },
-          {
-            "code": "MARKET_ADVISOR",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Market Advisor"
-          },
-          {
-            "code": "MARKET_PROVIDER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Market Provider"
-          },
-          {
-            "code": "MOBILE_ASSET_SUPPLIER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Mobile Asset Supplier"
-          },
-          {
-            "code": "OPERATOR",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Operator"
-          },
-          {
-            "code": "OWNER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Owner"
-          },
-          {
-            "code": "TRANSPORTER",
-            "enumerationItemStatusCode": "VALID",
-            "name": "Transporter"
           },
           {
             "code": "COLLECTOR",
             "description": "Party that collects samples or observations from fields, drives a field boundary for geospatial data retrieval, etc.",
             "enumerationItemStatusCode": "VALID",
             "name": "Collector"
+          },
+          {
+            "code": "CROP_ADVISOR",
+            "description": "Someone who provides Recommendations regarding how to grow a crop.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Crop Advisor"
+          },
+          {
+            "code": "CUSTOMER",
+            "description": "Someone who buys an agricultural commodity or product in the agricultural value chain.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Customer"
+          },
+          {
+            "code": "CUSTOM_SERVICE_PROVIDER",
+            "description": "A person or organization that provides field operations-related services (e.g. spraying, spreading, harvesting).",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Custom Service Provider"
+          },
+          {
+            "code": "DATA_SERVICES_PROVIDER",
+            "description": "A person or organization that provides data used to plan, prepare for, or execute a field operation.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Data Services Provider"
+          },
+          {
+            "code": "END_USER",
+            "description": "Someone who will be consuming a harvested commodity, or a product thereof.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "End User"
+          },
+          {
+            "code": "FARM_MANAGER",
+            "description": "A person or organization responsible for making management decisions regarding the growing of a crop on a piece of land.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Farm Manager"
+          },
+          {
+            "code": "FINANCIER",
+            "description": "A person or organization that provides capital/funding associated with the production of a crop.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Financier"
+          },
+          {
+            "code": "STATIONARY_ASSET_SUPPLIER",
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Stationary Asset Supplier",
+            "supersededByCode": "ASSET_SUPPLIER"
+          },
+          {
+            "code": "GOVERNMENT_AGENCY",
+            "description": "An agency of local, state/provincial, or national government, typically considered in a regulatory role.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Government Agency"
+          },
+          {
+            "code": "GROWER",
+            "description": "The person or organization that is responsible for growing a crop.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Grower"
+          },
+          {
+            "code": "INPUT_SUPPLIER",
+            "description": "A person or organization that supplies crop inputs (e.g. seed, fertilizers, and crop protection products) used to grow a crop.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Input Supplier"
+          },
+          {
+            "code": "INSURANCE_AGENT",
+            "description": "A person or organization that provides insurance services associated with the production of a crop.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Insurance Agent"
+          },
+          {
+            "code": "IRRIGATION_MANAGER",
+            "description": "A person or organization that manages irrigation operations.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Irrigation Manager"
+          },
+          {
+            "code": "LABORER",
+            "description": "Someone who harvests (typically manually) a commodity or performs other direct labour toward the production of a crop.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Laborer"
+          },
+          {
+            "code": "MARKET_ADVISOR",
+            "description": "A person or organization that provides advice to a producer regarding conditions of the market, typically for a harvested commodity",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Market Advisor"
+          },
+          {
+            "code": "MARKET_PROVIDER",
+            "description": "A person or organization that can influence or create markets for a commodity (e.g. a wheat flour producers’ association)",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Market Provider"
+          },
+          {
+            "code": "MOBILE_ASSET_SUPPLIER",
+            "enumerationItemStatusCode": "INVALID",
+            "name": "Mobile Asset Supplier",
+            "supersededByCode": "ASSET_SUPPLIER"
+          },
+          {
+            "code": "OPERATOR",
+            "description": "Someone who is in charge of performing a given field operation.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Operator"
+          },
+          {
+            "code": "OWNER",
+            "description": "A person or organization who owns the farm, field or cropzone on which a crop is being grown.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Owner"
+          },
+          {
+            "code": "TRANSPORTER",
+            "description": "Someone who transports crop inputs or harvested commodities.",
+            "enumerationItemStatusCode": "VALID",
+            "name": "Transporter"
           }
         ]
       },
@@ -3152,5 +3210,5 @@
       ]
     }
   ],
-  "version": "2.0.2"
+  "version": "2.0.3"
 }
