@@ -7,7 +7,7 @@ For more info, visit https://adaptstandard.org.
 
 ## Issue management
 
-New topics/issues are managed in a [GitHub project](https://github.com/ADAPT/Standard/projects/2). Each issue is in a state as specified below.
+New topics/issues are managed in a [GitHub project](https://github.com/orgs/ADAPT/projects/2). Each issue is in a state as specified below.
 
 ### GitHub Issue state diagram
 
